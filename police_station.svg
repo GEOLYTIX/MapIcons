@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 300 300"
+   id="svg3487"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="C:\Users\Kerst\Desktop\path3495.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="police_station.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="145.23058"
+     inkscape:cy="146.12552"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       id="grid4141"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3489">
+    <inkscape:perspective
+       inkscape:vp_z="580 : 290 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_x="0 : 289.99999 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective2441"
+       inkscape:persp3d-origin="290 : 193.33333 : 1" />
+    <inkscape:perspective
+       inkscape:vp_z="60 : 30 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_x="0 : 29.999999 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective3452"
+       inkscape:persp3d-origin="30 : 20 : 1" />
+    <inkscape:perspective
+       inkscape:vp_z="744.09448 : 526.18108 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_x="0 : 526.18108 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective4471"
+       inkscape:persp3d-origin="372.04724 : 350.78738 : 1" />
+    <inkscape:perspective
+       inkscape:vp_z="12 : 5.9999999 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_x="0 : 5.9999999 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective4668"
+       inkscape:persp3d-origin="6 : 3.9999999 : 1" />
+    <inkscape:perspective
+       inkscape:vp_z="32 : 16 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_x="0 : 16 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective4904"
+       inkscape:persp3d-origin="16 : 10.666667 : 1" />
+    <inkscape:perspective
+       inkscape:vp_z="16 : 8 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 8 : 1"
+       sodipodi:type="inkscape:persp3d"
+       id="perspective3435"
+       inkscape:persp3d-origin="8 : 5.3333333 : 1" />
+  </defs>
+  <metadata
+     id="metadata3492">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-752.36216)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       r="150"
+       cy="902.36218"
+       cx="150"
+       id="path3495"
+       style="fill:#0044aa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:#ffd42a;stroke:#000000;stroke-width:1.01010096;stroke-opacity:1"
+       inkscape:connector-curvature="0"
+       fill-opacity="param(fill-opacity)"
+       d="M219.25832 827.42205C210.131525 837.07239 166.061785 844.154355 150.58093 827.42205C139.26433 839.327355 92.54092 843.124325 80.30699 827.42205C80.30699 827.42205 75.6788725 896.83895 80.30699 908.00966C85.9331525 921.59773 149.60996 977.30231 149.60996 977.30231C149.60996 977.30231 214.112435 920.077025 219.23699 907.68622C224.371905 895.30122 219.25829 827.42205 219.25829 827.42205Z"
+       id="path4488" />
+  </g>
+</svg>
