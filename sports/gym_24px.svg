@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg style="isolation:isolate" viewBox="0 0 24 24" width="24pt" height="24pt" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="_clipPath_EkvHscPTeX96Hu6AWQXE3t5YBUXg4R8l">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#_clipPath_EkvHscPTeX96Hu6AWQXE3t5YBUXg4R8l)">
+    <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" style=""/>
+    <g/>
+    <path d="M 16.524 14.525 C 17.732 13.316 18.542 11.733 18.542 9.924 C 18.542 6.417 15.629 3.569 12.042 3.569 C 8.455 3.569 5.542 6.417 5.542 9.924 C 5.542 11.756 6.282 13.282 7.606 14.567 L 7.606 14.567 L 11.778 19.069 L 16.531 14.525 L 16.524 14.525 Z" style="fill: rgb(255, 255, 255);"/>
+    <rect x="91.107" y="168.839" width="217.785" height="16.11" style=""/>
+    <rect x="289.801" y="151.535" width="10.912" height="48.744" style=""/>
+    <rect x="100.711" y="151.535" width="10.912" height="48.744" style=""/>
+    <rect x="113.78" y="134.829" width="13.127" height="84.131" style=""/>
+    <rect x="274.285" y="133.934" width="13.127" height="84.131" style=""/>
+    <rect x="129.776" y="134.829" width="13.127" height="84.131" style=""/>
+    <rect x="258.061" y="133.04" width="13.127" height="84.131" style=""/>
+    <rect y="9.636" width="12" height="0.83" style="" x="6.031"/>
+    <rect x="16.979" y="8.745" width="0.601" height="2.51" style=""/>
+    <rect x="6.56" y="8.745" width="0.601" height="2.51" style=""/>
+    <rect x="7.28" y="7.885" width="0.724" height="4.332" style=""/>
+    <rect x="16.124" y="7.839" width="0.724" height="4.332" style=""/>
+    <rect x="8.161" y="7.885" width="0.724" height="4.332" style=""/>
+    <rect x="15.23" width="0.724" height="4.332" style="" y="7.793"/>
+  </g>
+</svg>
