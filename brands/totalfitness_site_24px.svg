@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg style="isolation:isolate" viewBox="0 0 24 24" width="24pt" height="24pt" xmlns="http://www.w3.org/2000/svg">
+<svg style="isolation:isolate" viewBox="0 0 19 24" width="400pt" height="520pt" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="_clipPath_EkvHscPTeX96Hu6AWQXE3t5YBUXg4R8l">
-      <rect width="24" height="24"/>
+    <clipPath id="_clipPath_5Ew9bAr8XzmvYV4WFM8GHIPoA2IBnBYt">
+      <rect width="400" height="520"/>
     </clipPath>
   </defs>
-  <g clip-path="url(#_clipPath_EkvHscPTeX96Hu6AWQXE3t5YBUXg4R8l)">
-    <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" style=""/>
-    <g/>
-    <path d="M 16.524 14.525 C 17.732 13.316 18.542 11.733 18.542 9.924 C 18.542 6.417 15.629 3.569 12.042 3.569 C 8.455 3.569 5.542 6.417 5.542 9.924 C 5.542 11.756 6.282 13.282 7.606 14.567 L 7.606 14.567 L 11.778 19.069 L 16.531 14.525 L 16.524 14.525 Z" style="fill: rgb(255, 179, 0);"/>
-    <text style="fill: rgb(0, 147, 188); font-family: &quot;Martel Sans&quot;; font-size: 9px; font-style: italic; font-weight: 700; white-space: pre;" x="6.64" y="13.762">tf</text>
+  <g clip-path="url(#_clipPath_5Ew9bAr8XzmvYV4WFM8GHIPoA2IBnBYt)" transform="matrix(0.047229, 0, 0, 0.047229, 0.02072, -0.094457)">
+    <g>
+      <defs>
+        <filter id="VMTm9Q5TuZfAOTI7eQBnKFEiCY8jfuLb" x="-200%" y="-200%" width="400%" height="400%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+          <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="4.293609062839028"/>
+        </filter>
+      </defs>
+      <g filter="url(#VMTm9Q5TuZfAOTI7eQBnKFEiCY8jfuLb)"/>
+      <defs>
+        <filter id="HTbRM7RB7fsHIG4xGbvzuuNZVXvKEPaB" x="-200%" y="-200%" width="400%" height="400%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+          <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="0"/>
+        </filter>
+      </defs>
+      <g filter="url(#HTbRM7RB7fsHIG4xGbvzuuNZVXvKEPaB)">
+        <path d=" M 18.914 183.931 C 18.914 83.382 99.774 2 199.384 2 C 299.14 2 380 83.382 380 183.931 C 380 237.891 356.562 286.544 319.355 319.863 C 317.304 321.633 246.405 388.124 198.944 490 C 181.073 417.906 111.785 348.613 79.998 320.306 C 42.498 286.839 18.914 238.186 18.914 183.931 Z  M 311.005 183.931" style=""/>
+      </g>
+    </g>
+    <circle vector-effect="non-scaling-stroke" cx="199.3950696443201" cy="180.06173631098662" r="143.0617363109866" style=""/>
+    <circle vector-effect="non-scaling-stroke" cx="199.45680595530652" cy="180.00000000000003" r="129.99999999999997" style="fill: rgb(255, 179, 0);"/>
   </g>
+  <path d="M 6.904 10.863 L 7.419 7.925 L 8.532 7.925 L 8.62 7.228 L 7.541 7.228 L 7.751 6.021 L 6.628 6.033 L 6.389 7.204 L 5.567 7.205 L 5.483 7.925 L 6.291 7.925 L 5.776 10.863 C 5.752 10.975 5.752 11.088 5.752 11.187 C 5.752 11.859 6.157 12.145 6.757 12.145 C 7.064 12.145 7.456 12.071 7.836 11.934 C 7.836 11.647 7.836 11.448 7.836 11.162 C 7.689 11.199 7.468 11.261 7.297 11.261 C 7.064 11.261 6.892 11.199 6.892 10.963 C 6.892 10.925 6.892 10.901 6.904 10.863 Z" style="fill: rgb(0, 146, 188);"/>
+  <path d="M 8.811 7.914 L 9.631 7.925 L 8.931 12.268 L 10.051 12.245 L 10.784 7.925 L 12.475 7.948 L 12.609 7.217 L 10.857 7.228 C 11.054 6.058 10.959 5.21 12.022 5.059 C 12.264 5.024 12.879 5.134 12.879 5.134 L 13.017 4.408 C 12.858 4.345 12.451 4.254 11.801 4.254 C 11.103 4.254 10.195 4.751 10.012 5.748 C 9.853 6.619 9.718 7.204 9.718 7.204 L 8.884 7.228 L 8.811 7.914 Z" style="fill: rgb(0, 146, 188);"/>
 </svg>
