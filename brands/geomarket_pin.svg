@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 400 520"
+   width="400pt"
+   height="520pt"
+   version="1.1"
+   id="svg4311"
+   sodipodi:docname="geomarket_pin.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4313"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="1.1596154"
+     inkscape:cx="121.59204"
+     inkscape:cy="259.13765"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4311" />
+  <defs
+     id="defs4273">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4337">
+      <g
+         id="g4341">
+        <rect
+           width="400"
+           height="520"
+           id="rect4339"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4343">
+      <g
+         id="g4347">
+        <rect
+           width="400"
+           height="520"
+           id="rect4345"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4349">
+      <g
+         id="g4353">
+        <rect
+           width="400"
+           height="520"
+           id="rect4351"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4355">
+      <g
+         id="g4359">
+        <rect
+           width="400"
+           height="520"
+           id="rect4357"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4361">
+      <g
+         id="g4365">
+        <rect
+           width="400"
+           height="520"
+           id="rect4363"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4367">
+      <g
+         id="g4371">
+        <rect
+           width="400"
+           height="520"
+           id="rect4369"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     id="g4293"
+     clip-path="url(#clipPath4367)"
+     style="fill:#003d57;fill-opacity:1">
+    <defs
+       id="defs4278">
+      <filter
+         id="Bvww0TEVKx6kJVzkrd9P3VWQe19GdOl5"
+         x="-0.07926663"
+         y="-0.25548749"
+         width="1.1585333"
+         height="1.510975"
+         filterUnits="objectBoundingBox"
+         color-interpolation-filters="sRGB">
+        <feGaussianBlur
+           stdDeviation="4.293609062839028"
+           id="feGaussianBlur4275" />
+      </filter>
+    </defs>
+    <g
+       filter="url(#Bvww0TEVKx6kJVzkrd9P3VWQe19GdOl5)"
+       id="g4282"
+       style="fill:#003d57;fill-opacity:1">
+      <ellipse
+         vector-effect="non-scaling-stroke"
+         cx="198"
+         cy="492"
+         rx="65"
+         ry="20.166666"
+         fill="#a2a2a2"
+         fill-opacity="0.7"
+         id="ellipse4280"
+         style="fill:#003d57;fill-opacity:1" />
+    </g>
+    <defs
+       id="defs4287">
+      <filter
+         id="jje20jMhpBaaYmvW1vMGbnz3BW6ZNPHI"
+         x="0"
+         y="0"
+         width="1"
+         height="1"
+         filterUnits="objectBoundingBox"
+         color-interpolation-filters="sRGB">
+        <feGaussianBlur
+           stdDeviation="0"
+           id="feGaussianBlur4284" />
+      </filter>
+    </defs>
+    <g
+       filter="url(#jje20jMhpBaaYmvW1vMGbnz3BW6ZNPHI)"
+       id="g4291"
+       style="fill:#003d57;fill-opacity:1">
+      <path
+         d="M 18.914,188.931 C 18.914,88.382 99.53,7 198.841,7 c 99.456,0 180.073,81.382 180.073,181.931 0,53.96 -23.368,102.613 -60.463,135.932 -2.044,1.77 -72.73,68.261 -120.049,170.137 C 180.585,422.906 111.506,353.613 79.814,325.306 42.427,291.839 18.914,243.186 18.914,188.931 Z m 291.213,0"
+         fill="#ffbf45"
+         id="path4289"
+         style="fill:#003d57;fill-opacity:1" />
+    </g>
+  </g>
+  <circle
+     vector-effect="non-scaling-stroke"
+     cx="201"
+     cy="186"
+     r="130"
+     fill="#f03d14"
+     id="circle4297"
+     clip-path="url(#clipPath4355)"
+     style="fill:#ffffff" />
+  <circle
+     vector-effect="non-scaling-stroke"
+     cx="201"
+     cy="186.0995"
+     r="118.9005"
+     fill="#001f78"
+     id="circle4301"
+     clip-path="url(#clipPath4343)"
+     style="fill:#003d57;fill-opacity:1" />
+  <g
+     id="g4307"
+     clip-path="url(#clipPath4337)">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:144px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free Bold';fill:#ffffff;stroke-width:0.75"
+       x="143.58208"
+       y="229.60199"
+       id="text4375"><tspan
+         sodipodi:role="line"
+         id="tspan4373"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;font-family:'Mark SC Offc';-inkscape-font-specification:'Mark SC Offc Bold';stroke-width:0.75"
+         x="143.58208"
+         y="229.60199">G</tspan></text>
+  </g>
+</svg>
