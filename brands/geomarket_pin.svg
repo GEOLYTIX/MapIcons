@@ -8,8 +8,32 @@
    height="24pt"
    version="1.1"
    id="svg9415"
+   sodipodi:docname="geomarket_pin.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9417"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="31.1875"
+     inkscape:cx="13.338677"
+     inkscape:cy="18.260521"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9415" />
   <defs
      id="defs9382">
     <clipPath
@@ -57,21 +81,40 @@
        id="rect9409" />
   </g>
   <path
-     style="isolation:isolate;fill:#ffffff;fill-opacity:1;stroke-width:0.750545"
+     style="isolation:isolate;fill:#ffffff;fill-opacity:1;stroke-width:0.662159"
      id="path9955"
-     d="M 20.368553,9.8402293 A 8.2965937,8.2845688 0 0 1 12.276422,18.177848 8.2965937,8.2845688 0 0 1 3.7830583,10.248125 8.2965937,8.2845688 0 0 1 11.570844,1.6263591 8.2965937,8.2845688 0 0 1 20.343269,9.2471368" />
+     sodipodi:type="arc"
+     sodipodi:cx="11.951905"
+     sodipodi:cy="9.6553106"
+     sodipodi:rx="7.5030065"
+     sodipodi:ry="7.13026"
+     sodipodi:start="6.2764786"
+     sodipodi:end="6.2048084"
+     sodipodi:open="true"
+     sodipodi:arc-type="arc"
+     d="M 19.454743,9.6074904 A 7.5030065,7.13026 0 0 1 12.136643,16.783409 7.5030065,7.13026 0 0 1 4.4556873,9.9585533 7.5030065,7.13026 0 0 1 11.498555,2.5380784 7.5030065,7.13026 0 0 1 19.431878,9.0970349" />
   <path
-     style="isolation:isolate;fill:#003d55;fill-opacity:1;stroke-width:0.71081"
+     style="isolation:isolate;fill:#003d55;fill-opacity:1;stroke-width:0.568089"
      id="path9955-4"
-     d="m 19.911648,9.854995 a 7.8276558,7.875751 0 0 1 -7.634749,7.926183 7.8276558,7.875751 0 0 1 -8.0133042,-7.538415 7.8276558,7.875751 0 0 1 7.3476072,-8.1963092 7.8276558,7.875751 0 0 1 8.276592,7.244716" />
+     sodipodi:type="arc"
+     sodipodi:cx="11.987976"
+     sodipodi:cy="9.4989967"
+     sodipodi:rx="6.4088178"
+     sodipodi:ry="6.1442885"
+     sodipodi:start="6.2764786"
+     sodipodi:end="6.2048084"
+     sodipodi:open="true"
+     sodipodi:arc-type="arc"
+     d="M 18.39665,9.4577891 A 6.4088178,6.1442885 0 0 1 12.145773,15.641423 6.4088178,6.1442885 0 0 1 5.5849568,9.760307 6.4088178,6.1442885 0 0 1 11.600739,3.3659345 a 6.4088178,6.1442885 0 0 1 6.77638,5.6519848" />
   <text
      xml:space="preserve"
-     style="font-weight:bold;font-size:6px;font-family:'Mark SC Offc';-inkscape-font-specification:'Mark SC Offc Bold';fill:#003d55;fill-opacity:1;stroke-width:0.75"
-     x="5.5070138"
-     y="12.048097"
+     style="font-weight:bold;font-size:12px;font-family:'Mark SC Offc';-inkscape-font-specification:'Mark SC Offc Bold';fill:#003d55;fill-opacity:1;stroke-width:0.75"
+     x="7.2865729"
+     y="13.490982"
      id="text9901"><tspan
+       sodipodi:role="line"
        id="tspan9899"
-       style="font-size:6px;fill:#ffffff;stroke-width:0.75"
-       x="5.5070138"
-       y="12.048097">GEO</tspan></text>
+       style="font-size:12px;fill:#ffffff;stroke-width:0.75"
+       x="7.2865729"
+       y="13.490982">G</tspan></text>
 </svg>
