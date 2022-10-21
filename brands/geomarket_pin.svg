@@ -3,184 +3,75 @@
 
 <svg
    style="isolation:isolate"
-   viewBox="0 0 400 520"
-   width="400pt"
-   height="520pt"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
    version="1.1"
-   id="svg4311"
+   id="svg9415"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs4273">
+     id="defs9382">
     <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4337">
-      <g
-         id="g4341">
-        <rect
-           width="400"
-           height="520"
-           id="rect4339"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4343">
-      <g
-         id="g4347">
-        <rect
-           width="400"
-           height="520"
-           id="rect4345"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4349">
-      <g
-         id="g4353">
-        <rect
-           width="400"
-           height="520"
-           id="rect4351"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4355">
-      <g
-         id="g4359">
-        <rect
-           width="400"
-           height="520"
-           id="rect4357"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4361">
-      <g
-         id="g4365">
-        <rect
-           width="400"
-           height="520"
-           id="rect4363"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4367">
-      <g
-         id="g4371">
-        <rect
-           width="400"
-           height="520"
-           id="rect4369"
-           x="0"
-           y="0" />
-      </g>
+       id="_clipPath_D7QS1awBBNaL00bCIr0JF9UbDYH1fC2o">
+      <rect
+         width="24"
+         height="24"
+         id="rect9379" />
     </clipPath>
   </defs>
   <g
-     id="g4293"
-     clip-path="url(#clipPath4367)"
-     style="fill:#003d57;fill-opacity:1">
-    <defs
-       id="defs4278">
-      <filter
-         id="Bvww0TEVKx6kJVzkrd9P3VWQe19GdOl5"
-         x="-0.07926663"
-         y="-0.25548749"
-         width="1.1585333"
-         height="1.510975"
-         filterUnits="objectBoundingBox"
-         color-interpolation-filters="sRGB">
-        <feGaussianBlur
-           stdDeviation="4.293609062839028"
-           id="feGaussianBlur4275" />
-      </filter>
-    </defs>
+     clip-path="url(#_clipPath_D7QS1awBBNaL00bCIr0JF9UbDYH1fC2o)"
+     id="g9413">
+    <clipPath
+       id="_clipPath_gZG72I3b9rWfDdRBTPDP1SG7zgANdebq">
+      <rect
+         x="2.98"
+         y="1"
+         width="18.04"
+         height="22"
+         transform="matrix(1,0,0,1,0,0)"
+         fill="rgb(255,255,255)"
+         id="rect9384" />
+    </clipPath>
     <g
-       filter="url(#Bvww0TEVKx6kJVzkrd9P3VWQe19GdOl5)"
-       id="g4282"
-       style="fill:#b3b3b3;fill-opacity:1">
-      <ellipse
-         vector-effect="non-scaling-stroke"
-         cx="198"
-         cy="492"
-         rx="65"
-         ry="20.166666"
-         fill="#a2a2a2"
-         fill-opacity="0.7"
-         id="ellipse4280"
-         style="fill:#b3b3b3;fill-opacity:1" />
+       clip-path="url(#_clipPath_gZG72I3b9rWfDdRBTPDP1SG7zgANdebq)"
+       id="g9391">
+      <g
+         id="g9389"
+         style="fill:#003d55;fill-opacity:1">
+        <path
+           d=" M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z "
+           fill="rgb(184,21,34)"
+           id="path9387"
+           style="fill:#003d55;fill-opacity:1" />
+      </g>
     </g>
-    <defs
-       id="defs4287">
-      <filter
-         id="jje20jMhpBaaYmvW1vMGbnz3BW6ZNPHI"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         filterUnits="objectBoundingBox"
-         color-interpolation-filters="sRGB">
-        <feGaussianBlur
-           stdDeviation="0"
-           id="feGaussianBlur4284" />
-      </filter>
-    </defs>
-    <g
-       filter="url(#jje20jMhpBaaYmvW1vMGbnz3BW6ZNPHI)"
-       id="g4291"
-       style="fill:#003d57;fill-opacity:1">
-      <path
-         d="M 18.914,188.931 C 18.914,88.382 99.53,7 198.841,7 c 99.456,0 180.073,81.382 180.073,181.931 0,53.96 -23.368,102.613 -60.463,135.932 -2.044,1.77 -72.73,68.261 -120.049,170.137 C 180.585,422.906 111.506,353.613 79.814,325.306 42.427,291.839 18.914,243.186 18.914,188.931 Z m 291.213,0"
-         fill="#ffbf45"
-         id="path4289"
-         style="fill:#003d57;fill-opacity:1" />
-    </g>
+    <rect
+       x="0"
+       y="0"
+       width="24"
+       height="24"
+       transform="matrix(1,0,0,1,0,0)"
+       fill="none"
+       id="rect9409" />
   </g>
-  <circle
-     vector-effect="non-scaling-stroke"
-     cx="201"
-     cy="186"
-     r="130"
-     fill="#f03d14"
-     id="circle4297"
-     clip-path="url(#clipPath4355)"
-     style="fill:#ffffff" />
-  <circle
-     vector-effect="non-scaling-stroke"
-     cx="201"
-     cy="186.0995"
-     r="118.9005"
-     fill="#001f78"
-     id="circle4301"
-     clip-path="url(#clipPath4343)"
-     style="fill:#003d57;fill-opacity:1" />
-  <g
-     id="g4307"
-     clip-path="url(#clipPath4337)">
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:144px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free Bold';fill:#ffffff;stroke-width:0.75"
-       x="143.58208"
-       y="229.60199"
-       id="text4375"><tspan
-         id="tspan4373"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;font-family:'Mark SC Offc';-inkscape-font-specification:'Mark SC Offc Bold';stroke-width:0.75"
-         x="143.58208"
-         y="229.60199">G</tspan></text>
-  </g>
+  <path
+     style="isolation:isolate;fill:#ffffff;fill-opacity:1;stroke-width:0.750545"
+     id="path9955"
+     d="M 20.368553,9.8402293 A 8.2965937,8.2845688 0 0 1 12.276422,18.177848 8.2965937,8.2845688 0 0 1 3.7830583,10.248125 8.2965937,8.2845688 0 0 1 11.570844,1.6263591 8.2965937,8.2845688 0 0 1 20.343269,9.2471368" />
+  <path
+     style="isolation:isolate;fill:#003d55;fill-opacity:1;stroke-width:0.71081"
+     id="path9955-4"
+     d="m 19.911648,9.854995 a 7.8276558,7.875751 0 0 1 -7.634749,7.926183 7.8276558,7.875751 0 0 1 -8.0133042,-7.538415 7.8276558,7.875751 0 0 1 7.3476072,-8.1963092 7.8276558,7.875751 0 0 1 8.276592,7.244716" />
+  <text
+     xml:space="preserve"
+     style="font-weight:bold;font-size:6px;font-family:'Mark SC Offc';-inkscape-font-specification:'Mark SC Offc Bold';fill:#003d55;fill-opacity:1;stroke-width:0.75"
+     x="5.5070138"
+     y="12.048097"
+     id="text9901"><tspan
+       id="tspan9899"
+       style="font-size:6px;fill:#ffffff;stroke-width:0.75"
+       x="5.5070138"
+       y="12.048097">GEO</tspan></text>
 </svg>
