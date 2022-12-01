@@ -6,7 +6,8 @@
    overflow="hidden"
    version="1.1"
    id="svg516"
-   sodipodi:docname="Asda On The Move.svg"
+   sodipodi:docname="asda_otm_24px.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +20,16 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     showgrid="false" /><defs
+     showgrid="false"
+     inkscape:zoom="36.708333"
+     inkscape:cx="12.013621"
+     inkscape:cy="12.013621"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g514" /><defs
      id="defs508"><clipPath
        id="clip0"><rect
          x="763"
@@ -39,5 +49,6 @@
        font-weight="400"
        font-size="28px"
        id="text512"
-       x="791.79626"
-       y="260">AOTM</text></g></svg>
+       x="794.0932"
+       y="260.65948"
+       style="font-size:25.966px">AOTM</text></g></svg>
