@@ -8,79 +8,47 @@
    height="24.000002pt"
    version="1.1"
    id="svg1518"
-   sodipodi:docname="lego_master_pin.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1597"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="24.249998"
-     inkscape:cx="11.835052"
-     inkscape:cy="16.000001"
-     inkscape:window-width="1920"
-     inkscape:window-height="974"
-     inkscape:window-x="-11"
-     inkscape:window-y="783"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg1518" />
   <defs
      id="defs1472">
-    <clipPath
-       id="_clipPath_uoPKfweeOyfTCM6mMn8vm0EJlTG6OUAG">
-      <rect
-         width="400"
-         height="520"
-         id="rect1469"
+    <defs
+       id="defs1477" />
+    <defs
+       id="defs1486">
+      <filter
+         id="Bc4ffSFNukYB3E7975ZEZM7rfpIRonis"
          x="0"
-         y="0" />
+         y="0"
+         width="1"
+         height="1"
+         filterUnits="objectBoundingBox"
+         color-interpolation-filters="sRGB">
+        <feGaussianBlur
+           stdDeviation="0"
+           id="feGaussianBlur1483" />
+      </filter>
+    </defs>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2645">
+      <g
+         id="g2649"
+         transform="matrix(20.342875,0,0,20.333332,18.914,4)">
+        <rect
+           width="400"
+           height="520"
+           id="rect2647"
+           x="0"
+           y="0" />
+      </g>
     </clipPath>
   </defs>
-  <g
-     clip-path="url(#_clipPath_uoPKfweeOyfTCM6mMn8vm0EJlTG6OUAG)"
-     id="g1516"
-     style="fill:#ff69b4;fill-opacity:1">
-    <g
-       id="g1492"
-       style="fill:#ff69b4;fill-opacity:1">
-      <defs
-         id="defs1477" />
-      <defs
-         id="defs1486">
-        <filter
-           id="Bc4ffSFNukYB3E7975ZEZM7rfpIRonis"
-           x="0"
-           y="0"
-           width="1"
-           height="1"
-           filterUnits="objectBoundingBox"
-           color-interpolation-filters="sRGB">
-          <feGaussianBlur
-             stdDeviation="0"
-             id="feGaussianBlur1483" />
-        </filter>
-      </defs>
-      <g
-         filter="url(#Bc4ffSFNukYB3E7975ZEZM7rfpIRonis)"
-         id="g1490"
-         transform="matrix(0.04915726,0,0,0.04918033,-0.92976042,-0.19672132)"
-         style="fill:#ff69b4;fill-opacity:1">
-        <path
-           d="M 18.914,185.931 C 18.914,85.382 99.774,4 199.384,4 299.14,4 380,85.382 380,185.931 c 0,53.96 -23.438,102.613 -60.645,135.932 -2.051,1.77 -72.95,68.261 -120.411,170.137 C 181.073,419.906 111.785,350.613 79.998,322.306 42.498,288.839 18.914,240.186 18.914,185.931 Z m 292.091,0"
-           fill="#ffed00"
-           id="path1488"
-           style="fill:#ff69b4;fill-opacity:1" />
-      </g>
-    </g>
-  </g>
+  <path
+     d="M 18.914,185.931 C 18.914,85.382 99.774,4 199.384,4 299.14,4 380,85.382 380,185.931 c 0,53.96 -23.438,102.613 -60.645,135.932 -2.051,1.77 -72.95,68.261 -120.411,170.137 C 181.073,419.906 111.785,350.613 79.998,322.306 42.498,288.839 18.914,240.186 18.914,185.931 Z m 292.091,0"
+     fill="#ffed00"
+     id="path1488"
+     style="fill:#ff69b4;fill-opacity:1;filter:url(#Bc4ffSFNukYB3E7975ZEZM7rfpIRonis)"
+     transform="matrix(0.04915726,0,0,0.04918033,-0.92976042,-0.19672132)"
+     clip-path="url(#clipPath2645)" />
 </svg>
