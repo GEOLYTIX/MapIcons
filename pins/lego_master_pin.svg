@@ -1,54 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Gravit.io -->
-
 <svg
-   style="isolation:isolate"
-   viewBox="0 0 17.749998 24.000002"
-   width="17.749998pt"
-   height="24.000002pt"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
    version="1.1"
-   id="svg1518"
+   id="svg2809"
+   sodipodi:docname="lego_master_pin.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1472">
-    <defs
-       id="defs1477" />
-    <defs
-       id="defs1486">
-      <filter
-         id="Bc4ffSFNukYB3E7975ZEZM7rfpIRonis"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         filterUnits="objectBoundingBox"
-         color-interpolation-filters="sRGB">
-        <feGaussianBlur
-           stdDeviation="0"
-           id="feGaussianBlur1483" />
-      </filter>
-    </defs>
+     id="defs2813">
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath2645">
+       id="clipPath2716">
       <g
-         id="g2649"
-         transform="matrix(20.342875,0,0,20.333332,18.914,4)">
+         id="g2720">
         <rect
            width="400"
            height="520"
-           id="rect2647"
+           id="rect2718"
            x="0"
            y="0" />
       </g>
     </clipPath>
+    <filter
+       id="Bc4ffSFNukYB3E7975ZEZM7rfpIRonis"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       filterUnits="objectBoundingBox"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         stdDeviation="0"
+         id="feGaussianBlur2099" />
+    </filter>
   </defs>
+  <sodipodi:namedview
+     id="namedview2811"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="24.25"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="744"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2809" />
   <path
-     d="M 18.914,185.931 C 18.914,85.382 99.774,4 199.384,4 299.14,4 380,85.382 380,185.931 c 0,53.96 -23.438,102.613 -60.645,135.932 -2.051,1.77 -72.95,68.261 -120.411,170.137 C 181.073,419.906 111.785,350.613 79.998,322.306 42.498,288.839 18.914,240.186 18.914,185.931 Z m 292.091,0"
-     fill="#ffed00"
-     id="path1488"
-     style="fill:#ff69b4;fill-opacity:1;filter:url(#Bc4ffSFNukYB3E7975ZEZM7rfpIRonis)"
-     transform="matrix(0.04915726,0,0,0.04918033,-0.92976042,-0.19672132)"
-     clip-path="url(#clipPath2645)" />
+     d="m 16.703538,16.118011 c 1.522361,-1.900567 3.04842,-3.251661 3.04842,-6.7165677 C 19.751958,4.4234433 15.802742,0.99999996 12,1 c -4.978,1e-7 -9.1331462,4.3523355 -8.5251546,8.9890722 0.3261317,2.4871838 2.132138,4.6004438 3.4516288,6.4353608 L 8.9058556,19.17701 11.633,23 14.456804,19.025227 Z"
+     fill="#ff69b4"
+     id="path2807"
+     sodipodi:nodetypes="csssscccc" />
 </svg>
