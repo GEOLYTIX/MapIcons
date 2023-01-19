@@ -1,67 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 24 24"
-   width="24pt"
-   height="24pt"
+   id="svg2"
+   viewBox="0 0 411.00009 1044.5283"
    version="1.1"
-   id="svg2809"
-   sodipodi:docname="lego_master_pin.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   width="411.00009"
+   height="1044.5283"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
-     id="defs2813">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath2716">
-      <g
-         id="g2720">
-        <rect
-           width="400"
-           height="520"
-           id="rect2718"
-           x="0"
-           y="0" />
-      </g>
-    </clipPath>
-    <filter
-       id="Bc4ffSFNukYB3E7975ZEZM7rfpIRonis"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       filterUnits="objectBoundingBox"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         stdDeviation="0"
-         id="feGaussianBlur2099" />
-    </filter>
-  </defs>
-  <sodipodi:namedview
-     id="namedview2811"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="24.25"
-     inkscape:cx="16"
-     inkscape:cy="16"
-     inkscape:window-width="1920"
-     inkscape:window-height="974"
-     inkscape:window-x="-11"
-     inkscape:window-y="744"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg2809" />
+     id="defs4" />
   <path
-     d="m 16.703538,16.118011 c 1.522361,-1.900567 3.04842,-3.251661 3.04842,-6.7165677 C 19.751958,4.4234433 15.802742,0.99999996 12,1 c -4.978,1e-7 -9.1331462,4.3523355 -8.5251546,8.9890722 0.3261317,2.4871838 2.132138,4.6004438 3.4516288,6.4353608 L 8.9058556,19.17701 11.633,23 14.456804,19.025227 Z"
-     fill="#ff69b4"
-     id="path2807"
-     sodipodi:nodetypes="csssscccc" />
+     id="svg_2"
+     style="fill:#ff69b4;fill-opacity:1;fill-rule:evenodd;stroke:#ff69b4;stroke-width:0.364955;stroke-miterlimit:10;stroke-opacity:1"
+     stroke-miterlimit="10"
+     d="M 6.8676137,21.435984 C 6.3738798,19.047855 5.5026136,17.060081 4.4479747,15.218155 3.6656002,13.851923 2.7592284,12.590489 1.9206163,11.265789 1.6406541,10.823418 1.3990333,10.355934 1.1300047,9.8971432 0.59209476,8.9790782 0.15597136,7.9146822 0.18372246,6.534445 0.21078706,5.1855988 0.60680376,4.1038174 1.1779563,3.2189782 2.1172274,1.7638856 3.6906056,0.57098019 5.8016977,0.25745669 c 1.7261072,-0.2563291 3.3444459,0.1767312 4.4919493,0.83770451 0.937751,0.540118 1.664083,1.2616759 2.216016,2.111985 0.576203,0.8874953 0.972955,1.9360023 1.006198,3.3036348 0.01707,0.7006951 -0.09938,1.3495223 -0.263499,1.8878052 -0.166026,0.544802 -0.433088,1.000213 -0.670732,1.48658 C 12.117706,10.834719 11.536159,11.704732 10.952504,12.57518 9.2140406,15.16822 7.5823167,17.812644 6.8678,21.436128 Z" />
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
 </svg>
