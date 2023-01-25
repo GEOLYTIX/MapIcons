@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg365"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview367"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" /><defs
+     id="defs362" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       id="g400"
+       transform="matrix(0.10016628,0,0,0.10016628,2.7754762,2.6230596)">
+	<path
+   fill="#010101"
+   d="M 22.319,12.1 H 10.442 v 49.123 h 4.539 V 38.961 h 6.529 c 0.527,0 12.861,-0.158 12.916,-13.637 C 34.427,12.434 22.449,12.102 22.319,12.1 Z M 22.261,34.42 H 14.982 V 16.582 h 7.365 c 0.312,0.018 7.604,0.558 7.604,8.678 -0.109,9.025 -7.382,9.158 -7.69,9.16 z"
+   id="path388" />
+	<path
+   fill="#010101"
+   d="M 51.141,12.1 H 39.323 v 49.062 h 4.482 v -22.2 h 13.617 v 22.262 h 4.539 V 34.42 H 59.79 c 1.23,-1.645 2.699,-4.555 2.699,-9.095 C 62.554,12.374 51.261,12.102 51.141,12.1 Z m 6.69,13.166 c 0,9.014 -6.477,9.15 -6.748,9.154 H 43.806 V 16.582 h 7.301 c 0.275,0.017 6.724,0.56 6.724,8.684 z"
+   id="path390" />
+	<polygon
+   fill="#010101"
+   points="92.657,12.1 70.603,12.1 70.603,61.223 92.657,61.223 92.657,56.681 75.085,56.681 75.085,37.262 92.657,37.262 92.657,32.721 75.144,32.721 75.144,16.582 92.657,16.582 "
+   id="polygon392" />
+	<polygon
+   fill="#010101"
+   points="131.937,16.699 156.015,16.642 128.362,61.223 160.61,61.223 160.61,56.681 136.532,56.681 164.187,12.161 131.937,12.161 "
+   id="polygon394" />
+	<polygon
+   fill="#010101"
+   points="97.198,16.699 121.218,16.642 93.628,61.223 125.813,61.223 125.813,56.681 101.794,56.681 129.386,12.161 97.198,12.161 "
+   id="polygon396" />
+	<path
+   fill="#010101"
+   d="m 185.577,12.1 c -13.523,0 -24.525,11.007 -24.525,24.531 0,13.524 11.002,24.53 24.525,24.53 13.527,0 24.533,-11.006 24.533,-24.53 0,-13.524 -11.006,-24.531 -24.533,-24.531 z m 0,44.581 c -11.018,0 -19.986,-8.968 -19.986,-19.991 0,-11.021 8.969,-19.99 19.986,-19.99 11.029,0 19.992,8.967 19.992,19.99 0,11.021 -8.963,19.991 -19.992,19.991 z"
+   id="path398" />
+</g></g></svg>
