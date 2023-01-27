@@ -4,7 +4,7 @@
    width="18.040001pt"
    height="21.999998pt"
    version="1.1"
-   id="svg758"
+   id="svg792"
    sodipodi:docname="pink_master_pin.svg"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -12,7 +12,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs762"><path
+     id="defs796"><path
        id="SVGID_1_"
        d="m 165.8,328.3 c 52.6,2.6 105.1,-3.7 157.7,-10 52.4,-6.3 104.8,-12.6 157.3,-10 C 475.6,162.7 418.6,80.5 323.5,80.5 c -99.4,0 -157.1,89.7 -157.7,247.8" /><path
        id="SVGID_4_"
@@ -81,7 +81,7 @@
        height="238.5" /><path
        id="SVGID_34_"
        d="m 326.2,320.4 c -76.3,9.1 -152.7,18.3 -229.1,0 0,67.7 0,176.6 0,244.3 76.3,18.3 152.7,9.1 229,0 76.3,-9.2 152.7,-18.3 229,0 0,-67.7 0,-176.6 0,-244.3 -32.3,-7.7 -64.5,-10.5 -96.8,-10.5 -43.9,-0.1 -88,5.2 -132.1,10.5" /></defs><sodipodi:namedview
-     id="namedview760"
+     id="namedview794"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -120,7 +120,7 @@
 	.st24{fill:#48111C;}
 </style><g
      id="g2059"
-     transform="matrix(0.02761844,0,0,0.02761844,0.01600648,-1.1810364)"><g
+     transform="matrix(0.02761844,0,0,0.02761844,0.00948388,-1.2589133)"><g
        id="g1300">
 	<defs
    id="defs1266" />
@@ -720,7 +720,7 @@
 	</g>
 	<polygon
    class="st4"
-   points="254.4,262.2 275,331.2 268.4,333.2 247.8,264.1 "
+   points="247.8,264.1 254.4,262.2 275,331.2 268.4,333.2 "
    id="polygon1560" />
 	<g
    class="st15"
