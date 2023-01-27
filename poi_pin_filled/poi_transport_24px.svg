@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 23 24"
+   width="23pt"
+   height="24pt"
+   version="1.1"
+   id="svg152"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs82">
+    <clipPath
+       id="_clipPath_Vg4kvHloNRXZ6Kny1J4sUuzgKwjzTsxP">
+      <rect
+         width="24"
+         height="24"
+         id="rect79"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_Vg4kvHloNRXZ6Kny1J4sUuzgKwjzTsxP)"
+     id="g150"
+     transform="translate(-0.5)">
+    <clipPath
+       id="_clipPath_tG5fFOqLiFUkLeERMNlEk5f5RaK7WXTP">
+      <rect
+         x="0.5"
+         y="0"
+         width="24"
+         height="24"
+         fill="#ffffff"
+         id="rect84" />
+    </clipPath>
+    <g
+       clip-path="url(#_clipPath_tG5fFOqLiFUkLeERMNlEk5f5RaK7WXTP)"
+       id="g148">
+      <g
+         id="g146">
+        <clipPath
+           id="_clipPath_8saGcgeap1SSC3gkUSZXWAvZv2NHQOJn">
+          <rect
+             x="0.5"
+             y="-2"
+             width="23"
+             height="28"
+             fill="#ffffff"
+             id="rect87" />
+        </clipPath>
+        <g
+           clip-path="url(#_clipPath_8saGcgeap1SSC3gkUSZXWAvZv2NHQOJn)"
+           id="g96"
+           style="fill:#aa4400;fill-opacity:1">
+          <g
+             id="g94"
+             style="fill:#aa4400;fill-opacity:1">
+            <g
+               id="g92"
+               style="fill:#aa4400;fill-opacity:1">
+              <ellipse
+                 vector-effect="non-scaling-stroke"
+                 cx="12"
+                 cy="12"
+                 rx="11.474501"
+                 ry="11.454545"
+                 fill="rgb(0,0,0)"
+                 id="ellipse90"
+                 style="fill:#aa4400;fill-opacity:1" />
+            </g>
+          </g>
+        </g>
+        <clipPath
+           id="_clipPath_VFPwfpoqOMj2oTRhtOqCAGCHQZDu88oN">
+          <rect
+             x="0.5"
+             y="-2"
+             width="23"
+             height="28"
+             fill="#ffffff"
+             id="rect98" />
+        </clipPath>
+        <rect
+           x="0.5"
+           y="-2"
+           width="23"
+           height="28"
+           fill="none"
+           id="rect144" />
+        <path
+           id="Path_11"
+           data-name="Path 11"
+           d="M 18.794906,9.2391376 H 18.099784 V 5.0216572 A 0.4681433,0.46337131 0 0 0 17.871286,4.62047 3.0398913,3.008904 0 0 0 16.798711,4.2724402 C 16.377686,4.2052412 15.423667,3.9309295 11.906006,3.9309295 h -0.0061 c -3.5176609,0 -4.47168,0.2743117 -4.8927051,0.3415107 A 3.0485044,3.0174292 0 0 0 5.933126,4.62047 0.47168976,0.46688166 0 0 0 5.7041209,5.0216572 V 9.2391376 H 5.0105191 A 0.23255168,0.23018107 0 0 0 4.7779674,9.4703218 v 2.5284832 a 0.23255168,0.23018107 0 0 0 0.2325517,0.230682 h 0.6936018 v 5.894944 a 0.2330584,0.23068263 0 0 0 0.233565,0.230684 h 0.2452179 v 0.551632 c 0,0.816917 0.614058,0.77379 1.3856838,0.77379 0.7716253,0 1.4089892,0.04312 1.4089892,-0.77379 v -0.513019 h 5.8507772 v 0.511514 c 0,0.816916 0.635337,0.77379 1.40899,0.77379 0.773652,0 1.387203,0.04312 1.387203,-0.77379 v -0.551633 h 0.243697 a 0.23204496,0.2296797 0 0 0 0.23154,-0.230683 v -5.89344 h 0.695122 a 0.2330584,0.23068263 0 0 0 0.233059,-0.230683 V 9.4703218 A 0.2330584,0.23068263 0 0 0 18.794906,9.2391376 Z M 9.0231756,5.3877405 H 14.781743 V 7.2311956 H 9.0231756 Z M 9.6499008,16.269944 A 0.28068333,0.27782205 0 0 1 9.3682031,16.544757 H 6.9575695 A 0.28017661,0.27732068 0 0 1 6.6778994,16.269944 v -0.829956 a 0.28169658,0.27882517 0 0 1 0.2796701,-0.278323 h 2.4106336 a 0.2822033,0.27932654 0 0 1 0.2816977,0.278323 z m 7.4776262,0 a 0.28017661,0.27732068 0 0 1 -0.279164,0.274813 h -2.410128 a 0.28118986,0.27832361 0 0 1 -0.282203,-0.274813 v -0.829956 a 0.2822033,0.27932654 0 0 1 0.282203,-0.278323 h 2.410128 a 0.28169658,0.27882517 0 0 1 0.279163,0.278323 z m 0,-3.127254 a 0.2330584,0.23068263 0 0 1 -0.232552,0.230683 H 6.9109578 A 0.2330584,0.23068263 0 0 1 6.6778994,13.14269 V 8.8474787 A 0.23255168,0.23018107 0 0 1 6.9109578,8.6167953 h 9.9840162 a 0.23255168,0.23018107 0 0 1 0.232552,0.2306834 z"
+           style="fill:#ffffff;stroke-width:0.50406" />
+      </g>
+    </g>
+  </g>
+</svg>
