@@ -4,7 +4,7 @@
    width="24pt"
    height="24pt"
    version="1.1"
-   id="svg9586"
+   id="svg3169"
    sodipodi:docname="tedi.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -12,9 +12,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs9590" />
+     id="defs3173" />
   <sodipodi:namedview
-     id="namedview9588"
+     id="namedview3171"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -25,17 +25,17 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="24.625"
-     inkscape:cx="8.6903553"
+     inkscape:cx="16"
      inkscape:cy="16"
      inkscape:window-width="1920"
      inkscape:window-height="986"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg9586" />
+     inkscape:current-layer="svg3169" />
   <g
      id="g9565"
-     transform="matrix(0.01877552,0,0,0.01892198,7.7662322,5.7006488)">
+     transform="matrix(0.03628243,0,0,0.03656545,3.8185285,2.4663778)">
     <path
        d="M 233.81,401.05 C 126.157,401.05 38.549,313.466 38.518,205.811 38.488,98.125 126.071,10.488 233.757,10.458 c 52.852,0 101.854,19.456 138.044,54.785 36.94,36.061 57.293,85.942 57.31,140.454 0.031,107.686 -87.554,195.321 -195.24,195.354 h -0.061 z"
        fill="#ffed00"
