@@ -2,12 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="24mm"
-   height="24.000002mm"
-   viewBox="0 0 24 24.000002"
+   width="6.3499999mm"
+   height="6.3500004mm"
+   viewBox="0 0 6.3499999 6.3500004"
    version="1.1"
    id="svg645"
    xml:space="preserve"
+   inkscape:export-filename="mcdonalds.svg"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,7 +38,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="surface2"
-       transform="matrix(1.0643569,0,0,1.0643569,-0.56128275,-0.8583569)"><path
+       transform="matrix(0.27717627,0,0,0.27717627,-0.01511528,-0.17117627)"><path
          style="fill:#eb1923;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="m 18.21875,16.550781 c 1.675781,-1.714843 2.800781,-3.960937 2.800781,-6.53125 C 21.019531,5.042969 16.976562,1 12,1 7.023438,1 2.980469,5.042969 2.980469,10.019531 c 0,2.601563 1.027343,4.765625 2.863281,6.589844 L 11.632812,23 18.230469,16.550781 Z m 0,0"
          id="path655" /><g

@@ -2,12 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="24mm"
-   height="24.000002mm"
-   viewBox="0 0 24 24.000002"
+   width="6.3499999mm"
+   height="6.3500004mm"
+   viewBox="0 0 6.3499999 6.3500004"
    version="1.1"
    id="svg1090"
    xml:space="preserve"
+   inkscape:export-filename="burger_king.svg"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,7 +38,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="surface2"
-       transform="matrix(1.0039216,0,0,1.0039216,0.1639411,-0.13517673)"><path
+       transform="matrix(0.26143791,0,0,0.26143791,0.17374509,0.01715189)"><path
          style="fill:#006666;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="M 18.59375,16.824219 C 20.371094,15.007812 21.5625,12.625 21.5625,9.902344 c 0,-5.28125 -4.285156,-9.5625 -9.5625,-9.5625 -5.277344,0 -9.5625,4.28125 -9.5625,9.5625 0,2.753906 1.089844,5.050781 3.035156,6.984375 l 6.136719,6.773437 6.996094,-6.835937 z m 0,0"
          id="path1100" /><path

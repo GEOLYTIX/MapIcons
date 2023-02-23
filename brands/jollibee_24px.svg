@@ -2,15 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="24mm"
-   height="24.000002mm"
-   viewBox="0 0 24 24.000002"
+   width="6.3499999mm"
+   height="6.3500004mm"
+   viewBox="0 0 6.3499999 6.3500004"
    version="1.1"
    id="svg715"
    xml:space="preserve"
    inkscape:export-filename="jollibee_24px.svg"
-   inkscape:export-xdpi="2.0525253"
-   inkscape:export-ydpi="2.0525253"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="g765"
-       transform="matrix(1.0643016,0,0,1.0643016,-0.56061877,-0.8583016)"><path
+       transform="matrix(0.27716186,0,0,0.27716186,-0.01494234,-0.17116186)"><path
          fill="#ce0e2d"
          d="M 18.219,16.551 C 19.897,14.836 21.02,12.588 21.02,10.02 21.02,5.042 16.979,1 12,1 7.022,1 2.98,5.042 2.98,10.02 c 0,2.6 1.027,4.767 2.864,6.589 v 0 L 11.633,23 18.231,16.551 Z"
          id="path719" /><ellipse

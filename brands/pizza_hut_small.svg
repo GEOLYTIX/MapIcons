@@ -2,12 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="24mm"
-   height="24.000002mm"
-   viewBox="0 0 24 24.000002"
+   width="6.3499999mm"
+   height="6.3500004mm"
+   viewBox="0 0 6.3499999 6.3500004"
    version="1.1"
    id="svg561"
    xml:space="preserve"
+   inkscape:export-filename="pizza_hut_small.svg"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +30,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="surface1"
-       transform="matrix(0.67535036,0,0,0.67535036,0.39236871,0.09520067)"><path
+       transform="matrix(0.17587249,0,0,0.17587249,0.23323143,0.07714601)"><path
          style="fill:#2e2e2e;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="M 27.300781,24.671875 C 29.945312,21.96875 31.714844,18.425781 31.714844,14.378906 31.714844,6.53125 25.347656,0.164062 17.5,0.164062 c -7.847656,0 -14.214844,6.367188 -14.214844,14.214844 0,4.097656 1.617188,7.511719 4.511719,10.386719 l 9.125,10.070313 10.398437,-10.164063 z m 0,0"
          id="path565" /><path
