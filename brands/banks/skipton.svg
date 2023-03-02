@@ -2,12 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="6.3499999mm"
-   height="6.3500004mm"
-   viewBox="0 0 6.3499999 6.3500004"
+   width="8.2020826mm"
+   height="8.3079166mm"
+   viewBox="0 0 8.2020826 8.3079166"
    version="1.1"
    id="svg5"
    xml:space="preserve"
+   inkscape:export-filename="skipton.svg"
+   inkscape:export-xdpi="76.800003"
+   inkscape:export-ydpi="76.800003"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +40,8 @@
        transform="matrix(0.26912418,0,0,0.26912418,0.03170142,-0.02907286)"><g
          clip-path="url(#_clipPath_Ao34CuVVrB7sENQ35N5dYoRkgJW58WIl)"
          id="g33"
-         style="fill:#ffffff"><path
+         style="fill:#ffffff"
+         transform="matrix(1.2811073,0,0,1.2811073,0.58067728,0.02555877)"><path
            d="m 18.593,16.825 c 1.777,-1.819 2.97,-4.201 2.97,-6.924 0,-5.278 -4.285,-9.563 -9.563,-9.563 -5.278,0 -9.562,4.285 -9.562,9.563 0,2.756 1.088,5.053 3.036,6.987 H 5.473 l 6.138,6.774 6.994,-6.837 z"
            fill="#00afe9"
            id="path29"
@@ -49,7 +53,7 @@
          fill-rule="evenodd"
          clip-rule="evenodd"
          id="g224"
-         transform="matrix(0.08761932,0,0,0.08761932,3.4523001,0.39707279)"><path
+         transform="matrix(0.11451674,0,0,0.11451674,4.9594627,0.39707319)"><path
            fill="#ffffff"
            fill-opacity="0"
            d="M 0,0 H 192.756 V 192.756 H 0 Z"
