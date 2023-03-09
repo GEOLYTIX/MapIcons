@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="34.541665"
-     inkscape:cx="7.3679136"
-     inkscape:cy="12.014476"
+     inkscape:cx="7.396864"
+     inkscape:cy="12.043426"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -50,7 +50,7 @@
      id="layer1"><g
        id="surface2"
        transform="matrix(0.27717627,0,0,0.27717627,-0.01511528,-0.17117627)"><path
-         style="fill:#857f80;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#969696;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="m 18.21875,16.550781 c 1.675781,-1.714843 2.800781,-3.960937 2.800781,-6.53125 C 21.019531,5.042969 16.976562,1 12,1 7.023438,1 2.980469,5.042969 2.980469,10.019531 c 0,2.601563 1.027343,4.765625 2.863281,6.589844 L 11.632812,23 18.230469,16.550781 Z m 0,0"
          id="path655" /><g
          clip-path="url(#clip1)"
