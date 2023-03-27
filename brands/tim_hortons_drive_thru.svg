@@ -13,33 +13,26 @@
   <defs
      id="defs2025">
     <clipPath
-       id="_clipPath_0lJMMfJPlAIV2EJWILGbNWyls3TCzBkd">
-      <rect
-         width="24"
-         height="24"
-         id="rect2022"
-         x="0"
-         y="0" />
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6430">
+      <g
+         id="g6434">
+        <rect
+           width="24"
+           height="24"
+           id="rect6432"
+           x="0"
+           y="0" />
+      </g>
     </clipPath>
   </defs>
-  <g
-     clip-path="url(#_clipPath_0lJMMfJPlAIV2EJWILGbNWyls3TCzBkd)"
-     id="g2049"
-     transform="translate(-2.98,-1)">
-    <g
-       id="g2031">
-      <path
-         d="M 18.219,16.551 C 19.895,14.836 21.02,12.59 21.02,10.02 21.02,5.043 16.977,1 12,1 7.023,1 2.98,5.043 2.98,10.02 c 0,2.601 1.028,4.765 2.864,6.589 L 11.633,23 18.23,16.551 Z"
-         fill="#c3c5c8"
-         id="path2027" />
-      <path
-         d="m 4.309,1.285 h 15.16 V 15.383 H 4.309 Z"
-         fill="none"
-         id="path2029" />
-    </g>
-    <defs
-       id="defs2039" />
-  </g>
+  <path
+     d="M 18.219,16.551 C 19.895,14.836 21.02,12.59 21.02,10.02 21.02,5.043 16.977,1 12,1 7.023,1 2.98,5.043 2.98,10.02 c 0,2.601 1.028,4.765 2.864,6.589 L 11.633,23 18.23,16.551 Z"
+     fill="rgb(195,197,200)"
+     id="path2027"
+     style="fill:#b41e07;fill-opacity:1"
+     clip-path="url(#clipPath6430)"
+     transform="translate(-2.98,-1)" />
   <defs
      id="defs2052" />
   <path
@@ -48,5 +41,5 @@
      fill="#b41e07"
      fill-rule="evenodd"
      id="path2546"
-     style="stroke-width:0.012145" />
+     style="fill:#ffffff;stroke-width:0.012145" />
 </svg>
