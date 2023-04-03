@@ -24,29 +24,29 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="26.03125"
-     inkscape:cx="13.906363"
+     inkscape:cx="13.92557"
      inkscape:cy="16.057623"
      inkscape:window-width="1904"
      inkscape:window-height="993"
-     inkscape:window-x="2041"
-     inkscape:window-y="60"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg4" /><path
      style="fill:#00b8e6;fill-opacity:1;stroke-width:2.78493"
      id="path2106"
      sodipodi:type="arc"
-     sodipodi:cx="12.028811"
-     sodipodi:cy="9.6806726"
+     sodipodi:cx="12.057623"
+     sodipodi:cy="10.170468"
      sodipodi:rx="7.2810616"
      sodipodi:ry="7.2231603"
      sodipodi:start="0"
      sodipodi:end="6.2753717"
      sodipodi:open="true"
      sodipodi:arc-type="arc"
-     d="M 19.309873,9.6806726 A 7.2810616,7.2231603 0 0 1 12.043034,16.903819 7.2810616,7.2231603 0 0 1 4.7478054,9.708892 7.2810616,7.2231603 0 0 1 11.986143,2.4576364 7.2810616,7.2231603 0 0 1 19.309651,9.6242343"
+     d="M 19.338685,10.170468 A 7.2810616,7.2231603 0 0 1 12.071846,17.393615 7.2810616,7.2231603 0 0 1 4.7766168,10.198688 7.2810616,7.2231603 0 0 1 12.014955,2.9474321 7.2810616,7.2231603 0 0 1 19.338462,10.11403"
      inkscape:label="path2106" /><g
      id="g174"
-     transform="matrix(0.59740229,0,0,0.6163518,-1.8815348,5.5318155)"><ellipse
+     transform="matrix(0.59740229,0,0,0.6163518,-1.8527233,6.0216114)"><ellipse
        id="circle"
        vector-effect="non-scaling-stroke"
        display="none"
@@ -75,10 +75,10 @@
 	<polygon
    id="diamond"
    fill="#020200"
-   points="20.982,10.082 11.999,5.856 3.128,10.03 12.001,14.307 " />
+   points="11.999,5.856 3.128,10.03 12.001,14.307 20.982,10.082 " />
 	<polygon
    fill="#d02626"
-   points="3.725,10.082 11.999,6.189 20.276,10.082 11.999,13.973 "
+   points="11.999,6.189 20.276,10.082 11.999,13.973 3.725,10.082 "
    id="polygon144" />
 	<path
    fill="#ffffa0"
