@@ -5,56 +5,6 @@
    height="24pt"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8">
-    <mask
-       maskUnits="userSpaceOnUse"
-       x="5.965"
-       y="3.942"
-       width="12.566"
-       height="12.545"
-       id="_mask_Zo2hSAbvn9ndn6jDdPnxoaXlBJqn8EU3_1_">
-		<rect
-   x="-47.625999"
-   y="-47.194"
-   fill="#ffffff"
-   filter="url(#Adobe_OpacityMaskFilter)"
-   width="96"
-   height="96"
-   id="rect11" />
-
-		<path
-   d="M 6.21,4.204 C 6.323,4.086 6.414,4.053 6.548,4.042 h 11.424 c 0.068,0.018 0.123,0.037 0.164,0.057 0.061,0.03 0.125,0.055 0.195,0.156 0.07,0.103 0.083,0.135 0.1,0.219 l -0.912,11.422 c -0.01,0.145 -0.037,0.248 -0.082,0.313 -0.061,0.088 -0.14,0.143 -0.242,0.174 H 7.535 C 7.333,16.401 7.197,16.358 7.139,16.297 7.082,16.234 7.061,16.25 7.018,16.113 L 6.069,4.629 C 6.05,4.468 6.099,4.322 6.21,4.204 Z"
-   id="path13" />
-
-	</mask>
-    <filter
-       id="Adobe_OpacityMaskFilter"
-       filterUnits="userSpaceOnUse"
-       x="5.9650002"
-       y="3.9419999"
-       width="12.566"
-       height="12.545">
-			<feColorMatrix
-   type="matrix"
-   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-   id="feColorMatrix6" />
-
-		</filter>
-    <filter
-       id="filter18994"
-       filterUnits="userSpaceOnUse"
-       x="5.9650002"
-       y="3.9419999"
-       width="12.566"
-       height="12.545">
-			<feColorMatrix
-   type="matrix"
-   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-   id="feColorMatrix18992" />
-
-		</filter>
-  </defs>
   <path
      style="fill:#ff69b4;fill-opacity:1;stroke-width:2.78493"
      id="path2106"
@@ -66,49 +16,6 @@
    fill="#ffffff"
    d="M 6.21,4.204 C 6.323,4.086 6.414,4.053 6.548,4.042 h 11.424 c 0.068,0.018 0.123,0.037 0.164,0.057 0.061,0.03 0.125,0.055 0.195,0.156 0.07,0.103 0.083,0.135 0.1,0.219 l -0.912,11.422 c -0.01,0.145 -0.037,0.248 -0.082,0.313 -0.061,0.088 -0.14,0.143 -0.242,0.174 H 7.535 C 7.333,16.401 7.197,16.358 7.139,16.297 7.082,16.234 7.061,16.25 7.018,16.113 L 6.069,4.629 C 6.05,4.468 6.099,4.322 6.21,4.204 Z"
    id="path4" />
-
-	<defs
-   id="defs9">
-		<filter
-   id="filter19798"
-   filterUnits="userSpaceOnUse"
-   x="5.9650002"
-   y="3.9419999"
-   width="12.566"
-   height="12.545">
-			<feColorMatrix
-   type="matrix"
-   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-   id="feColorMatrix19796" />
-
-		</filter>
-
-	</defs>
-
-	
-		<mask
-   maskUnits="userSpaceOnUse"
-   x="5.965"
-   y="3.942"
-   width="12.566"
-   height="12.545"
-   id="mask19001">
-		<rect
-   x="-47.625999"
-   y="-47.194"
-   fill="#ffffff"
-   filter="url(#Adobe_OpacityMaskFilter)"
-   width="96"
-   height="96"
-   id="rect18997" />
-
-		<path
-   d="M 6.21,4.204 C 6.323,4.086 6.414,4.053 6.548,4.042 h 11.424 c 0.068,0.018 0.123,0.037 0.164,0.057 0.061,0.03 0.125,0.055 0.195,0.156 0.07,0.103 0.083,0.135 0.1,0.219 l -0.912,11.422 c -0.01,0.145 -0.037,0.248 -0.082,0.313 -0.061,0.088 -0.14,0.143 -0.242,0.174 H 7.535 C 7.333,16.401 7.197,16.358 7.139,16.297 7.082,16.234 7.061,16.25 7.018,16.113 L 6.069,4.629 C 6.05,4.468 6.099,4.322 6.21,4.204 Z"
-   id="path18999" />
-
-	</mask>
-
-	
 		<path
    vector-effect="non-scaling-stroke"
    mask="url(#_mask_Zo2hSAbvn9ndn6jDdPnxoaXlBJqn8EU3_1_)"
