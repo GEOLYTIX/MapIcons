@@ -3,15 +3,43 @@
    viewBox="0 0 24 24"
    width="24pt"
    height="24pt"
+   version="1.1"
+   id="svg4278"
+   sodipodi:docname="pink_master_pin_2_layers_foreground_kfc.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4282" />
+  <sodipodi:namedview
+     id="namedview4280"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="16.785264"
+     inkscape:cx="16.174902"
+     inkscape:cy="16.025962"
+     inkscape:window-width="1536"
+     inkscape:window-height="793"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4278" />
   <path
-     style="fill:#FF69B4;fill-opacity:1;stroke-width:2.78493"
-     id="path2106"
-     d="M 19.281062,9.8866119 A 7.2810616,7.2231603 0 0 1 12.014223,17.109758 7.2810616,7.2231603 0 0 1 4.7189939,9.9148313 7.2810616,7.2231603 0 0 1 11.957332,2.6635757 7.2810616,7.2231603 0 0 1 19.280839,9.8301736" />
+     style="fill:#FF69B4;fill-opacity:1;stroke-width:3.8402"
+     id="path2106-0"
+     d="M 21.976214,12.062622 A 10.000001,10.000002 0 0 1 11.995747,22.062603 10.000001,10.000002 0 0 1 1.9762924,12.10169 10.000001,10.000002 0 0 1 11.917613,2.062794 10.000001,10.000002 0 0 1 21.975909,11.984487" />
   <g
      id="g32"
-     transform="matrix(0.75,0,0,0.75,2.9152534,2.5586666)">
+     transform="matrix(0.94511816,0,0,1.00894,0.30203579,1.9346286)">
     <path
        fill="#ffffff"
        d="M 6.21,4.204 C 6.323,4.086 6.414,4.053 6.548,4.042 h 11.424 c 0.068,0.018 0.123,0.037 0.164,0.057 0.061,0.03 0.125,0.055 0.195,0.156 0.07,0.103 0.083,0.135 0.1,0.219 l -0.912,11.422 c -0.01,0.145 -0.037,0.248 -0.082,0.313 -0.061,0.088 -0.14,0.143 -0.242,0.174 H 7.535 C 7.333,16.401 7.197,16.358 7.139,16.297 7.082,16.234 7.061,16.25 7.018,16.113 L 6.069,4.629 C 6.05,4.468 6.099,4.322 6.21,4.204 Z"
