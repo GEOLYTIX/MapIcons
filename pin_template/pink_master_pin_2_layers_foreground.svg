@@ -3,38 +3,12 @@
    viewBox="0 0 24 24"
    width="24pt"
    height="24pt"
-   version="1.1"
-   id="svg4"
-   sodipodi:docname="pink_master_pin_2_layers_foreground.svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="25.90625"
-     inkscape:cx="16"
-     inkscape:cy="16.0193"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
   <defs
      id="defs8" />
   <path
-     style="fill:#ff69b4;fill-opacity:1;stroke-width:3.07673"
+     style="fill:#ff69b4;fill-opacity:1;stroke-width:2.78493"
      id="path2106"
-     d="m 20.395658,10.335343 a 8.0627262,7.9613992 0 0 1 -8.046977,7.961384 8.0627262,7.9613992 0 0 1 -8.0784144,-7.93028 8.0627262,7.9613992 0 0 1 8.0154164,-7.9923656 8.0627262,7.9613992 0 0 1 8.109728,7.8990556" />
+     d="M 19.281062,9.8866119 A 7.2810616,7.2231603 0 0 1 12.014223,17.109758 7.2810616,7.2231603 0 0 1 4.7189939,9.9148313 7.2810616,7.2231603 0 0 1 11.957332,2.6635757 7.2810616,7.2231603 0 0 1 19.280839,9.8301736" />
 </svg>
