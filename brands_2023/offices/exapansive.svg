@@ -8,6 +8,9 @@
    sodipodi:docname="exapansive.svg"
    xml:space="preserve"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="exapansive.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +42,7 @@
        stroke="none"
        fill="#14bcb4"
        fill-rule="evenodd"
-       style="fill:#ffffff;stroke-width:0.265668" /><path
+       style="stroke-width:0.265668;fill:#ffffff" /><path
        id="path2"
        d=""
        stroke="none"
