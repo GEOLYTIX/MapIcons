@@ -1,51 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 16.000002 16"
-   width="16.000002pt"
-   height="16pt"
+   viewBox="0 0 30 30"
+   width="30pt"
+   height="30pt"
    version="1.1"
-   id="svg198"
+   id="svg133"
+   sodipodi:docname="aldi.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="20.1"
+     inkscape:cx="19.552239"
+     inkscape:cy="20.074627"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg133"
+     inkscape:lockguides="true" />
   <defs
-     id="defs202" />
+     id="defs137" />
   <circle
      vector-effect="non-scaling-stroke"
-     cx="8"
-     cy="8"
+     cx="14.962687"
+     cy="12.380597"
      fill="#fa6e0a"
      id="circle5903"
-     style="isolation:isolate;stroke-width:0.0571429"
-     r="8" />
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="9.1567163" />
   <circle
      vector-effect="non-scaling-stroke"
-     cx="8.0571508"
-     cy="8"
+     cx="14.962687"
+     cy="12.380597"
      fill="#f03d14"
      id="circle5905"
-     style="isolation:isolate;stroke-width:0.0571429"
-     r="7.4285717" />
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="8.5026655" />
   <circle
      vector-effect="non-scaling-stroke"
-     cx="8.0571508"
-     cy="8.0113707"
+     cx="14.962687"
+     cy="12.393612"
      fill="#00b5db"
      id="circle5907"
-     style="isolation:isolate;stroke-width:0.0571429"
-     r="7.0857148" />
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="8.1102352" />
   <ellipse
      vector-effect="non-scaling-stroke"
-     cx="8.0571508"
-     cy="8.0056829"
+     cx="14.962687"
+     cy="12.387102"
      fill="#001f78"
      id="circle5909"
-     style="isolation:isolate;stroke-width:0.0571429"
-     rx="6.7943139"
-     ry="6.7943134" />
+     style="isolation:isolate;stroke-width:0.0654052"
+     rx="7.7767005"
+     ry="7.7767" />
   <g
      id="g5915"
      style="isolation:isolate"
-     transform="matrix(0.05714287,0,0,0.05714285,-3.4285715,-2.6285736)">
+     transform="matrix(0.06540513,0,0,0.06540511,1.9470657,0.54227224)">
     <g
        id="g5913">
       <path
