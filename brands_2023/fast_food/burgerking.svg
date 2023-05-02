@@ -5,10 +5,6 @@
    height="24pt"
    version="1.1"
    id="svg440"
-   sodipodi:docname="burgerkingsvg.svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
@@ -21,26 +17,6 @@
          id="path1094" />
     </clipPath>
   </defs>
-  <sodipodi:namedview
-     id="namedview442"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="17.766058"
-     inkscape:cx="4.6436863"
-     inkscape:cy="13.424475"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg440" />
   <path
      style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.404991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-opacity:1"
      d="m 3.7080798,10.119306 c 0,-4.6826972 3.7148825,-8.4821051 8.2919212,-8.4821051 4.57704,0 8.291919,3.7994079 8.291919,8.4821051 0,4.686922 -3.714879,8.486328 -8.291919,8.486328 -4.5770387,0 -8.2919212,-3.799406 -8.2919212,-8.486328 z m 0,0"
