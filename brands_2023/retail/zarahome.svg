@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 30 30"
+   width="30pt"
+   height="30pt"
+   version="1.1"
+   id="svg133"
+   sodipodi:docname="zarahome.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="28.425693"
+     inkscape:cx="18.838591"
+     inkscape:cy="20.034692"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg133" /><defs
+     id="defs137" /><style
+     type="text/css"
+     id="style233">
+	.st0{fill:#1D1D1B;}
+</style><g
+     id="g251"
+     transform="matrix(0.07822125,0,0,0.07822125,5.1329158,11.367924)">
+	<polygon
+   class="st0"
+   points="135.3,15.8 135.3,0.5 137.6,0.5 137.6,6.6 148.7,6.6 148.7,0.5 151,0.5 151,15.8 148.7,15.8 148.7,8.3 137.6,8.3 137.6,15.8 "
+   id="polygon235" />
+	<path
+   class="st0"
+   d="m 175.4,14.4 c 2.1,0 3.9,-0.6 5.2,-1.8 1.4,-1.2 2.1,-2.7 2.1,-4.5 0,-1.8 -0.7,-3.3 -2.1,-4.5 -1.4,-1.2 -3.1,-1.8 -5.2,-1.8 -2.1,0 -3.9,0.6 -5.2,1.8 -1.4,1.2 -2.1,2.7 -2.1,4.5 0,1.8 0.7,3.3 2.1,4.5 1.4,1.3 3.1,1.8 5.2,1.8 z m 0,1.8 c -2.8,0 -5.1,-0.8 -7,-2.3 -1.8,-1.5 -2.7,-3.4 -2.7,-5.8 0,-2.3 0.9,-4.3 2.8,-5.8 1.8,-1.5 4.2,-2.3 7,-2.3 2.8,0 5.1,0.8 7,2.3 1.8,1.5 2.8,3.4 2.8,5.8 0,2.3 -0.9,4.2 -2.8,5.8 -1.9,1.6 -4.3,2.3 -7.1,2.3 z"
+   id="path237" />
+	<polygon
+   class="st0"
+   points="199.6,15.8 199.6,0.5 201.8,0.5 209.4,9.9 217,0.5 219.1,0.5 219.1,15.8 216.8,15.8 216.8,3.9 209.4,12.9 201.9,3.9 201.9,15.8 "
+   id="polygon239" />
+	<polygon
+   class="st0"
+   points="235.1,15.8 235.1,0.5 249.9,0.5 249.9,2.3 237.4,2.3 237.4,6.8 244.9,6.8 244.9,8.5 237.4,8.5 237.4,14.1 250.6,14.1 250.6,15.8 "
+   id="polygon241" />
+	<polygon
+   class="st0"
+   points="16.9,0.5 4.5,14.1 16.9,14.1 16.9,15.8 0,15.8 12.7,2.3 1.1,2.3 1.1,0.5 "
+   id="polygon243" />
+	<path
+   class="st0"
+   d="m 34.3,9.9 h 8.3 L 38.4,3.1 Z m -6,5.9 9.2,-15.3 h 1.9 l 9.3,15.3 H 46.2 L 43.7,11.7 H 33.2 l -2.5,4.1 z"
+   id="path245" />
+	<path
+   class="st0"
+   d="m 64.2,7.3 h 8.3 c 1.2,0 2.1,-0.2 2.7,-0.6 0.6,-0.4 0.9,-1 0.9,-1.9 C 76.1,4 75.8,3.4 75.2,2.9 74.6,2.5 73.7,2.2 72.6,2.2 h -8.4 z m -2.3,8.5 V 0.5 h 10.8 c 1.8,0 3.3,0.4 4.3,1.1 1,0.8 1.6,1.8 1.6,3.1 0,1.1 -0.4,2.1 -1.2,2.8 -0.8,0.7 -1.9,1.3 -3.2,1.5 l 4.7,6.7 H 76.3 L 71.6,9 h -7.3 v 6.7 z"
+   id="path247" />
+	<path
+   class="st0"
+   d="m 95.3,9.9 h 8.3 L 99.5,3.1 Z m -6,5.9 9.2,-15.3 h 1.9 l 9.3,15.3 h -2.5 l -2.6,-4.1 H 94.2 l -2.5,4.1 z"
+   id="path249" />
+</g></svg>
