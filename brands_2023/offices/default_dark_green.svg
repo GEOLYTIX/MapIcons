@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 18.040002 22"
+   width="18.040003pt"
+   height="22pt"
+   version="1.1"
+   id="svg456"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs450"><clipPath
+       id="_clipPath_mEA9fIJKaBTsdsGlZvmHl6qMcpQzoLim"><rect
+         width="18.040001"
+         height="22"
+         id="rect447"
+         x="0"
+         y="0" /></clipPath></defs><g
+     clip-path="url(#_clipPath_mEA9fIJKaBTsdsGlZvmHl6qMcpQzoLim)"
+     id="g454"><path
+       d="M 15.239,15.551 C 16.916,13.836 18.04,11.588 18.04,9.02 18.04,4.042 13.998,0 9.02,0 4.042,0 0,4.042 0,9.02 c 0,2.6 1.027,4.767 2.864,6.59 v 0 L 8.653,22 15.25,15.551 Z"
+       fill="#015d4d"
+       id="path452" /></g><g
+     style="fill:#ffffff"
+     id="g622"
+     transform="matrix(0.25196,0,0,0.25196,1.7393387,2.0424062)"><g
+       id="g608"
+       style="fill:#ffffff">
+	<g
+   id="g606"
+   style="fill:#ffffff">
+		<path
+   d="M 55.007,12 H 2.993 C 1.343,12 0,13.348 0,15.005 v 0.99 C 0,17.652 1.343,19 2.993,19 H 3 v 11 9.992 C 3,41.65 4.343,43 5.994,43 H 6 v 3 h 2 v -3 h 8 v 3 h 2 v -3 h 0.006 C 19.657,43 21,41.65 21,39.992 V 30 19 h 16 v 11 9.992 C 37,41.65 38.343,43 39.994,43 H 40 v 3 h 2 v -3 h 8 v 3 h 2 v -3 h 0.006 C 53.657,43 55,41.65 55,39.992 V 30 19 h 0.007 C 56.657,19 58,17.652 58,15.995 v -0.99 C 58,13.348 56.657,12 55.007,12 Z M 19,39.992 C 19,40.548 18.554,41 18.006,41 H 18 16 8 6 5.994 C 5.446,41 5,40.548 5,39.992 V 31 H 19 Z M 19,29 H 5 V 19 H 19 Z M 53,39.992 C 53,40.548 52.554,41 52.006,41 H 52 50 42 40 39.994 C 39.446,41 39,40.548 39,39.992 V 31 H 53 Z M 53,29 H 39 V 19 H 53 Z M 56,15.995 C 56,16.549 55.555,17 55.007,17 H 54 38 20 4 2.993 C 2.445,17 2,16.549 2,15.995 v -0.99 C 2,14.451 2.445,14 2.993,14 H 55.007 C 55.555,14 56,14.451 56,15.005 Z"
+   id="path596"
+   style="fill:#ffffff" />
+		<rect
+   x="10.664"
+   y="21"
+   width="2"
+   height="2"
+   id="rect598"
+   style="fill:#ffffff" />
+		<rect
+   x="10.664"
+   y="32.914001"
+   width="2"
+   height="2"
+   id="rect600"
+   style="fill:#ffffff" />
+		<rect
+   x="45"
+   y="21"
+   width="2"
+   height="2"
+   id="rect602"
+   style="fill:#ffffff" />
+		<rect
+   x="45"
+   y="32.914001"
+   width="2"
+   height="2"
+   id="rect604"
+   style="fill:#ffffff" />
+	</g>
+</g></g></svg>
