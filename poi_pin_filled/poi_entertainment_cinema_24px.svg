@@ -43,19 +43,6 @@
              id="feGaussianBlur7" />
         </filter>
       </defs>
-      <g
-         filter="url(#z50KQDkU86oDZRL9edggdv7Z9awwCCZl)"
-         id="g14">
-        <ellipse
-           vector-effect="non-scaling-stroke"
-           cx="198.91362"
-           cy="490"
-           rx="65"
-           ry="20.166666"
-           fill="#a2a2a2"
-           fill-opacity="0.7"
-           id="ellipse12" />
-      </g>
       <defs
          id="defs19">
         <filter
