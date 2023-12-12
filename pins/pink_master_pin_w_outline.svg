@@ -5,8 +5,32 @@
    height="24pt"
    version="1.1"
    id="svg4"
+   sodipodi:docname="pink_master_pin_w_outline.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="25.125"
+     inkscape:cx="9.8905473"
+     inkscape:cy="16"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
   <defs
      id="defs8" />
   <path
@@ -14,4 +38,9 @@
      fill="#ff69b4"
      id="path2"
      style="stroke:#000000;stroke-opacity:1" />
+  <path
+     style="fill:#bb1100;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.0955224;paint-order:markers stroke fill"
+     d="M 12.039445,25.804897 C 10.113272,23.678279 8.3160066,21.703689 8.0455205,21.416921 6.0778121,19.330759 5.0430598,17.224602 4.729129,14.666667 c -0.066089,-0.538501 -0.066089,-2.048564 0,-2.587065 0.4546421,-3.7044645 2.5923788,-6.8740606 5.849542,-8.6730456 1.236008,-0.6826669 2.648754,-1.1305706 4.167598,-1.3213144 0.511034,-0.064178 1.99243,-0.064513 2.507462,-5.674e-4 2.640868,0.327888 4.932221,1.4400905 6.76717,3.2847234 0.584506,0.5875915 0.917649,0.9904599 1.368958,1.6554776 0.569138,0.838642 0.998508,1.6900613 1.316367,2.6102942 1.299318,3.7616382 0.568036,7.7332552 -2.01428,10.9396262 -0.457587,0.56817 -0.459939,0.570537 -4.45314,4.482453 -1.882587,1.844265 -3.709613,3.636938 -4.060058,3.983718 l -0.637171,0.630508 z"
+     id="path1813"
+     transform="scale(0.75)" />
 </svg>
