@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
+   version="1.1"
+   id="svg200"
+   sodipodi:docname="coles_24px_grey.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview202"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="23.1875"
+     inkscape:cx="14.857143"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="1609"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g198" />
+  <defs
+     id="defs171">
+    <clipPath
+       id="_clipPath_uOmnpnwUW3WZXKMe4psR46eManu7dCO4">
+      <rect
+         width="24"
+         height="24"
+         id="rect168" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_uOmnpnwUW3WZXKMe4psR46eManu7dCO4)"
+     id="g198">
+    <clipPath
+       id="_clipPath_Edvap3D0FNs05dt8uhWqlzCXl3konLV4">
+      <rect
+         x="0"
+         y="0"
+         width="24"
+         height="24"
+         transform="matrix(1,0,0,1,0,0)"
+         fill="rgb(255,255,255)"
+         id="rect173" />
+    </clipPath>
+    <g
+       clip-path="url(#_clipPath_Edvap3D0FNs05dt8uhWqlzCXl3konLV4)"
+       id="g180"
+       style="fill:#b3b3b3">
+      <g
+         id="g178"
+         style="fill:#b3b3b3">
+        <path
+           d=" M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 L 18.219 16.551 Z "
+           fill="rgb(231,32,36)"
+           id="path176"
+           style="fill:#b3b3b3" />
+      </g>
+    </g>
+    <rect
+       x="2.98"
+       y="1"
+       width="18.04"
+       height="22"
+       transform="matrix(1,0,0,1,0,0)"
+       fill="none"
+       id="rect182" />
+    <g
+       id="g196"
+       style="fill:#ea0000;fill-opacity:1">
+      <g
+         id="g194"
+         style="fill:#ea0000;fill-opacity:1">
+        <path
+           d=" M 7.735 10.521 C 7.529 11.373 6.781 11.999 5.893 12 C 4.847 11.999 3.998 11.122 4 10.039 C 3.998 8.957 4.847 8.08 5.893 8.08 C 6.777 8.08 7.523 8.716 7.735 9.561 L 6.965 9.561 C 6.789 9.139 6.381 8.846 5.909 8.848 C 5.271 8.846 4.754 9.379 4.754 10.039 C 4.754 10.699 5.271 11.234 5.909 11.234 C 6.381 11.234 6.789 10.941 6.965 10.521"
+           fill-rule="evenodd"
+           fill="rgb(255,255,255)"
+           id="path184"
+           style="fill:#ea0000;fill-opacity:1" />
+        <path
+           d=" M 9.764 8.08 C 8.718 8.079 7.869 8.957 7.866 10.038 C 7.869 11.122 8.718 11.998 9.764 11.999 C 10.812 11.998 11.66 11.122 11.662 10.038 C 11.66 8.957 10.812 8.079 9.764 8.08 Z  M 9.764 11.221 C 9.133 11.222 8.621 10.692 8.621 10.038 C 8.621 9.386 9.133 8.856 9.764 8.855 C 10.396 8.856 10.909 9.386 10.909 10.038 C 10.909 10.692 10.396 11.222 9.764 11.221 Z "
+           fill-rule="evenodd"
+           fill="rgb(255,255,255)"
+           id="path186"
+           style="fill:#ea0000;fill-opacity:1" />
+        <path
+           d=" M 11.901 7 L 11.901 11.999 L 12.733 11.999 L 12.733 7 L 11.901 7 Z "
+           fill="rgb(255,255,255)"
+           id="path188"
+           style="fill:#ea0000;fill-opacity:1" />
+        <path
+           d=" M 14.921 11.246 C 14.339 11.244 13.854 10.802 13.853 10.269 C 13.854 10.249 13.855 10.23 13.857 10.212 L 16.584 10.212 C 16.585 8.658 15.808 8.073 14.853 8.073 C 14.116 8.073 13.05 8.563 13.052 10.017 C 13.05 11.222 13.896 12 14.853 11.999 C 15.677 12 16.375 11.485 16.547 10.636 L 15.782 10.636 C 15.664 11.023 15.331 11.244 14.921 11.246 Z  M 14.841 8.765 C 15.321 8.765 15.718 9.111 15.777 9.548 L 13.922 9.544 L 13.902 9.553 C 13.956 9.11 14.356 8.765 14.841 8.765 Z "
+           fill-rule="evenodd"
+           fill="rgb(255,255,255)"
+           id="path190"
+           style="fill:#ea0000;fill-opacity:1" />
+        <path
+           d=" M 18.92 9.313 L 19.641 9.313 C 19.641 9.313 19.673 8.646 19.135 8.312 C 19.135 8.312 18.88 8.072 18.17 8.074 C 18.17 8.074 17.455 8.064 17.129 8.399 C 17.129 8.399 16.793 8.661 16.791 9.177 C 16.791 9.177 16.731 9.674 17.202 9.985 C 17.202 9.985 17.586 10.174 17.956 10.286 C 17.956 10.286 18.556 10.454 18.657 10.517 C 18.657 10.517 19.173 10.763 18.864 11.074 C 18.864 11.074 18.726 11.274 18.258 11.275 C 18.258 11.275 17.439 11.305 17.44 10.661 L 16.708 10.661 C 16.708 10.661 16.638 11.346 17.202 11.728 C 17.202 11.728 17.563 11.982 18.262 11.975 C 18.262 11.975 18.934 11.967 19.291 11.703 C 19.291 11.703 19.75 11.361 19.749 10.78 C 19.749 10.78 19.804 10.183 19.079 9.85 C 19.079 9.85 18.347 9.594 18.161 9.544 C 18.161 9.544 17.439 9.379 17.583 9.004 C 17.583 9.004 17.617 8.749 18.194 8.749 C 18.194 8.749 18.603 8.742 18.781 8.98 C 18.781 8.98 18.903 9.124 18.92 9.313 Z "
+           fill-rule="evenodd"
+           fill="rgb(255,255,255)"
+           id="path192"
+           style="fill:#ea0000;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
