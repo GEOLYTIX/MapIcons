@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="3.44 2.757 16.752 15.939" style="isolation:isolate" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="_clipPath_jQvNXpeaWQ3UINbhBpP0xxb8sZJ9Buta">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <ellipse style="stroke: rgb(0, 0, 0); paint-order: stroke; fill: rgb(1, 1, 101); stroke-width: 0.3px;" cx="11.842" cy="10.713" rx="8.099" ry="7.732" transform="matrix(1, 0, 0, 1, 0, 2.220446049250313e-16)"/>
+  <g clip-path="url(#_clipPath_jQvNXpeaWQ3UINbhBpP0xxb8sZJ9Buta)" transform="matrix(1, 0, 0, 1, -0.28761401772499084, 0.958607017993927)">
+    <path d=" M 9.968 11.909 C 9.338 11.909 9.035 11.407 9.193 10.827 C 9.52 9.624 11.619 7.841 13.049 7.841 C 14.093 7.841 14.013 8.807 13.402 9.632 L 13.064 10.019 C 11.851 11.251 10.727 11.909 9.968 11.909 Z  M 15.081 3.797 C 13.255 3.798 11.245 4.954 9.982 6.049 L 10.082 6.198 C 12.042 4.776 14.761 3.851 15.511 5.239 C 15.907 5.97 15.235 7.448 14.289 8.616 C 14.515 8.1 14.365 7.11 13.046 7.11 C 10.852 7.11 6.534 10.118 6.534 13.197 C 6.534 14.43 7.361 15.234 8.722 15.234 C 12.365 15.234 17.306 9.052 17.306 5.946 C 17.306 4.849 16.697 3.797 15.081 3.797 Z " style="fill: rgb(255, 255, 255);"/>
+  </g>
+</svg>
