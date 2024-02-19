@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24px" height="24px" viewBox="151.532 45.951 252.188 243.436" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);" cx="277.353" cy="167.396" rx="119.145" ry="116.956"/>
+  <path d="M 235.777 112.284 L 242.008 131.801 L 260.981 132.222 L 245.859 144.705 L 251.354 164.481 L 235.777 152.68 L 220.2 164.481 L 225.695 144.705 L 210.573 132.222 L 229.546 131.801 Z" style="stroke: rgb(0, 0, 0); transform-origin: 235.777px 138.382px;" transform="matrix(0.946089029312, 0.323907017708, -0.323907017708, 0.946089029312, 14.413666015605, 4.640620615142)" bx:shape="star 235.777 141.138 26.501 28.854 0.4 5 1@766114af"/>
+  <polyline style="stroke: rgb(0, 0, 0); fill: rgb(4, 4, 4);" points="344.091 148.806 278.056 205.688 251.641 205.136 316.026 147.701"/>
+  <polyline style="stroke: rgb(0, 0, 0);" points="313.994 148.91 263.677 85.003 287.036 83.698 344.093 149.344"/>
+  <text style="font-family: 'Trebuchet MS'; font-size: 15.3px; font-weight: 700; white-space: pre;" transform="matrix(2.419139862060547, 0, 0, 1.9198930263519287, -323.73590087890625, -217.16793823242185)" x="211.16" y="234.683">CONVERSE<tspan x="211.16000366210938" dy="1em">​</tspan><tspan x="211.16000366210938" dy="1em">​</tspan></text>
+</svg>
