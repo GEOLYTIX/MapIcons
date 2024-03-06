@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
+   version="1.1"
+   id="svg125"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <clipPath
+       id="_clipPath_xFc6V8lMZoi7yjKhfGJ1b4O6w0ERCm5i">
+      <rect
+         width="24"
+         height="24"
+         id="rect2" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_xFc6V8lMZoi7yjKhfGJ1b4O6w0ERCm5i)"
+     id="g123">
+    <clipPath
+       id="_clipPath_pxRrWM1Lwk8KYCNbrF44RWw677ZSYLUf">
+      <rect
+         x="0"
+         y="0"
+         width="24"
+         height="24"
+         transform="matrix(1,0,0,1,0,0)"
+         fill="rgb(255,255,255)"
+         id="rect7" />
+    </clipPath>
+    <clipPath
+       id="_clipPath_WjrkC1NrvRJ16bvcAmuIREu2yzFz8U1N">
+      <rect
+         x="2.98"
+         y="1"
+         width="18.04"
+         height="22"
+         transform="matrix(1,0,0,1,0,0)"
+         fill="rgb(255,255,255)"
+         id="rect59" />
+    </clipPath>
+    <g
+       clip-path="url(#_clipPath_WjrkC1NrvRJ16bvcAmuIREu2yzFz8U1N)"
+       id="g66">
+      <g
+         id="g64">
+        <path
+           d=" M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z "
+           fill="rgb(44,46,53)"
+           id="path62"
+           style="fill:#2c2e35;fill-opacity:0.48453608" />
+      </g>
+    </g>
+    <clipPath
+       id="_clipPath_qLP4s47LAn84YiVEDrYrHJtZIPtpM8aG">
+      <rect
+         x="0"
+         y="0"
+         width="24"
+         height="24"
+         transform="matrix(1,0,0,1,0,0)"
+         fill="rgb(255,255,255)"
+         id="rect68" />
+    </clipPath>
+    <g
+       clip-path="url(#_clipPath_qLP4s47LAn84YiVEDrYrHJtZIPtpM8aG)"
+       id="g121">
+      <g
+         id="g119">
+        <clipPath
+           id="_clipPath_E6ejWOga2qa5cHiYZAXJFiyZak8Vb5ys">
+          <rect
+             x="0"
+             y="0"
+             width="24"
+             height="24"
+             transform="matrix(1,0,0,1,0,0)"
+             fill="rgb(255,255,255)"
+             id="rect71" />
+        </clipPath>
+        <g
+           clip-path="url(#_clipPath_E6ejWOga2qa5cHiYZAXJFiyZak8Vb5ys)"
+           id="g117">
+          <g
+             id="g115">
+            <g
+               id="g113">
+              <clipPath
+                 id="_clipPath_ByUmJcVovjCwTOVu5R7NtRurnIR1gg1G">
+                <rect
+                   x="2.769"
+                   y="0"
+                   width="18.462"
+                   height="24"
+                   transform="matrix(1,0,0,1,0,0)"
+                   fill="rgb(255,255,255)"
+                   id="rect74" />
+              </clipPath>
+              <g
+                 clip-path="url(#_clipPath_ByUmJcVovjCwTOVu5R7NtRurnIR1gg1G)"
+                 id="g111">
+                <g
+                   id="g109">
+                  <g
+                     id="g107">
+                    <g
+                       id="g105">
+                      <circle
+                         vector-effect="non-scaling-stroke"
+                         cx="12"
+                         cy="9.900000000000002"
+                         r="6.700000000000002"
+                         fill="rgb(209,209,209)"
+                         id="circle77" />
+                      <ellipse
+                         vector-effect="non-scaling-stroke"
+                         cx="12.011538461538457"
+                         cy="9.821922127127984"
+                         rx="6.25"
+                         ry="6.199999999999999"
+                         fill="rgb(255,255,255)"
+                         id="ellipse79" />
+                      <clipPath
+                         id="_clipPath_LBrzQfel8BSksngX2Ghu1KMSYOHuQYoN">
+                        <rect
+                           x="6.577"
+                           y="6.164"
+                           width="10.394"
+                           height="7.349"
+                           transform="matrix(1,0,0,1,0,0)"
+                           fill="rgb(255,255,255)"
+                           id="rect81" />
+                      </clipPath>
+                      <g
+                         clip-path="url(#_clipPath_LBrzQfel8BSksngX2Ghu1KMSYOHuQYoN)"
+                         id="g103">
+                        <g
+                           id="g101">
+                          <g
+                             id="g99">
+                            <g
+                               id="g97">
+                              <clipPath
+                                 id="_clipPath_xSwY8Fg0qhpbC9DKBtMLTmAJYvNNmuLz">
+                                <path
+                                   d=" M 6.773 6.506 L 17.167 6.506 L 17.167 13.855 L 6.773 13.855 L 6.773 6.506 L 6.773 6.506 Z "
+                                   fill="rgb(255,255,255)"
+                                   id="path84" />
+                              </clipPath>
+                              <g
+                                 clip-path="url(#_clipPath_xSwY8Fg0qhpbC9DKBtMLTmAJYvNNmuLz)"
+                                 id="g95">
+                                <g
+                                   id="g93">
+                                <g
+                                   id="g91">
+                                <g
+                                   id="g89">
+                                <path
+                                   d=" M 15.979 8.722 L 15.736 8.821 C 15.639 8.475 15.366 8.253 14.996 8.253 C 14.593 8.253 14.329 8.48 14.329 8.865 C 14.329 9.689 16 9.253 16 10.415 C 16 10.97 15.605 11.358 15.018 11.358 C 14.471 11.358 14.144 11.065 13.917 10.595 L 14.144 10.439 C 14.295 10.8 14.572 11.078 14.992 11.078 C 15.48 11.078 15.731 10.827 15.731 10.41 C 15.731 9.581 14.06 9.989 14.06 8.859 C 14.06 8.191 14.593 7.973 14.988 7.973 C 15.433 7.973 15.836 8.2 15.979 8.722 Z  M 11.868 8.731 C 11.868 8.916 11.977 9.073 12.216 9.363 C 12.497 9.178 12.653 8.982 12.653 8.731 C 12.653 8.484 12.506 8.29 12.254 8.29 C 12.019 8.29 11.868 8.499 11.868 8.731 Z  M 12.149 9.713 C 11.767 9.95 11.599 10.139 11.599 10.434 C 11.599 10.771 11.868 11.051 12.212 11.051 C 12.523 11.051 12.682 10.89 12.855 10.576 L 12.149 9.713 L 12.149 9.713 Z  M 13.51 11.373 L 13.022 10.785 C 12.846 11.098 12.607 11.325 12.212 11.325 C 11.704 11.325 11.33 10.927 11.33 10.439 C 11.33 10.031 11.553 9.78 11.981 9.504 C 11.738 9.229 11.604 9.002 11.604 8.731 C 11.604 8.338 11.897 8.025 12.254 8.025 C 12.632 8.025 12.913 8.338 12.913 8.731 C 12.913 9.11 12.649 9.367 12.384 9.562 L 12.988 10.306 L 13.346 9.652 L 13.56 9.802 L 13.165 10.529 L 13.708 11.179 L 13.51 11.373 L 13.51 11.373 Z  M 10.658 8.015 L 10.658 11.325 L 10.389 11.325 L 10.389 8.623 L 9.423 10.738 L 9.235 10.738 L 8.269 8.627 L 8.269 11.325 L 8 11.325 L 8 8.015 L 8.282 8.015 L 9.331 10.302 L 10.381 8.015 L 10.658 8.015 L 10.658 8.015 Z "
+                                   fill="rgb(44,46,53)"
+                                   vector-effect="non-scaling-stroke"
+                                   stroke-width="0.1"
+                                   stroke="rgb(44,46,53)"
+                                   stroke-linejoin="miter"
+                                   stroke-linecap="butt"
+                                   stroke-miterlimit="4"
+                                   id="path87"
+                                   style="fill:#2c2e35;fill-opacity:0.57216495" />
+                                </g>
+                                </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
