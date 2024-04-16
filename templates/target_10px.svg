@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Optional parameter: fillColor -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 12 12" width="12pt" height="12pt"><defs><clipPath id="_clipPath_xPpJb30c5F99TbTrsUXbILwM2CbnWTXX"><rect width="12" height="12"/></clipPath></defs><g clip-path="url(#_clipPath_xPpJb30c5F99TbTrsUXbILwM2CbnWTXX)"><circle vector-effect="non-scaling-stroke" cx="6.134210490467171" cy="6.218665893429482" r="5" fill="rgb(232,232,232)"/><circle vector-effect="non-scaling-stroke" cx="5.851735015772858" cy="5.794952681388009" r="5" fill="fillColor"/></g></svg>
