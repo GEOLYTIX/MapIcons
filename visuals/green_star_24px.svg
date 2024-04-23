@@ -1,1 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 24 24" width="24pt" height="24pt"><defs><clipPath id="_clipPath_BHidspDCB1xMvmfkusyEvAR2pwJd1O5m"><rect width="24" height="24"/></clipPath></defs><g clip-path="url(#_clipPath_BHidspDCB1xMvmfkusyEvAR2pwJd1O5m)"><path d=" M 12 0.587 L 15 9 L 24 9.306 L 17 15 L 19.416 23.413 L 12 19 L 4.583 23.413 L 7 15 L 0 9.306 L 9 9 L 12 0.587 Z " fill="rgb(76,158,69)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24pt" height="24pt">
+  <path d="M12 1L15 9L24 9L17 15L19.416 23.413L12 19L4.583 23.413L7 15L0 9.306L9 9L12 1Z" fill="#4C9E45"/>
+</svg>
