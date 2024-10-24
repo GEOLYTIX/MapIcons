@@ -57,7 +57,7 @@
      d="M 21.443006,21.612491 C 23.802736,19.229014 25.38433,16.104787 25.38433,12.535828 25.38433,5.6174962 19.696779,0 12.692165,0 5.6875539,0 0,5.6174962 0,12.535828 c 0,3.613431 1.4451059,6.62509 4.0299738,9.158658 v 0 l 8.1457812,8.880703 9.282728,-8.962698 z"
      fill="#ff69b4"
      id="path2"
-     style="stroke-width:1.39843;fill:#e21e2c;fill-opacity:1" />
+     style="stroke-width:1.39843;fill:#999999;fill-opacity:1" />
   <ellipse
      style="fill:#e21e2c;fill-opacity:0.0137457;stroke:#ffffff;stroke-width:0.409783;stroke-dasharray:none;stroke-opacity:1"
      id="path1"
