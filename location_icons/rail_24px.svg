@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
+   version="1.1"
+   id="svg3382"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3342">
+    <clipPath
+       id="_clipPath_1eUfTD7fULqIUeDYF9g3kC7lXyE3rZjK">
+      <rect
+         width="24"
+         height="24"
+         id="rect3339" />
+    </clipPath>
+    <clipPath
+       id="_clipPath_ZZvjQkmvAqfUNcZQ85dUECtphdt2dGDB">
+      <rect
+         x="0"
+         y="0"
+         width="24"
+         height="24"
+         fill="#ffffff"
+         id="rect2801" />
+    </clipPath>
+    <clipPath
+       id="_clipPath_zHrbakkaD4BnR6wn6HVnibBcsWSk5iiA">
+      <rect
+         x="2.7690001"
+         y="0"
+         width="18.462"
+         height="24"
+         fill="#ffffff"
+         id="rect2808" />
+    </clipPath>
+    <clipPath
+       id="_clipPath_rEcfa6ZrmZTZBTNSXZZf78fieNYxNv8v">
+      <rect
+         x="2.7690001"
+         y="0"
+         width="18.462"
+         height="24"
+         fill="#ffffff"
+         id="rect2821" />
+    </clipPath>
+    <clipPath
+       id="_clipPath_Nzpd7CTErWWmDZvPLcKUpqY9zHmXkBSa">
+      <rect
+         x="2.7690001"
+         y="0"
+         width="18.462"
+         height="24"
+         fill="#ffffff"
+         id="rect2834" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_1eUfTD7fULqIUeDYF9g3kC7lXyE3rZjK)"
+     id="g3380"
+     transform="translate(0.57901086,0.43425815)">
+    <clipPath
+       id="_clipPath_Qy454BnxLo3L5EDRCvOV6UGyOApyHYlm">
+      <rect
+         x="2.7690001"
+         y="0"
+         width="18.462"
+         height="24"
+         fill="#ffffff"
+         id="rect3344" />
+    </clipPath>
+    <g
+       clip-path="url(#_clipPath_Qy454BnxLo3L5EDRCvOV6UGyOApyHYlm)"
+       id="g3378">
+      <g
+         id="g3376">
+        <g
+           id="g3372"
+           style="fill:#00824c;fill-opacity:1">
+          <g
+             filter="url(#w6TcZWCuv1RCxWO7O2oVfkrw2vTydHVc)"
+             id="g3349"
+             style="fill:#00824c;fill-opacity:1">
+            <ellipse
+               vector-effect="non-scaling-stroke"
+               cx="11.94986"
+               cy="22.615385"
+               rx="3"
+               ry="0.93076921"
+               fill="rgb(162,162,162)"
+               fill-opacity="0.7"
+               id="ellipse3347"
+               style="fill:#00824c;fill-opacity:1" />
+          </g>
+          <defs
+             id="defs3354">
+            <filter
+               id="w6TcZWCuv1RCxWO7O2oVfkrw2vTydHVc"
+               x="-1.7174437"
+               y="-5.5355624"
+               width="4.4348873"
+               height="12.071125"
+               filterUnits="objectBoundingBox"
+               color-interpolation-filters="sRGB">
+              <feGaussianBlur
+                 stdDeviation="4.293609062839028"
+                 id="feGaussianBlur3351" />
+            </filter>
+          </defs>
+          <g
+             filter="url(#5lxiSsWyCtkVHKwNj1QOEkYlTbuI16HV)"
+             id="g3365"
+             style="fill:#00824c;fill-opacity:1">
+            <mask
+               id="_mask_JTmd2T0B1TVsuNi7gnVODoahu5hBSRxk"
+               x="-200%"
+               y="-200%"
+               width="400%"
+               height="400%">
+              <rect
+                 x="-200%"
+                 y="-200%"
+                 width="400%"
+                 height="400%"
+                 style="fill:#ffffff"
+                 id="rect3356" />
+              <path
+                 d="m 3.642,8.489 c 0,-4.641 3.732,-8.397 8.33,-8.397 4.604,0 8.336,3.756 8.336,8.397 0,2.491 -1.082,4.736 -2.799,6.274 -0.095,0.082 -3.367,3.15 -5.558,7.852 C 11.126,19.288 7.929,16.09 6.461,14.783 4.731,13.239 3.642,10.993 3.642,8.489 Z"
+                 fill="#000000"
+                 stroke="none"
+                 id="path3358" />
+            </mask>
+            <path
+               d="m 3.642,8.489 c 0,-4.641 3.732,-8.397 8.33,-8.397 4.604,0 8.336,3.756 8.336,8.397 0,2.491 -1.082,4.736 -2.799,6.274 -0.095,0.082 -3.367,3.15 -5.558,7.852 C 11.126,19.288 7.929,16.09 6.461,14.783 4.731,13.239 3.642,10.993 3.642,8.489 Z"
+               fill="rgb(60,145,230)"
+               id="path3361"
+               style="fill:#00824c;fill-opacity:1" />
+            <path
+               d="m 3.642,8.489 c 0,-4.641 3.732,-8.397 8.33,-8.397 4.604,0 8.336,3.756 8.336,8.397 0,2.491 -1.082,4.736 -2.799,6.274 -0.095,0.082 -3.367,3.15 -5.558,7.852 C 11.126,19.288 7.929,16.09 6.461,14.783 4.731,13.239 3.642,10.993 3.642,8.489 Z"
+               fill="rgb(60,145,230)"
+               mask="url(#_mask_JTmd2T0B1TVsuNi7gnVODoahu5hBSRxk)"
+               vector-effect="non-scaling-stroke"
+               stroke-width="0.185"
+               stroke="#ffffff"
+               stroke-opacity="1"
+               stroke-linejoin="miter"
+               stroke-linecap="butt"
+               stroke-miterlimit="4"
+               id="path3363"
+               style="fill:#00824c;fill-opacity:1" />
+          </g>
+          <defs
+             id="defs3370">
+            <filter
+               id="5lxiSsWyCtkVHKwNj1QOEkYlTbuI16HV"
+               x="-0.067380664"
+               y="-0.04985864"
+               width="1.1347613"
+               height="1.1078833"
+               filterUnits="objectBoundingBox"
+               color-interpolation-filters="sRGB">
+              <feGaussianBlur
+                 stdDeviation="0.42936090628390283"
+                 id="feGaussianBlur3367" />
+            </filter>
+          </defs>
+        </g>
+        <g
+           clip-path="url(#_clipPath_ZZvjQkmvAqfUNcZQ85dUECtphdt2dGDB)"
+           id="g2851"
+           style="isolation:isolate"
+           transform="matrix(0.96984319,0,0,0.88178529,1.6646562,-1.1145959)">
+          <g
+             id="g2849"
+             transform="matrix(1.3246268,0,0,1.2927496,-4.8656716,-1.4774282)">
+            <clipPath
+               id="clipPath4249">
+              <rect
+                 x="2.7690001"
+                 y="0"
+                 width="18.462"
+                 height="24"
+                 fill="#ffffff"
+                 id="rect4247" />
+            </clipPath>
+            <clipPath
+               id="clipPath4258">
+              <rect
+                 x="2.7690001"
+                 y="0"
+                 width="18.462"
+                 height="24"
+                 fill="#ffffff"
+                 id="rect4256" />
+            </clipPath>
+            <clipPath
+               id="clipPath4267">
+              <rect
+                 x="2.7690001"
+                 y="0"
+                 width="18.462"
+                 height="24"
+                 fill="#ffffff"
+                 id="rect4265" />
+            </clipPath>
+            <g
+               clip-path="url(#_clipPath_Nzpd7CTErWWmDZvPLcKUpqY9zHmXkBSa)"
+               id="g2847">
+              <g
+                 id="g2845">
+                <g
+                   id="g2843">
+                  <g
+                     id="g2841">
+                    <path
+                       d="m 11.716962,5.5738571 c -1.537601,0 -3.0752014,0.2326287 -3.0752014,1.8673508 V 11.87506 c 0,0.901437 0.6039013,1.634722 1.3454006,1.634722 l -0.5766004,0.700415 v 0.232629 h 0.8572552 l 0.7688,-0.933044 h 1.449146 l 0.767708,0.933044 h 0.7688 v -0.232629 l -0.5766,-0.700415 c 0.742591,0 1.345401,-0.733285 1.345401,-1.634722 V 7.4412079 c 0,-1.6347221 -1.375979,-1.8673508 -3.074109,-1.8673508 z M 9.9871612,12.575476 c -0.3188776,0 -0.5766004,-0.312279 -0.5766004,-0.700416 0,-0.386871 0.2577228,-0.699151 0.5766004,-0.699151 0.3188768,0 0.5765998,0.31228 0.5765998,0.699151 0,0.388137 -0.257723,0.700416 -0.5765998,0.700416 z M 11.332562,9.3085589 H 9.4105608 v -1.867351 h 1.9220012 z m 0.7688,0 v -1.867351 h 1.920908 v 1.867351 z m 1.344308,3.2669171 c -0.318878,0 -0.575509,-0.312279 -0.575509,-0.700416 0,-0.386871 0.256631,-0.699151 0.575509,-0.699151 0.319969,0 0.5766,0.31228 0.5766,0.699151 0,0.388137 -0.256631,0.700416 -0.5766,0.700416 z"
+                       fill="#2c2e35"
+                       id="path2837"
+                       style="fill:#fffffe;fill-opacity:1;stroke-width:1.17502" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
