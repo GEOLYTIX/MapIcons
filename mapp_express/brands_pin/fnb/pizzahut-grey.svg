@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 25.384331 30.575188"
-   width="25.384331pt"
-   height="30.575188pt"
+   viewBox="0 0 26.28233 31.66716"
+   width="26.28233pt"
+   height="31.66716pt"
    version="1.1"
    id="svg133"
    xmlns="http://www.w3.org/2000/svg"
@@ -63,21 +63,14 @@
     </clipPath>
   </defs>
   <path
-     d="M 21.443006,21.612491 C 23.802736,19.229014 25.38433,16.104787 25.38433,12.535828 25.38433,5.6174962 19.696779,0 12.692165,0 5.6875539,0 0,5.6174962 0,12.535828 c 0,3.613431 1.4451059,6.62509 4.0299738,9.158658 v 0 l 8.1457812,8.880703 9.282728,-8.962698 z"
+     d="M 21.892006,22.061491 C 24.251736,19.678014 25.83333,16.553787 25.83333,12.984828 25.83333,6.066496 20.145779,0.449 13.141165,0.449 6.136554,0.449 0.449,6.066496 0.449,12.984828 c 0,3.613431 1.445106,6.62509 4.029974,9.158658 v 0 l 8.145781,8.880703 9.282728,-8.962698 z"
      fill="#ff69b4"
-     id="path2"
-     style="fill:#999999;fill-opacity:1;stroke-width:1.39843" />
-  <ellipse
-     style="fill:#e21e2c;fill-opacity:0.0137457;stroke:#ffffff;stroke-width:0.409783;stroke-dasharray:none;stroke-opacity:1"
-     id="path1"
-     cx="12.693246"
-     cy="12.502701"
-     rx="11.989118"
-     ry="11.827887" />
+     id="path2-9"
+     style="fill:#999999;fill-opacity:1;stroke:#999999;stroke-width:0.898;stroke-dasharray:none;stroke-opacity:1" />
   <g
      style="isolation:isolate"
      id="g284"
-     transform="translate(-239.14749,-235.50873)">
+     transform="matrix(1.3463945,0,0,1.3650841,-326.24189,-325.56633)">
     <g
        clip-path="url(#_clipPath_G28UzD0GJHCW8cgeRl2Ny7veMqTXy6Gj)"
        id="g264">
