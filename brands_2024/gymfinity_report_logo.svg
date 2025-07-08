@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    viewBox="0 0 766.843 79.803"
-   width="766.843pt"
-   height="79.803pt"
+   width="766.84302pt"
+   height="79.803001pt"
    version="1.1"
    id="svg1"
    sodipodi:docname="gymfinity_report_logo.svg"
@@ -30,7 +30,15 @@
      inkscape:window-x="-11"
      inkscape:window-y="402"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" /><g
+     inkscape:current-layer="g1"
+     showgrid="false"><inkscape:page
+       x="0"
+       y="0"
+       width="766.84302"
+       height="79.803001"
+       id="page2"
+       margin="0"
+       bleed="0" /></sodipodi:namedview><g
      id="g1"
      transform="matrix(0.04886788,0,0,0.04886788,2.0633029,1.5845695)"><path
        d="m 1,13 c -368.22207,-230.42558 -368.22207,-230.42558 0,0 z"
