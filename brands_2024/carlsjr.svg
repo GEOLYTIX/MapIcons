@@ -7,6 +7,7 @@
    id="svg133"
    xml:space="preserve"
    sodipodi:docname="carlsjr.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +20,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="pt"><inkscape:page
+     inkscape:document-units="pt"
+     inkscape:zoom="17.407625"
+     inkscape:cx="17.521058"
+     inkscape:cy="21.111439"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="1609"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg133"><inkscape:page
        x="0"
        y="0"
        width="26.28233"
@@ -34,7 +44,7 @@
          id="path14" /></clipPath></defs><g
      id="g12"
      clip-path="url(#clipPath16)"
-     transform="matrix(0.03291895,0,0,-0.03103602,4.3748284,22.890857)"><g
+     transform="matrix(0.02480499,0,0,-0.02338617,6.2705495,20.621979)"><g
        id="g22"
        transform="translate(384.4814,228.2077)"><path
          d="m 0,0 177.485,60.807 c 5.237,1.795 8.781,6.664 8.858,12.177 l 0.293,20.908 c -0.064,-4.349 -2.552,-8.666 -7.546,-10.376 l -199.85,-68.41 3.624,-210.487 c 0.187,-10.813 -13.64,-15.546 -20.178,-6.907 l -127.22,168.122 -199.946,-68.587 c -2.136,-0.732 -4.196,-0.78 -6.083,-0.366 l -1.401,0.376 25.702,-9.54 c 5.741,-2.156 12.059,-2.247 17.86,-0.26 l 164.063,56.218 122.294,-161.488 c 14.928,-19.971 45.878,-9.211 45.523,15.677 z"
