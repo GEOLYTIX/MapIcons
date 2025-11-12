@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    xml:space="preserve"
-   inkscape:export-filename="bmbargains_report.png"
+   inkscape:export-filename="bmbargains_report.svg"
    inkscape:export-xdpi="181.42857"
    inkscape:export-ydpi="181.42857"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -36,7 +36,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="g1"
-       transform="matrix(3.5972283,0,0,3.5972283,-796.66042,-312.45342)"
+       transform="matrix(0.54766848,0,0,0.58388721,4.2706399,82.168304)"
        style="stroke-width:0.999937;stroke-dasharray:none"><path
          fill="#423a92"
          d="M 0,0 H 367.76 V 214.76 H 0 Z"
