@@ -1,23 +1,23 @@
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <!-- Main circle -->
-  <circle cx="12" cy="12" r="10" fill="#2563eb"/>
+  <circle cx="12" cy="12" r="10" fill="#33a02c"/>
   
   <!-- Mini dots arranged in a circle pattern inside, more central -->
   <!-- Top -->
-  <circle cx="12" cy="7" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="12" cy="7" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
   
   <!-- Top-right -->
-  <circle cx="16" cy="10" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="16" cy="10" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
   
   <!-- Bottom-right -->
-  <circle cx="16" cy="14" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="16" cy="14" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
   
   <!-- Bottom -->
-  <circle cx="12" cy="17" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="12" cy="17" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
   
   <!-- Bottom-left -->
-  <circle cx="8" cy="14" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="8" cy="14" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
   
   <!-- Top-left -->
-  <circle cx="8" cy="10" r="2" fill="#2563eb" stroke="white" stroke-width="0.5"/>
+  <circle cx="8" cy="10" r="2" fill="#ff7f00" stroke="white" stroke-width="0.5"/>
 </svg>
