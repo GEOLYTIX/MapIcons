@@ -11,13 +11,14 @@ async function processAllLogos() {
     const files = fs.readdirSync(LOGO_DIR).filter(file => /\.(png|jpg|jpeg)$/i.test(file));
     
     let htmlContent = `<html><head><style>
-        body{font-family:sans-serif;background:#f4f4f4;padding:20px;}
+        body{font-family:sans-serif;background:#e0e0e0;padding:20px;}
         .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
         .card{background:white;padding:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-        .comparison{display:flex;align-items:center;justify-content:space-between;margin-top:10px;background:#eee;padding:10px;border-radius:4px;}
-        img,svg{width:64px;height:64px;object-fit:contain;background:#fff;border:1px solid #ddd;}
+        .comparison{display:flex;align-items:center;justify-content:space-between;margin-top:10px;background:#fff;padding:10px;border-radius:4px;border:1px solid #eee;}
+        img,svg{width:24px;height:24px;object-fit:contain;border:1px solid #ccc;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqkJymiA8VAQDQwMcAAw4E01j6k52AAAAAElFTkSuQmCC') repeat;}
         .hex-chip{display:inline-block;width:10px;height:10px;margin-right:4px;border:1px solid #ccc;}
-    </style></head><body><h1>Final Fixed Audit</h1><div class="grid">`;
+        .label{font-size:11px;color:#666;text-align:center;margin-top:5px;}
+    </style></head><body><h1>Final Production Audit</h1><div class="grid">`;
 
     for (const file of files) {
         const inputPath = path.join(LOGO_DIR, file);
@@ -33,8 +34,8 @@ async function processAllLogos() {
                 <strong>${file}</strong><br>
                 <div style="margin-bottom:5px">${colors.map(c => `<span class="hex-chip" style="background:${c}"></span>`).join('')}</div>
                 <div class="comparison">
-                    <div><img src="${file}"><div class="label">Original</div></div>
-                    <div><img src="${outputName}"><div class="label">Vector</div></div>
+                    <div><img src="${file}" style="width:64px;height:64px;"><div class="label">Original</div></div>
+                    <div><img src="${outputName}" style="width:24px;height:24px;"><div class="label">Vector (24px)</div></div>
                 </div>
             </div>`;
         } catch (err) {
@@ -42,58 +43,50 @@ async function processAllLogos() {
         }
     }
     fs.writeFileSync(path.join(LOGO_DIR, 'audit.html'), htmlContent + `</div></body></html>`);
-    console.log(`\n✅ Batch complete. Results in audit.html`);
+    console.log(`\n✅ Batch complete. Open audit.html to check results.`);
 }
 
 async function convertToHighFidelity(inputPath, outputPath) {
     const image = sharp(inputPath).trim();
+    // 1. Resize for analysis
     const { data, info } = await image
-        .resize(256, 256, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
+        .resize(256, 256, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
         .ensureAlpha()
         .raw()
         .toBuffer({ resolveWithObject: true });
 
-    // 1. Color Analysis
+    // 2. Color Analysis
     const colorCounts = {};
     for (let i = 0; i < data.length; i += 4) {
         const r = data[i], g = data[i+1], b = data[i+2], a = data[i+3];
-        
+
         if (a < 128) continue; // Skip transparent
-        
-        // Skip pure White (Background) - We want to keep Black/Dark Grey!
-        // We only filter out high brightness (white), NOT low saturation (grey/black).
-        if (r > 240 && g > 240 && b > 240) continue; 
+        if (r > 230 && g > 230 && b > 230) continue; // Skip White background pixels
 
         const hex = `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
         colorCounts[hex] = (colorCounts[hex] || 0) + 1;
     }
 
-    // Get Top 3 colors to be safe (catches Black + Orange + maybe a 3rd accent)
     let sortedColors = Object.keys(colorCounts)
         .sort((a, b) => colorCounts[b] - colorCounts[a])
-        .slice(0, 3);
+        .slice(0, 3); 
     
-    // Fallback: If logo was purely white/transparent or failed detection, use black
     if (sortedColors.length === 0) sortedColors = ['#000000'];
 
     let svgLayers = '';
 
-    // 2. Multi-Layer Trace
+    // 3. Multi-Layer Trace using Temp Files
     for (const color of sortedColors) {
         const rT = parseInt(color.slice(1, 3), 16);
         const gT = parseInt(color.slice(3, 5), 16);
         const bT = parseInt(color.slice(5, 7), 16);
 
-        // A. Create Mask: Black (0) = Ink, White (255) = Paper
+        // A. Masking
         const maskPixels = Buffer.alloc(info.width * info.height * 4);
-        
         for (let i = 0; i < info.width * info.height; i++) {
             const idx = i * 4;
             const alpha = data[idx+3];
 
-            // CRITICAL FIX FOR M&S: 
-            // If the pixel is transparent, force it to WHITE (255).
-            // Do NOT let it fall through to the distance check, because 0,0,0 (transparent) looks like Black!
             if (alpha < 128) {
                 maskPixels[idx] = maskPixels[idx+1] = maskPixels[idx+2] = 255; 
                 maskPixels[idx+3] = 255;
@@ -106,26 +99,27 @@ async function convertToHighFidelity(inputPath, outputPath) {
                 Math.pow(data[idx+2]-bT,2)
             );
 
-            // If color matches, make it BLACK (ink). Otherwise WHITE (paper).
             const val = dist < 60 ? 0 : 255; 
-            
             maskPixels[idx] = val;    
             maskPixels[idx+1] = val;   
             maskPixels[idx+2] = val;   
-            maskPixels[idx+3] = 255; // Always opaque for the tracer
+            maskPixels[idx+3] = 255; 
         }
 
-        // B. Convert to PNG to bypass "bitmap" error
-        const pngBuffer = await sharp(maskPixels, {
-            raw: { width: info.width, height: info.height, channels: 4 }
-        }).png().toBuffer();
+        // B. THE FIX: Write to a physical temporary file
+        const tempFileName = `temp_mask_${Date.now()}_${Math.random().toString(36).substr(2, 5)}.png`;
+        const tempFilePath = path.join(LOGO_DIR, tempFileName);
 
-        // C. Trace
+        await sharp(maskPixels, {
+            raw: { width: info.width, height: info.height, channels: 4 }
+        }).png().toFile(tempFilePath);
+
+        // C. Trace the file path directly
         const layerPath = await new Promise((resolve) => {
-            potrace.trace(pngBuffer, { 
-                turdSize: 4, // Increased slightly to ignore noise
-                optTolerance: 0.2,
-            }, (err, svg) => {
+            potrace.trace(tempFilePath, { turdSize: 4, optTolerance: 0.2 }, (err, svg) => {
+                // Always delete the temp file, even if error
+                try { fs.unlinkSync(tempFilePath); } catch(e) {}
+
                 if (err) return resolve('');
                 const matches = svg.match(/d="[^"]+"/g);
                 if (!matches) return resolve('');
@@ -135,13 +129,22 @@ async function convertToHighFidelity(inputPath, outputPath) {
         svgLayers += layerPath;
     }
 
+    // 4. Optimization & Scaling
     const fullSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${info.width} ${info.height}">${svgLayers}</svg>`;
     
     const result = optimize(fullSvg, {
         multipass: true,
         plugins: [
             'removeDimensions',
-            { name: 'addAttributesToSVGElement', params: { attributes: [{ viewBox: '0 0 24 24' }, { width: '24' }, { height: '24' }] } }
+            { 
+                name: 'addAttributesToSVGElement', 
+                params: { 
+                    attributes: [
+                        { width: '24' },   
+                        { height: '24' }   
+                    ] 
+                } 
+            }
         ]
     });
 
