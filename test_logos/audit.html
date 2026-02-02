@@ -11,14 +11,25 @@
             .label { display: block; font-size: 10px; color: #666; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
             .box-24 { width: 24px; height: 24px; margin: 0 auto; position: relative; }
             .border-red { border: 1px solid red; background: white; }
-            .border-green { position: absolute; top: 4px; left: 4px; width: 16px; height: 16px; border: 1px dotted #00c853; pointer-events: none; box-sizing: border-box; }
+            
+            /* Guide: The 20x14 box positioned at y=9.5 */
+            .border-guide { 
+                position: absolute; 
+                left: 50%; 
+                top: 9.5px; /* 9.5px */
+                transform: translate(-50%, -50%);
+                width: 20px; height: 14px; 
+                border: 1px dotted #00c853; 
+                pointer-events: none; box-sizing: border-box; 
+            }
+            
             .pin-bg { position: absolute; top: 0; left: 0; z-index: 1; }
             .pin-fg { position: absolute; top: 0; left: 0; z-index: 2; }
             .color-chip { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; border:1px solid #ccc; }
         </style>
     </head>
     <body>
-        <h1>Map Pin Audit (Color & Detail Fix)</h1>
+        <h1>Map Pin Audit (Head-Targeted Fit)</h1>
         <div class="grid">
             <div class="tile">
                 <div class="tile-header" title="akzonobel.png">akzonobel.png</div>
@@ -28,9 +39,9 @@
                         <img src="akzonobel.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="akzonobel.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -43,7 +54,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#005596"></span>#005596
+                    <span class="color-chip" style="background:#005596"></span>#005596
                 </div>
             </div>
             <div class="tile">
@@ -54,9 +65,9 @@
                         <img src="argile.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="argile.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -69,7 +80,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -80,9 +91,9 @@
                         <img src="astralpaints.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="astralpaints.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -95,7 +106,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -106,9 +117,9 @@
                         <img src="bondex.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="bondex.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -121,7 +132,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#fff000"></span>#fff000
+                    <span class="color-chip" style="background:#fff000"></span>#fff000
                 </div>
             </div>
             <div class="tile">
@@ -132,9 +143,9 @@
                         <img src="cetabever.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="cetabever.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -147,7 +158,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -158,9 +169,9 @@
                         <img src="coat.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="coat.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -173,7 +184,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#000000"></span>#000000
+                    <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -184,9 +195,9 @@
                         <img src="crown_paints.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="crown_paints.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -199,7 +210,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#141213"></span>#141213
+                    <span class="color-chip" style="background:#141213"></span>#141213
                 </div>
             </div>
             <div class="tile">
@@ -210,9 +221,9 @@
                         <img src="didonato.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="didonato.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -225,7 +236,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#1f1f1f"></span>#1f1f1f
+                    <span class="color-chip" style="background:#1f1f1f"></span>#1f1f1f
                 </div>
             </div>
             <div class="tile">
@@ -236,9 +247,9 @@
                         <img src="dulux.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="dulux.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -251,7 +262,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#00317d"></span>#00317d
+                    <span class="color-chip" style="background:#00317d"></span>#00317d
                 </div>
             </div>
             <div class="tile">
@@ -262,9 +273,9 @@
                         <img src="edward_bulmer.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="edward_bulmer.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -277,7 +288,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#2a434f"></span>#2a434f
+                    <span class="color-chip" style="background:#2a434f"></span>#2a434f
                 </div>
             </div>
             <div class="tile">
@@ -288,9 +299,9 @@
                         <img src="farrow_&_ball.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="farrow_&_ball.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -303,7 +314,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -314,9 +325,9 @@
                         <img src="flexa.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="flexa.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -329,7 +340,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#00286c"></span>#00286c
+                    <span class="color-chip" style="background:#00286c"></span>#00286c
                 </div>
             </div>
             <div class="tile">
@@ -340,9 +351,9 @@
                         <img src="gemini_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="gemini_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -355,7 +366,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#000000"></span>#000000
+                    <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -366,9 +377,9 @@
                         <img src="glitsa.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="glitsa.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -381,7 +392,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#000000"></span>#000000
+                    <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -392,9 +403,9 @@
                         <img src="gori.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="gori.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -407,7 +418,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#717b95"></span>#717b95
+                    <span class="color-chip" style="background:#717b95"></span>#717b95
                 </div>
             </div>
             <div class="tile">
@@ -418,9 +429,9 @@
                         <img src="guittet.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="guittet.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -433,7 +444,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#e2e2e2"></span>#e2e2e2
+                    <span class="color-chip" style="background:#e2e2e2"></span>#e2e2e2
                 </div>
             </div>
             <div class="tile">
@@ -444,9 +455,9 @@
                         <img src="herbol.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="herbol.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -459,7 +470,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#00aeef"></span>#00aeef
+                    <span class="color-chip" style="background:#00aeef"></span>#00aeef
                 </div>
             </div>
             <div class="tile">
@@ -470,9 +481,9 @@
                         <img src="histor.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="histor.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -485,7 +496,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#052453"></span>#052453
+                    <span class="color-chip" style="background:#052453"></span>#052453
                 </div>
             </div>
             <div class="tile">
@@ -496,9 +507,9 @@
                         <img src="house_of_hackney.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="house_of_hackney.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -511,7 +522,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#000000"></span>#000000
+                    <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -522,9 +533,9 @@
                         <img src="johnstones.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="johnstones.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -537,7 +548,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#184b8c"></span>#184b8c
+                    <span class="color-chip" style="background:#184b8c"></span>#184b8c
                 </div>
             </div>
             <div class="tile">
@@ -548,9 +559,9 @@
                         <img src="lauragai_peintures.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="lauragai_peintures.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -563,7 +574,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#102c3c"></span>#102c3c
+                    <span class="color-chip" style="background:#102c3c"></span>#102c3c
                 </div>
             </div>
             <div class="tile">
@@ -574,9 +585,9 @@
                         <img src="lick.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="lick.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -589,7 +600,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#354147"></span>#354147
+                    <span class="color-chip" style="background:#354147"></span>#354147
                 </div>
             </div>
             <div class="tile">
@@ -600,9 +611,9 @@
                         <img src="little_greene.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="little_greene.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -615,7 +626,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#070e08"></span>#070e08
+                    <span class="color-chip" style="background:#070e08"></span>#070e08
                 </div>
             </div>
             <div class="tile">
@@ -626,9 +637,9 @@
                         <img src="mylands.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="mylands.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -641,7 +652,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#bebdbd"></span>#bebdbd
+                    <span class="color-chip" style="background:#bebdbd"></span>#bebdbd
                 </div>
             </div>
             <div class="tile">
@@ -652,9 +663,9 @@
                         <img src="ppg_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="ppg_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -667,7 +678,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#1079a9"></span>#1079a9
+                    <span class="color-chip" style="background:#1079a9"></span>#1079a9
                 </div>
             </div>
             <div class="tile">
@@ -678,9 +689,9 @@
                         <img src="procoatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="procoatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -693,7 +704,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#525251"></span>#525251
+                    <span class="color-chip" style="background:#525251"></span>#525251
                 </div>
             </div>
             <div class="tile">
@@ -704,9 +715,9 @@
                         <img src="ralston_colour_&_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="ralston_colour_&_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -719,7 +730,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -730,9 +741,9 @@
                         <img src="rebel_paints.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="rebel_paints.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -745,7 +756,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#565157"></span>#565157
+                    <span class="color-chip" style="background:#565157"></span>#565157
                 </div>
             </div>
             <div class="tile">
@@ -756,9 +767,9 @@
                         <img src="ripolin.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="ripolin.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -771,7 +782,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#1a3867"></span>#1a3867
+                    <span class="color-chip" style="background:#1a3867"></span>#1a3867
                 </div>
             </div>
             <div class="tile">
@@ -782,9 +793,9 @@
                         <img src="sanderson.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="sanderson.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -797,7 +808,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#00053f"></span>#00053f
+                    <span class="color-chip" style="background:#00053f"></span>#00053f
                 </div>
             </div>
             <div class="tile">
@@ -808,9 +819,9 @@
                         <img src="san_marco.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="san_marco.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -823,7 +834,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#262122"></span>#262122
+                    <span class="color-chip" style="background:#262122"></span>#262122
                 </div>
             </div>
             <div class="tile">
@@ -834,9 +845,9 @@
                         <img src="seigneurie.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="seigneurie.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -849,7 +860,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#000000"></span>#000000
+                    <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -860,9 +871,9 @@
                         <img src="sherwin_williams.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="sherwin_williams.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -875,7 +886,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#0067b4"></span>#0067b4
+                    <span class="color-chip" style="background:#0067b4"></span>#0067b4
                 </div>
             </div>
             <div class="tile">
@@ -886,9 +897,9 @@
                         <img src="sigma_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="sigma_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -901,7 +912,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#01178a"></span>#01178a
+                    <span class="color-chip" style="background:#01178a"></span>#01178a
                 </div>
             </div>
             <div class="tile">
@@ -912,9 +923,9 @@
                         <img src="sikkens_wood_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="sikkens_wood_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -927,7 +938,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#0b2140"></span>#0b2140
+                    <span class="color-chip" style="background:#0b2140"></span>#0b2140
                 </div>
             </div>
             <div class="tile">
@@ -938,9 +949,9 @@
                         <img src="strikolith.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="strikolith.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -953,7 +964,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#e73643"></span>#e73643
+                    <span class="color-chip" style="background:#e73643"></span>#e73643
                 </div>
             </div>
             <div class="tile">
@@ -964,9 +975,9 @@
                         <img src="teknos.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="teknos.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -979,7 +990,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#201c1d"></span>#201c1d
+                    <span class="color-chip" style="background:#201c1d"></span>#201c1d
                 </div>
             </div>
             <div class="tile">
@@ -990,9 +1001,9 @@
                         <img src="theodore_collection.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="theodore_collection.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -1005,7 +1016,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#223265"></span>#223265
+                    <span class="color-chip" style="background:#223265"></span>#223265
                 </div>
             </div>
             <div class="tile">
@@ -1016,9 +1027,9 @@
                         <img src="tikkurila.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="tikkurila.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -1031,7 +1042,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -1042,9 +1053,9 @@
                         <img src="tollens.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="tollens.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -1057,7 +1068,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#002767"></span>#002767
+                    <span class="color-chip" style="background:#002767"></span>#002767
                 </div>
             </div>
             <div class="tile">
@@ -1068,9 +1079,9 @@
                         <img src="veveo_coatings.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="veveo_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -1083,7 +1094,7 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#e31a2a"></span>#e31a2a
+                    <span class="color-chip" style="background:#e31a2a"></span>#e31a2a
                 </div>
             </div>
             <div class="tile">
@@ -1094,9 +1105,9 @@
                         <img src="wijzonol.png" height="24" style="object-fit: contain;">
                     </div>
                     <div>
-                        <span class="label">Safe Zone</span>
+                        <span class="label">Smart Fit</span>
                         <div class="box-24 border-red">
-                            <div class="border-green"></div>
+                            <div class="border-guide"></div>
                             <img src="wijzonol.svg" width="24" height="24" style="position:relative; z-index:1;">
                         </div>
                     </div>
@@ -1109,6 +1120,6 @@
                     </div>
                 </div>
                 <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    Trace Color: <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div></div></body></html>
