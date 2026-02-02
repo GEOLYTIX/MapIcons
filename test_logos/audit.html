@@ -1,274 +1,300 @@
 <html><head><style>
-        body{font-family:sans-serif;background:#e0e0e0;padding:20px;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
-        .card{background:white;padding:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-        .comparison{display:flex;align-items:center;justify-content:space-between;margin-top:10px;background:#fff;padding:10px;border-radius:4px;border:1px solid #eee;}
-        /* Force display at 24px to verify sizing */
-        img,svg{width:24px;height:24px;object-fit:contain;border:1px solid #ccc;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqkJymiA8VAQDQwMcAAw4E01j6k52AAAAAElFTkSuQmCC') repeat;}
-        .hex-chip{display:inline-block;width:10px;height:10px;margin-right:4px;border:1px solid #ccc;}
-        .label{font-size:11px;color:#666;text-align:center;margin-top:5px;}
-    </style></head><body><h1>Final Production Audit</h1><div class="grid">
+        body{font-family:sans-serif;background:#eee;padding:20px;}
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;}
+        .card{background:white;padding:15px;border-radius:8px;text-align:center;}
+        .preview { border: 1px solid #ccc; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%); background-size: 10px 10px; background-position: 0 0, 0 5px, 5px -5px, -5px 0px; }
+    </style></head><body><h1>24px SVG Audit</h1><div class="grid">
             <div class="card">
-                <strong>argile.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#d3964d"></span><span class="hex-chip" style="background:#d2944c"></span><span class="hex-chip" style="background:#d6984e"></span></div>
-                <div class="comparison">
-                    <div><img src="argile.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="argile.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">akzonobel.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="akzonobel.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="akzonobel.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>bondex.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#ffdd01"></span><span class="hex-chip" style="background:#ffee1d"></span><span class="hex-chip" style="background:#ffe50d"></span></div>
-                <div class="comparison">
-                    <div><img src="bondex.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="bondex.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">argile.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="argile.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="argile.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>cetabever.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#231e1b"></span><span class="hex-chip" style="background:#241f1c"></span><span class="hex-chip" style="background:#221d1a"></span></div>
-                <div class="comparison">
-                    <div><img src="cetabever.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="cetabever.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">astralpaints.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="astralpaints.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="astralpaints.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>coat.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#000000"></span><span class="hex-chip" style="background:#c7c7c7"></span><span class="hex-chip" style="background:#161616"></span></div>
-                <div class="comparison">
-                    <div><img src="coat.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="coat.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">bondex.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="bondex.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="bondex.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>crown_paints.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#201e1f"></span><span class="hex-chip" style="background:#1f1d1e"></span><span class="hex-chip" style="background:#1e1c1d"></span></div>
-                <div class="comparison">
-                    <div><img src="crown_paints.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="crown_paints.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">cetabever.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="cetabever.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="cetabever.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>didonato.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#c41c4c"></span><span class="hex-chip" style="background:#c41d4a"></span><span class="hex-chip" style="background:#c41c4e"></span></div>
-                <div class="comparison">
-                    <div><img src="didonato.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="didonato.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">coat.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="coat.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="coat.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>dulux.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#00317d"></span><span class="hex-chip" style="background:#01327e"></span><span class="hex-chip" style="background:#00307c"></span></div>
-                <div class="comparison">
-                    <div><img src="dulux.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="dulux.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">crown_paints.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="crown_paints.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="crown_paints.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>edward_bulmer.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#122d3b"></span><span class="hex-chip" style="background:#132e3c"></span><span class="hex-chip" style="background:#132d3b"></span></div>
-                <div class="comparison">
-                    <div><img src="edward_bulmer.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="edward_bulmer.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">didonato.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="didonato.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="didonato.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>farrow_&_ball.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#424242"></span><span class="hex-chip" style="background:#404040"></span><span class="hex-chip" style="background:#414141"></span></div>
-                <div class="comparison">
-                    <div><img src="farrow_&_ball.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="farrow_&_ball.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">dulux.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="dulux.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="dulux.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>flexa.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#00286c"></span><span class="hex-chip" style="background:#00286b"></span><span class="hex-chip" style="background:#00286a"></span></div>
-                <div class="comparison">
-                    <div><img src="flexa.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="flexa.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">edward_bulmer.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="edward_bulmer.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="edward_bulmer.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>gemini_coatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#000000"></span><span class="hex-chip" style="background:#3a3a3a"></span><span class="hex-chip" style="background:#c1c1c1"></span></div>
-                <div class="comparison">
-                    <div><img src="gemini_coatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="gemini_coatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">farrow_&_ball.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="farrow_&_ball.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="farrow_&_ball.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>glitsa.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#373737"></span><span class="hex-chip" style="background:#363636"></span><span class="hex-chip" style="background:#393939"></span></div>
-                <div class="comparison">
-                    <div><img src="glitsa.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="glitsa.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">flexa.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="flexa.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="flexa.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>gori.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#182e56"></span><span class="hex-chip" style="background:#152b5a"></span><span class="hex-chip" style="background:#162b5a"></span></div>
-                <div class="comparison">
-                    <div><img src="gori.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="gori.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">gemini_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="gemini_coatings.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="gemini_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>guittet.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#dadada"></span><span class="hex-chip" style="background:#c8c8c8"></span><span class="hex-chip" style="background:#dcdcdc"></span></div>
-                <div class="comparison">
-                    <div><img src="guittet.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="guittet.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">glitsa.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="glitsa.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="glitsa.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>histor.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#052453"></span><span class="hex-chip" style="background:#052553"></span><span class="hex-chip" style="background:#e42314"></span></div>
-                <div class="comparison">
-                    <div><img src="histor.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="histor.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">gori.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="gori.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="gori.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>house_of_hackney.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#000000"></span><span class="hex-chip" style="background:#010101"></span><span class="hex-chip" style="background:#020202"></span></div>
-                <div class="comparison">
-                    <div><img src="house_of_hackney.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="house_of_hackney.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">guittet.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="guittet.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="guittet.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>johnstones.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#184b8c"></span><span class="hex-chip" style="background:#d8d8d8"></span><span class="hex-chip" style="background:#bbbbbb"></span></div>
-                <div class="comparison">
-                    <div><img src="johnstones.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="johnstones.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">herbol.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="herbol.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="herbol.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>lauragai_peintures.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#102c3c"></span><span class="hex-chip" style="background:#40b394"></span><span class="hex-chip" style="background:#102d3d"></span></div>
-                <div class="comparison">
-                    <div><img src="lauragai_peintures.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="lauragai_peintures.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">histor.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="histor.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="histor.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>little_greene.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#172119"></span><span class="hex-chip" style="background:#18221a"></span><span class="hex-chip" style="background:#000000"></span></div>
-                <div class="comparison">
-                    <div><img src="little_greene.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="little_greene.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">house_of_hackney.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="house_of_hackney.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="house_of_hackney.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>mylands.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#231f20"></span><span class="hex-chip" style="background:#2a2627"></span><span class="hex-chip" style="background:#262223"></span></div>
-                <div class="comparison">
-                    <div><img src="mylands.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="mylands.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">johnstones.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="johnstones.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="johnstones.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>ppg_coatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#1079a9"></span><span class="hex-chip" style="background:#1179a9"></span><span class="hex-chip" style="background:#117aa9"></span></div>
-                <div class="comparison">
-                    <div><img src="ppg_coatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="ppg_coatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">lauragai_peintures.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="lauragai_peintures.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="lauragai_peintures.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>procoatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#e30613"></span><span class="hex-chip" style="background:#575756"></span><span class="hex-chip" style="background:#595958"></span></div>
-                <div class="comparison">
-                    <div><img src="procoatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="procoatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">lick.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="lick.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="lick.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>ralston_colour_&_coatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#1c3365"></span><span class="hex-chip" style="background:#1e3264"></span><span class="hex-chip" style="background:#1e3265"></span></div>
-                <div class="comparison">
-                    <div><img src="ralston_colour_&_coatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="ralston_colour_&_coatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">little_greene.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="little_greene.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="little_greene.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>rebel_paints.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#534e54"></span><span class="hex-chip" style="background:#544f55"></span><span class="hex-chip" style="background:#555056"></span></div>
-                <div class="comparison">
-                    <div><img src="rebel_paints.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="rebel_paints.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">mylands.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="mylands.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="mylands.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>ripolin.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#1a3867"></span><span class="hex-chip" style="background:#1b3968"></span><span class="hex-chip" style="background:#354f79"></span></div>
-                <div class="comparison">
-                    <div><img src="ripolin.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="ripolin.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ppg_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="ppg_coatings.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="ppg_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>sanderson.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#000000"></span><span class="hex-chip" style="background:#000027"></span><span class="hex-chip" style="background:#000015"></span></div>
-                <div class="comparison">
-                    <div><img src="sanderson.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="sanderson.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">procoatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="procoatings.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="procoatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>san_marco.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#241f20"></span><span class="hex-chip" style="background:#ed0d00"></span><span class="hex-chip" style="background:#231e1f"></span></div>
-                <div class="comparison">
-                    <div><img src="san_marco.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="san_marco.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ralston_colour_&_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="ralston_colour_&_coatings.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="ralston_colour_&_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>sigma_coatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#01178a"></span><span class="hex-chip" style="background:#01188a"></span><span class="hex-chip" style="background:#001489"></span></div>
-                <div class="comparison">
-                    <div><img src="sigma_coatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="sigma_coatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">rebel_paints.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="rebel_paints.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="rebel_paints.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>strikolith.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#e73643"></span><span class="hex-chip" style="background:#e73744"></span><span class="hex-chip" style="background:#e73845"></span></div>
-                <div class="comparison">
-                    <div><img src="strikolith.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="strikolith.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ripolin.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="ripolin.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="ripolin.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>tikkurila.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#ed1c24"></span><span class="hex-chip" style="background:#ed1d25"></span><span class="hex-chip" style="background:#ed1e26"></span></div>
-                <div class="comparison">
-                    <div><img src="tikkurila.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="tikkurila.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sanderson.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="sanderson.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="sanderson.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>tollens.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#123f78"></span><span class="hex-chip" style="background:#133f78"></span><span class="hex-chip" style="background:#134078"></span></div>
-                <div class="comparison">
-                    <div><img src="tollens.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="tollens.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">san_marco.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="san_marco.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="san_marco.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>veveo_coatings.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#e31a2a"></span><span class="hex-chip" style="background:#241e20"></span><span class="hex-chip" style="background:#e21a2a"></span></div>
-                <div class="comparison">
-                    <div><img src="veveo_coatings.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="veveo_coatings.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">seigneurie.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="seigneurie.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="seigneurie.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div>
             <div class="card">
-                <strong>wijzonol.png</strong><br>
-                <div style="margin-bottom:5px"><span class="hex-chip" style="background:#1e3159"></span><span class="hex-chip" style="background:#1f3159"></span><span class="hex-chip" style="background:#122b56"></span></div>
-                <div class="comparison">
-                    <div><img src="wijzonol.png" style="width:64px;height:64px;"><div class="label">Original</div></div>
-                    <div><img src="wijzonol.svg"><div class="label">Vector (24px)</div></div>
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sherwin_williams.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="sherwin_williams.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="sherwin_williams.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sigma_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="sigma_coatings.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="sigma_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sikkens_wood_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="sikkens_wood_coatings.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="sikkens_wood_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">strikolith.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="strikolith.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="strikolith.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">teknos.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="teknos.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="teknos.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">theodore_collection.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="theodore_collection.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="theodore_collection.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">tikkurila.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="tikkurila.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="tikkurila.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">tollens.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="tollens.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="tollens.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">veveo_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="veveo_coatings.png" height="64"><br><small>Original (jpeg)</small></div>
+                    <div><img src="veveo_coatings.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">wijzonol.png</div>
+                <div style="display:flex; justify-content:center; gap:15px; align-items:end;">
+                    <div><img src="wijzonol.png" height="64"><br><small>Original (png)</small></div>
+                    <div><img src="wijzonol.svg" class="preview" width="24" height="24"><br><small>24px SVG</small></div>
                 </div>
             </div></div></body></html>
