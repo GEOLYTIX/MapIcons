@@ -1,302 +1,466 @@
-<html><head><style>
-        body{font-family:sans-serif;background:#eee;padding:20px;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;}
-        .card{background:white;padding:15px;border-radius:8px;text-align:center;}
-        /* Checkerboard pattern to prove transparency */
-        .preview { border: 1px solid #ccc; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%); background-size: 10px 10px; background-position: 0 0, 0 5px, 5px -5px, -5px 0px; }
-        .pin-mockup { width: 24px; height: 24px; background: rgba(255,0,0,0.1); display: inline-block; border: 1px dashed red; }
-    </style></head><body><h1>20px Logo in 24px Pin Audit</h1><div class="grid">
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">akzonobel.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="akzonobel.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="akzonobel.svg"></div><br><small>SVG</small></div>
+<html><body style="background:#eee;font-family:sans-serif;padding:20px;">
+        <h1>Safe Zone Audit (20px in 24px)</h1>
+        <p>Red Box = 24px ViewBox (Pin Size)<br>Green Box = 20px Safe Zone (Logo Limit)</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;">
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">akzonobel.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="akzonobel.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="akzonobel.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">argile.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="argile.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="argile.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">argile.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="argile.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="argile.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">astralpaints.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="astralpaints.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="astralpaints.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">astralpaints.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="astralpaints.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="astralpaints.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">bondex.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="bondex.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="bondex.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">bondex.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="bondex.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="bondex.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">cetabever.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="cetabever.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="cetabever.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">cetabever.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="cetabever.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="cetabever.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">coat.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="coat.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="coat.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">coat.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="coat.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="coat.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">crown_paints.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="crown_paints.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="crown_paints.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">crown_paints.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="crown_paints.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="crown_paints.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">didonato.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="didonato.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="didonato.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">didonato.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="didonato.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="didonato.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">dulux.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="dulux.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="dulux.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">dulux.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="dulux.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="dulux.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">edward_bulmer.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="edward_bulmer.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="edward_bulmer.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">edward_bulmer.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="edward_bulmer.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="edward_bulmer.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">farrow_&_ball.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="farrow_&_ball.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="farrow_&_ball.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">farrow_&_ball.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="farrow_&_ball.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="farrow_&_ball.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">flexa.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="flexa.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="flexa.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">flexa.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="flexa.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="flexa.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">gemini_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="gemini_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="gemini_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">gemini_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="gemini_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="gemini_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">glitsa.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="glitsa.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="glitsa.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">glitsa.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="glitsa.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="glitsa.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">gori.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="gori.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="gori.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">gori.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="gori.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="gori.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">guittet.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="guittet.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="guittet.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">guittet.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="guittet.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="guittet.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">herbol.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="herbol.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="herbol.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">herbol.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="herbol.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="herbol.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">histor.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="histor.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="histor.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">histor.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="histor.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="histor.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">house_of_hackney.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="house_of_hackney.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="house_of_hackney.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">house_of_hackney.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="house_of_hackney.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="house_of_hackney.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">johnstones.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="johnstones.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="johnstones.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">johnstones.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="johnstones.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="johnstones.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">lauragai_peintures.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="lauragai_peintures.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="lauragai_peintures.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">lauragai_peintures.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="lauragai_peintures.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="lauragai_peintures.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">lick.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="lick.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="lick.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">lick.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="lick.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="lick.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">little_greene.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="little_greene.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="little_greene.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">little_greene.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="little_greene.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="little_greene.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">mylands.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="mylands.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="mylands.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">mylands.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="mylands.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="mylands.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ppg_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="ppg_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="ppg_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">ppg_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="ppg_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="ppg_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">procoatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="procoatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="procoatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">procoatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="procoatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="procoatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ralston_colour_&_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="ralston_colour_&_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="ralston_colour_&_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">ralston_colour_&_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="ralston_colour_&_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="ralston_colour_&_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">rebel_paints.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="rebel_paints.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="rebel_paints.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">rebel_paints.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="rebel_paints.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="rebel_paints.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">ripolin.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="ripolin.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="ripolin.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">ripolin.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="ripolin.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="ripolin.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sanderson.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="sanderson.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="sanderson.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">sanderson.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="sanderson.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="sanderson.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">san_marco.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="san_marco.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="san_marco.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">san_marco.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="san_marco.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="san_marco.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">seigneurie.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="seigneurie.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="seigneurie.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">seigneurie.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="seigneurie.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="seigneurie.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sherwin_williams.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="sherwin_williams.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="sherwin_williams.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">sherwin_williams.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="sherwin_williams.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="sherwin_williams.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sigma_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="sigma_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="sigma_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">sigma_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="sigma_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="sigma_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">sikkens_wood_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="sikkens_wood_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="sikkens_wood_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">sikkens_wood_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="sikkens_wood_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="sikkens_wood_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">strikolith.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="strikolith.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="strikolith.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">strikolith.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="strikolith.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="strikolith.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">teknos.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="teknos.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="teknos.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">teknos.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="teknos.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="teknos.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">theodore_collection.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="theodore_collection.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="theodore_collection.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">theodore_collection.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="theodore_collection.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="theodore_collection.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">tikkurila.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="tikkurila.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="tikkurila.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">tikkurila.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="tikkurila.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="tikkurila.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">tollens.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="tollens.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="tollens.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">tollens.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="tollens.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="tollens.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">veveo_coatings.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="veveo_coatings.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="veveo_coatings.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">veveo_coatings.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="veveo_coatings.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="veveo_coatings.svg" width="24" height="24">
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div style="font-weight:bold; margin-bottom:10px; overflow:hidden; text-overflow:ellipsis;">wijzonol.png</div>
-                <div style="display:flex; justify-content:center; gap:15px; align-items:center;">
-                    <div><img src="wijzonol.png" height="48" style="object-fit:contain"><br><small>Original</small></div>
-                    <div><div class="preview" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px;"><img src="wijzonol.svg"></div><br><small>SVG</small></div>
+            <div style="background:white;padding:15px;border-radius:8px;text-align:center;">
+                <div style="margin-bottom:10px;font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;">wijzonol.png</div>
+                <div style="display:flex; justify-content:center; gap:20px; align-items:center;">
+                    <div style="opacity:0.6;"><img src="wijzonol.png" height="40" style="object-fit:contain"></div>
+                    <div>→</div>
+                    <div style="position:relative; width:24px; height:24px; border:1px solid red; background:white; margin:0 auto;">
+                        <div style="position:absolute; top:2px; left:2px; width:20px; height:20px; border:1px dotted green; pointer-events:none; box-sizing:border-box;"></div>
+                        <img src="wijzonol.svg" width="24" height="24">
+                    </div>
                 </div>
             </div></div></body></html>
