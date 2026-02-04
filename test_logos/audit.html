@@ -9,37 +9,37 @@
             .tile-header { background: #007bff; color: white; padding: 10px; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             .tile-body { padding: 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; }
             .label { display: block; font-size: 10px; color: #666; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
-            .box-24 { width: 24px; height: 24px; margin: 0 auto; position: relative; }
-            .border-red { border: 1px solid red; background: white; }
             
-            /* Guide: The 20x14 box positioned at y=9.5 */
+            /* Updated: Grey background for previews so WHITE logos are visible */
+            .box-24 { width: 24px; height: 24px; margin: 0 auto; position: relative; background: #cccccc; border-radius: 4px; }
+            .box-24.original { background: white; } /* Keep original on white */
+            
+            .border-red { border: 1px solid red; }
             .border-guide { 
-                position: absolute; 
-                left: 50%; 
-                top: 9.5px; /* 9.5px */
-                transform: translate(-50%, -50%);
-                width: 20px; height: 14px; 
-                border: 1px dotted #00c853; 
-                pointer-events: none; box-sizing: border-box; 
+                position: absolute; left: 50%; top: 10px; 
+                transform: translate(-50%, -50%); width: 22px; height: 16px; 
+                border: 1px dotted #00c853; pointer-events: none; box-sizing: border-box; 
             }
-            
             .pin-bg { position: absolute; top: 0; left: 0; z-index: 1; }
             .pin-fg { position: absolute; top: 0; left: 0; z-index: 2; }
-            .color-chip { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; border:1px solid #ccc; }
+            .color-chip { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; border:1px solid #ccc; vertical-align:middle; }
+            .footer { text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee; }
         </style>
     </head>
     <body>
-        <h1>Map Pin Audit (Head-Targeted Fit)</h1>
+        <h1>Map Pin Audit (White Text Fix)</h1>
         <div class="grid">
             <div class="tile">
                 <div class="tile-header" title="akzonobel.png">akzonobel.png</div>
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="akzonobel.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="akzonobel.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="akzonobel.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -47,14 +47,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="akzonobel.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#005596"></span>#005596
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#005596"></span>#005596
                 </div>
             </div>
             <div class="tile">
@@ -62,10 +61,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="argile.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="argile.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="argile.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -73,14 +74,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="argile.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#d3964d"></span>#d3964d
                 </div>
             </div>
             <div class="tile">
@@ -88,10 +88,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="astralpaints.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="astralpaints.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="astralpaints.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -99,14 +101,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="astralpaints.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -114,10 +115,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="bondex.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="bondex.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="bondex.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -125,14 +128,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="bondex.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#fff000"></span>#fff000
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffee1d"></span>#ffee1d
                 </div>
             </div>
             <div class="tile">
@@ -140,10 +142,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="cetabever.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="cetabever.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="cetabever.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -151,14 +155,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="cetabever.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -166,10 +169,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="coat.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="coat.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="coat.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -177,14 +182,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="coat.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#000000"></span>#000000
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -192,10 +196,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="crown_paints.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="crown_paints.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="crown_paints.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -203,14 +209,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="crown_paints.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#141213"></span>#141213
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#201e1f"></span>#201e1f
                 </div>
             </div>
             <div class="tile">
@@ -218,10 +223,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="didonato.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="didonato.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="didonato.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -229,14 +236,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="didonato.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#1f1f1f"></span>#1f1f1f
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#343434"></span>#343434
                 </div>
             </div>
             <div class="tile">
@@ -244,10 +250,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="dulux.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="dulux.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="dulux.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -255,14 +263,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="dulux.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#00317d"></span>#00317d
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#00317d"></span>#00317d
                 </div>
             </div>
             <div class="tile">
@@ -270,10 +277,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="edward_bulmer.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="edward_bulmer.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="edward_bulmer.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -281,14 +290,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="edward_bulmer.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#2a434f"></span>#2a434f
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#122d3b"></span>#122d3b
                 </div>
             </div>
             <div class="tile">
@@ -296,10 +304,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="farrow_&_ball.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="farrow_&_ball.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="farrow_&_ball.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -307,14 +317,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="farrow_&_ball.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#fefefe"></span>#fefefe
                 </div>
             </div>
             <div class="tile">
@@ -322,10 +331,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="flexa.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="flexa.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="flexa.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -333,14 +344,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="flexa.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#00286c"></span>#00286c
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#00286c"></span>#00286c
                 </div>
             </div>
             <div class="tile">
@@ -348,10 +358,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="gemini_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="gemini_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="gemini_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -359,14 +371,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="gemini_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#000000"></span>#000000
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -374,10 +385,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="glitsa.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="glitsa.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="glitsa.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -385,14 +398,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="glitsa.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#000000"></span>#000000
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -400,10 +412,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="gori.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="gori.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="gori.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -411,14 +425,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="gori.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#717b95"></span>#717b95
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#15325a"></span>#15325a
                 </div>
             </div>
             <div class="tile">
@@ -426,10 +439,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="guittet.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="guittet.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="guittet.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -437,14 +452,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="guittet.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#e2e2e2"></span>#e2e2e2
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#dddddd"></span>#dddddd
                 </div>
             </div>
             <div class="tile">
@@ -452,10 +466,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="herbol.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="herbol.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="herbol.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -463,14 +479,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="herbol.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#00aeef"></span>#00aeef
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#00aeef"></span>#00aeef
                 </div>
             </div>
             <div class="tile">
@@ -478,10 +493,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="histor.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="histor.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="histor.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -489,14 +506,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="histor.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#052453"></span>#052453
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#052453"></span>#052453
                 </div>
             </div>
             <div class="tile">
@@ -504,10 +520,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="house_of_hackney.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="house_of_hackney.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="house_of_hackney.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -515,14 +533,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="house_of_hackney.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#000000"></span>#000000
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -530,10 +547,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="johnstones.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="johnstones.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="johnstones.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -541,14 +560,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="johnstones.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#184b8c"></span>#184b8c
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#184b8c"></span>#184b8c
                 </div>
             </div>
             <div class="tile">
@@ -556,10 +574,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="lauragai_peintures.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="lauragai_peintures.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="lauragai_peintures.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -567,14 +587,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="lauragai_peintures.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#102c3c"></span>#102c3c
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#102c3c"></span>#102c3c
                 </div>
             </div>
             <div class="tile">
@@ -582,10 +601,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="lick.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="lick.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="lick.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -593,14 +614,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="lick.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#354147"></span>#354147
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#354147"></span>#354147
                 </div>
             </div>
             <div class="tile">
@@ -608,10 +628,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="little_greene.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="little_greene.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="little_greene.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -619,14 +641,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="little_greene.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#070e08"></span>#070e08
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#172119"></span>#172119
                 </div>
             </div>
             <div class="tile">
@@ -634,10 +655,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="mylands.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="mylands.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="mylands.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -645,14 +668,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="mylands.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#bebdbd"></span>#bebdbd
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#231f20"></span>#231f20
                 </div>
             </div>
             <div class="tile">
@@ -660,10 +682,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="ppg_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="ppg_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="ppg_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -671,14 +695,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="ppg_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#1079a9"></span>#1079a9
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#1079a9"></span>#1079a9
                 </div>
             </div>
             <div class="tile">
@@ -686,10 +709,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="procoatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="procoatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="procoatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -697,14 +722,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="procoatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#525251"></span>#525251
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#575756"></span>#575756
                 </div>
             </div>
             <div class="tile">
@@ -712,10 +736,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="ralston_colour_&_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="ralston_colour_&_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="ralston_colour_&_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -723,14 +749,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="ralston_colour_&_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -738,10 +763,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="rebel_paints.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="rebel_paints.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="rebel_paints.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -749,14 +776,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="rebel_paints.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#565157"></span>#565157
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#534e54"></span>#534e54
                 </div>
             </div>
             <div class="tile">
@@ -764,10 +790,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="ripolin.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="ripolin.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="ripolin.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -775,14 +803,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="ripolin.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#1a3867"></span>#1a3867
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#1a3867"></span>#1a3867
                 </div>
             </div>
             <div class="tile">
@@ -790,10 +817,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="sanderson.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="sanderson.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="sanderson.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -801,14 +830,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="sanderson.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#00053f"></span>#00053f
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -816,10 +844,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="san_marco.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="san_marco.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="san_marco.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -827,14 +857,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="san_marco.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#262122"></span>#262122
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#241f20"></span>#241f20
                 </div>
             </div>
             <div class="tile">
@@ -842,10 +871,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="seigneurie.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="seigneurie.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="seigneurie.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -853,14 +884,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="seigneurie.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#000000"></span>#000000
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#000000"></span>#000000
                 </div>
             </div>
             <div class="tile">
@@ -868,10 +898,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="sherwin_williams.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="sherwin_williams.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="sherwin_williams.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -879,14 +911,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="sherwin_williams.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#0067b4"></span>#0067b4
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#0067b5"></span>#0067b5
                 </div>
             </div>
             <div class="tile">
@@ -894,10 +925,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="sigma_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="sigma_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="sigma_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -905,14 +938,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="sigma_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#01178a"></span>#01178a
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#01178a"></span>#01178a
                 </div>
             </div>
             <div class="tile">
@@ -920,10 +952,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="sikkens_wood_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="sikkens_wood_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="sikkens_wood_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -931,14 +965,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="sikkens_wood_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#0b2140"></span>#0b2140
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#0a203f"></span>#0a203f
                 </div>
             </div>
             <div class="tile">
@@ -946,10 +979,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="strikolith.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="strikolith.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="strikolith.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -957,14 +992,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="strikolith.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#e73643"></span>#e73643
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#e73643"></span>#e73643
                 </div>
             </div>
             <div class="tile">
@@ -972,10 +1006,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="teknos.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="teknos.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="teknos.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -983,14 +1019,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="teknos.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#201c1d"></span>#201c1d
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#231f20"></span>#231f20
                 </div>
             </div>
             <div class="tile">
@@ -998,10 +1033,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="theodore_collection.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="theodore_collection.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="theodore_collection.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -1009,14 +1046,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="theodore_collection.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#223265"></span>#223265
+                <div class="footer">
+                    Transparent BG <span class="color-chip" style="background:#223265"></span>#223265
                 </div>
             </div>
             <div class="tile">
@@ -1024,10 +1060,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="tikkurila.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="tikkurila.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="tikkurila.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -1035,14 +1073,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="tikkurila.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div>
             <div class="tile">
@@ -1050,10 +1087,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="tollens.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="tollens.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="tollens.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -1061,14 +1100,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="tollens.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#002767"></span>#002767
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#123f78"></span>#123f78
                 </div>
             </div>
             <div class="tile">
@@ -1076,10 +1114,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="veveo_coatings.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="veveo_coatings.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="veveo_coatings.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -1087,14 +1127,13 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="veveo_coatings.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#e31a2a"></span>#e31a2a
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#e31a2a"></span>#e31a2a
                 </div>
             </div>
             <div class="tile">
@@ -1102,10 +1141,12 @@
                 <div class="tile-body">
                     <div>
                         <span class="label">Original</span>
-                        <img src="wijzonol.png" height="24" style="object-fit: contain;">
+                        <div class="box-24 original">
+                            <img src="wijzonol.png" height="24" style="object-fit: contain;">
+                        </div>
                     </div>
                     <div>
-                        <span class="label">Smart Fit</span>
+                        <span class="label">Max Fill (Grey BG)</span>
                         <div class="box-24 border-red">
                             <div class="border-guide"></div>
                             <img src="wijzonol.svg" width="24" height="24" style="position:relative; z-index:1;">
@@ -1113,13 +1154,12 @@
                     </div>
                     <div>
                         <span class="label">Map View</span>
-                        <div class="box-24">
-                            <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
+                        <div class="box-24" style="background:white"> <img src="../pins/pink_master_pin.svg" width="24" height="24" class="pin-bg">
                             <img src="wijzonol.svg" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; padding:5px; font-size:10px; color:#666; background:#fafafa; border-top:1px solid #eee;">
-                    <span class="color-chip" style="background:#ffffff"></span>#ffffff
+                <div class="footer">
+                    Box Text Extraction <span class="color-chip" style="background:#ffffff"></span>#ffffff
                 </div>
             </div></div></body></html>
