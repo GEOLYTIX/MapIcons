@@ -113,7 +113,7 @@ async function processAllLogos() {
                     <div>
                         <span class="label">SVG Result</span>
                         <div class="box-24">
-                            <img src="${outputName}" width="24" height="24" style="position:relative; z-index:2;">
+                            <img src="svgs/${outputName}" width="24" height="24" style="position:relative; z-index:2;">
                         </div>
                     </div>
                     <div>
@@ -122,7 +122,7 @@ async function processAllLogos() {
                             <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="${pinColor}">
                                 <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
                             </svg>
-                            <img src="${outputName}" width="24" height="24" class="pin-fg">
+                            <img src="svgs/${outputName}" width="24" height="24" class="pin-fg">
                         </div>
                     </div>
                 </div>
