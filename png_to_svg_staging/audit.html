@@ -1,0 +1,172 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; background: #e0e0e0; padding: 20px; }
+            h1 { text-align: center; color: #333; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+            .tile { background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+            .tile-header { background: #333; color: white; padding: 10px; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .tile-body { padding: 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; align-items: end; }
+            .label { display: block; font-size: 10px; color: #666; margin-bottom: 5px; text-transform: uppercase; font-weight:bold; }
+            .box-24 { width: 24px; height: 24px; margin: 0 auto; position: relative; background: #ccc; border-radius: 4px; border: 1px solid #999; }
+            .box-24.original { background: white; border-color: #eee; }
+            .pin-bg { position: absolute; top: 0; left: 0; z-index: 1; }
+            .pin-fg { position: absolute; top: 0; left: 0; z-index: 10; }
+            .footer { text-align:center; padding:8px; font-size:11px; color:#555; background:#f9f9f9; border-top:1px solid #eee; display:flex; justify-content:space-between; align-items:center; }
+            .color-chip { width:12px; height:12px; border-radius:50%; border:1px solid rgba(0,0,0,0.2); display:inline-block; vertical-align:middle; margin-right:4px; }
+        </style>
+    </head>
+    <body>
+        <h1>Map Pin Audit (Fixed Extraction)</h1>
+        <div class="grid">
+            <div class="tile">
+                <div class="tile-header" title="cetabever.png">cetabever.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="cetabever.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24">
+                            <img src="svgs/cetabever.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/cetabever.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Drill-Down</span>
+                    <span><span class="color-chip" style="background:#564332"></span>#564332</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="edward_bulmer.png">edward_bulmer.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="edward_bulmer.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24">
+                            <img src="svgs/edward_bulmer.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#1a303e">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/edward_bulmer.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent Drill-Down</span>
+                    <span><span class="color-chip" style="background:#3e4953"></span>#3e4953</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="ripolin.png">ripolin.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="ripolin.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24">
+                            <img src="svgs/ripolin.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#173867">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/ripolin.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Drill-Down</span>
+                    <span><span class="color-chip" style="background:#ccd1db"></span>#ccd1db</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="theodore_collection.png">theodore_collection.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="theodore_collection.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24">
+                            <img src="svgs/theodore_collection.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#2c3846">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/theodore_collection.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Drill-Down</span>
+                    <span><span class="color-chip" style="background:#e6e3de"></span>#e6e3de</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="wijzonol.png">wijzonol.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="wijzonol.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24">
+                            <img src="svgs/wijzonol.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#cfd7e1">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/wijzonol.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Drill-Down</span>
+                    <span><span class="color-chip" style="background:#5d81a3"></span>#5d81a3</span>
+                </div>
+            </div></div></body></html>
