@@ -6,24 +6,6 @@
       "type": "categorized",
       "distribution": "count",
       "cat": {
-        "cetabever": {
-          "field": "retailer",
-          "style": {
-            "icon": [
-              {
-                "type": "template",
-                "template": "template_pin",
-                "substitute": {
-                  "#FF69B4": "#ffffff"
-                },
-                "legendScale": 0.6
-              },
-              {
-                "svg": "https://geolytix.github.io/MapIcons/brands_2024/cetabever.svg"
-              }
-            ]
-          }
-        },
         "edward_bulmer": {
           "field": "retailer",
           "style": {
@@ -32,30 +14,12 @@
                 "type": "template",
                 "template": "template_pin",
                 "substitute": {
-                  "#FF69B4": "#1a303e"
+                  "#FF69B4": "#333333"
                 },
                 "legendScale": 0.6
               },
               {
                 "svg": "https://geolytix.github.io/MapIcons/brands_2024/edward_bulmer.svg"
-              }
-            ]
-          }
-        },
-        "ripolin": {
-          "field": "retailer",
-          "style": {
-            "icon": [
-              {
-                "type": "template",
-                "template": "template_pin",
-                "substitute": {
-                  "#FF69B4": "#173867"
-                },
-                "legendScale": 0.6
-              },
-              {
-                "svg": "https://geolytix.github.io/MapIcons/brands_2024/ripolin.svg"
               }
             ]
           }
@@ -68,30 +32,12 @@
                 "type": "template",
                 "template": "template_pin",
                 "substitute": {
-                  "#FF69B4": "#2c3846"
+                  "#FF69B4": "#0e3a69"
                 },
                 "legendScale": 0.6
               },
               {
                 "svg": "https://geolytix.github.io/MapIcons/brands_2024/theodore_collection.svg"
-              }
-            ]
-          }
-        },
-        "wijzonol": {
-          "field": "retailer",
-          "style": {
-            "icon": [
-              {
-                "type": "template",
-                "template": "template_pin",
-                "substitute": {
-                  "#FF69B4": "#cfd7e1"
-                },
-                "legendScale": 0.6
-              },
-              {
-                "svg": "https://geolytix.github.io/MapIcons/brands_2024/wijzonol.svg"
               }
             ]
           }
