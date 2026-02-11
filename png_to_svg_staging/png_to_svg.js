@@ -6,7 +6,6 @@ const path = require('path');
 
 // --- CONFIGURATION ---
 const LOGO_DIR = './'; 
-const PIN_BACKGROUND = '../pins/pink_master_pin.svg'; 
 const CONFIG_FILE = 'configuration.json';
 const GITHUB_BASE_URL = 'https://geolytix.github.io/MapIcons/brands_2024/';
 
@@ -59,7 +58,7 @@ async function processAllLogos() {
         </style>
     </head>
     <body>
-        <h1>Map Pin Audit (Fixed Extraction)</h1>
+        <h1>Map Pin Audit (Intelligent Box Logic)</h1>
         <div class="grid">`;
 
     for (const file of files) {
@@ -73,8 +72,8 @@ async function processAllLogos() {
             const { hexColor, method, contrastColor } = await convertLogo(inputPath, outputPath);
             console.log(`✅ [${method}]`);
             
-            // --- CONFIG LOGIC ---
-            // If the logo color is very light (white), make the pin dark.
+            // If the extracted logo is very light (e.g. White text from Wijzonol), 
+            // the pin background should be the contrast color (e.g. Blue Box color).
             const pinColor = contrastColor;
 
             configOutput.style.theme.cat[cleanName] = {
@@ -207,9 +206,9 @@ async function convertLogo(inputPath, outputPath) {
     return { hexColor: fillColor, method, contrastColor };
 }
 
-// --- INTELLIGENT "DOUBLE TRIM" MASKING (FIXED) ---
+// --- INTELLIGENT EXTRACTION ENGINE ---
 async function extractAndTrim(inputPath) {
-    // STEP 1: Initial Trim
+    // 1. Initial Trim: Remove borders (whitespace around the box)
     const trimmedInput = await sharp(inputPath)
         .trim({ threshold: 10 }) 
         .toBuffer();
@@ -220,7 +219,7 @@ async function extractAndTrim(inputPath) {
         .raw()
         .toBuffer({ resolveWithObject: true });
 
-    // Check for transparency
+    // 2. Transparency Check
     let transparentCount = 0;
     for (let i = 0; i < data.length; i += 4) {
         if (data[i+3] < 50) transparentCount++;
@@ -228,30 +227,15 @@ async function extractAndTrim(inputPath) {
     const isTransparent = transparentCount > (data.length / 4) * 0.1;
 
     let bgR = 0, bgG = 0, bgB = 0;
+    let detectionMethod = '';
 
-    // --- COLOR DETECTION STRATEGY ---
-    if (!isTransparent) {
-        // CASE A: Solid Box (Box Drill-Down)
-        // Sample the corners to find the background color
-        const corners = [0, info.width-1, info.width*(info.height-1), (info.width*info.height)-1];
-        let bgCount = 0;
-        corners.forEach(idx => {
-            const i = idx * 4;
-            bgR += data[i]; bgG += data[i+1]; bgB += data[i+2];
-            bgCount++;
-        });
-        bgR = Math.round(bgR/bgCount); bgG = Math.round(bgG/bgCount); bgB = Math.round(bgB/bgCount);
-    } else {
-        // CASE B: Transparent Shape (e.g. Shield/Badge)
-        // We cannot use corners (they are transparent).
-        // Instead, calculate the AVERAGE color of all OPAQUE pixels.
-        // This assumes the background of the shield occupies more area than the text.
+    if (isTransparent) {
+        // --- CASE A: TRANSPARENT BG (e.g. CetaBever) ---
+        // Calculate average of OPAQUE pixels only.
         let rSum = 0, gSum = 0, bSum = 0, opaqueCount = 0;
         for (let i = 0; i < data.length; i += 4) {
-            if (data[i+3] > 100) { // If pixel is visible
-                rSum += data[i];
-                gSum += data[i+1];
-                bSum += data[i+2];
+            if (data[i+3] > 100) { 
+                rSum += data[i]; gSum += data[i+1]; bSum += data[i+2];
                 opaqueCount++;
             }
         }
@@ -259,16 +243,59 @@ async function extractAndTrim(inputPath) {
             bgR = Math.round(rSum / opaqueCount);
             bgG = Math.round(gSum / opaqueCount);
             bgB = Math.round(bSum / opaqueCount);
+        } else { bgR=255; bgG=255; bgB=255; }
+        detectionMethod = 'Transparent Avg';
+        
+    } else {
+        // --- CASE B: SOLID BG (White/Colored Canvas) ---
+        // We need to decide: Is the "Background" the corners? Or is it a "Box Logo"?
+        
+        // 1. Sample Corner Color (Top-Left)
+        const cIdx = 0; 
+        const cornerR = data[cIdx], cornerG = data[cIdx+1], cornerB = data[cIdx+2];
+
+        // 2. Sample Center Color (Middle of image)
+        const midIdx = (Math.floor(info.height/2) * info.width + Math.floor(info.width/2)) * 4;
+        const centerR = data[midIdx], centerG = data[midIdx+1], centerB = data[midIdx+2];
+
+        // 3. Count Pixels matching Corner vs Center
+        // This determines which color dominates the image area.
+        let cornerCount = 0;
+        let centerCount = 0;
+        const tolerance = 45;
+
+        for (let i = 0; i < data.length; i += 4) {
+            const r = data[i], g = data[i+1], b = data[i+2];
+            
+            const distCorner = Math.sqrt(Math.pow(r-cornerR,2) + Math.pow(g-cornerG,2) + Math.pow(b-cornerB,2));
+            const distCenter = Math.sqrt(Math.pow(r-centerR,2) + Math.pow(g-centerG,2) + Math.pow(b-centerB,2));
+            
+            if (distCorner < tolerance) cornerCount++;
+            if (distCenter < tolerance) centerCount++;
+        }
+
+        const totalPixels = data.length / 4;
+        
+        // LOGIC: If Center color is dominant (>40%) AND significantly different from Corner,
+        // it's likely a "Box Logo" (like Wijzonol). We treat the BOX color as the Background
+        // to subtract, leaving the text.
+        const centerIsDominant = centerCount > (totalPixels * 0.4);
+        const distinctColors = Math.sqrt(Math.pow(cornerR-centerR,2) + Math.pow(cornerG-centerG,2) + Math.pow(cornerB-centerB,2)) > 50;
+
+        if (centerIsDominant && distinctColors) {
+            bgR = centerR; bgG = centerG; bgB = centerB;
+            detectionMethod = 'Box Mode (Center)';
         } else {
-            // Fallback if image is empty?
-            bgR = 255; bgG = 255; bgB = 255;
+            // Otherwise, standard logo on canvas (Corner is BG)
+            bgR = cornerR; bgG = cornerG; bgB = cornerB;
+            detectionMethod = 'Standard (Corner)';
         }
     }
 
-    // Determine Contrast Color (For the Pin Body) based on the detected background
+    // Determine Contrast Color (For the Pin Body)
     let contrastColor = '#' + [bgR, bgG, bgB].map(c => c.toString(16).padStart(2,'0')).join('');
 
-    // STEP 2: Masking (Difference Check)
+    // 3. Create Mask (Difference Keying)
     const maskRaw = Buffer.alloc(info.width * info.height * 3);
     const fgPixels = [];
 
@@ -280,28 +307,22 @@ async function extractAndTrim(inputPath) {
         let isLogo = false;
 
         if (a < 100) {
-            // Transparent pixels are definitely background
             isLogo = false; 
         } else {
-            // Check distance from the determined background color
+            // Is pixel different from our determined "Background"?
             const dist = Math.sqrt(Math.pow(r-bgR,2) + Math.pow(g-bgG,2) + Math.pow(b-bgB,2));
-            
-            // If the pixel is significantly different from the background, it's the logo.
-            // (e.g., White Text vs Brown Shield)
             isLogo = dist > 45; 
         }
 
         if (isLogo) {
-            // Foregound (Black)
-            maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0;
+            maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0; // Black (Keep)
             fgPixels.push({r, g, b});
         } else {
-            // Background (White)
-            maskRaw[outIdx] = 255; maskRaw[outIdx+1] = 255; maskRaw[outIdx+2] = 255;
+            maskRaw[outIdx] = 255; maskRaw[outIdx+1] = 255; maskRaw[outIdx+2] = 255; // White (Drop)
         }
     }
 
-    // Determine Fill Color (The color of the text/icon)
+    // 4. Determine Fill Color
     let fillColor = '#000000';
     if (fgPixels.length > 0) {
         let r=0, g=0, b=0;
@@ -311,34 +332,19 @@ async function extractAndTrim(inputPath) {
             .map(c => c.toString(16).padStart(2,'0')).join('');
     }
 
-    // Refine Pin Contrast
-    // If we extracted the logo successfully, we want the pin color to contrast with the LOGO (fillColor), 
-    // OR we want it to match the original background (contrastColor).
-    // For "Ceta Bever", the fill is White. The contrastColor is Brown. 
-    // Brown is a good pin color. 
+    // 5. Pin Color Legibility Check
+    // If fill is light (White text) and bg is dark (Blue box), contrastColor is already the Box Color (Blue). Great.
+    // If fill is light and bg is light (low contrast), darken the pin.
+    const getLuma = (hex) => {
+        const c = parseInt(hex.slice(1), 16);
+        return 0.2126 * ((c>>16)&0xff) + 0.7152 * ((c>>8)&0xff) + 0.0722 * ((c>>0)&0xff);
+    }
     
-    // However, if the extraction failed or it's a black icon, we ensure visibility.
-    // Calculate Luma of the extracted fill
-    const rgb = parseInt(fillColor.slice(1), 16);
-    const r = (rgb >> 16) & 0xff;
-    const g = (rgb >>  8) & 0xff;
-    const b = (rgb >>  0) & 0xff;
-    const fillLuma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    
-    // If fill is very light (e.g. White text), force the Pin Color to be Dark.
-    // If contrastColor (original bg) is light, we overwrite it to dark grey.
-    const bgRgb = parseInt(contrastColor.slice(1), 16);
-    const br = (bgRgb >> 16) & 0xff;
-    const bg = (bgRgb >>  8) & 0xff;
-    const bb = (bgRgb >>  0) & 0xff;
-    const bgLuma = 0.2126 * br + 0.7152 * bg + 0.0722 * bb;
-
-    // If Fill and Background are both light (low contrast), darken the background
-    if (fillLuma > 150 && bgLuma > 150) {
+    if (getLuma(fillColor) > 180 && getLuma(contrastColor) > 180) {
         contrastColor = '#333333';
     }
 
-    // STEP 3: Second Trim
+    // 6. Second Trim (Zoom to content)
     const finalMaskBuffer = await sharp(maskRaw, { raw: { width: info.width, height: info.height, channels: 3 } })
         .trim({ threshold: 10, background: {r:255, g:255, b:255} }) 
         .png()
@@ -347,20 +353,14 @@ async function extractAndTrim(inputPath) {
     return { 
         maskBuffer: finalMaskBuffer, 
         fillColor, 
-        method: isTransparent ? 'Transparent Drill-Down' : 'Box Drill-Down',
+        method: detectionMethod,
         contrastColor
     };
 }
 
 function traceBuffer(buffer, color) {
     return new Promise((resolve, reject) => {
-        const params = {
-            turdSize: 20, 
-            optTolerance: 0.2,
-            color: color 
-        };
-        
-        potrace.trace(buffer, params, (err, svg) => {
+        potrace.trace(buffer, { turdSize: 20, optTolerance: 0.2, color: color }, (err, svg) => {
             if (err) return reject(err);
             const dMatch = svg.match(/d="([^"]+)"/);
             resolve(dMatch ? dMatch[1] : '');
