@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 24 24"
+   width="24pt"
+   height="24pt"
+   version="1.1"
+   id="svg23"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <clipPath
+       id="_clipPath_BIWaDv3sQ9VuMwpTXVaWaU14cOERcNng">
+      <rect
+         width="24"
+         height="24"
+         id="rect2" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_BIWaDv3sQ9VuMwpTXVaWaU14cOERcNng)"
+     id="g21">
+    <g
+       id="g19">
+      <path
+         d=" M 11.889 3.415 C 8.268 3.415 5.332 6.352 5.332 9.974 C 5.332 13.592 8.268 16.529 11.889 16.529 C 15.509 16.529 18.446 13.592 18.446 9.974 C 18.446 6.352 15.509 3.415 11.889 3.415 L 11.889 3.415 Z "
+         fill-rule="evenodd"
+         fill="rgb(255,227,0)"
+         id="path7" />
+      <path
+         d=" M 11.999 10.083 L 11.999 9.636 L 11.481 10.156 L 10.324 8.999 L 8.989 10.336 L 8.989 10.785 L 9.326 10.447 L 10.257 11.381 L 9.913 11.724 L 10.137 11.949 L 11.999 10.083 Z "
+         fill-rule="evenodd"
+         fill="rgb(180,30,10)"
+         id="path9" />
+      <path
+         d=" M 6.077 10.746 L 6.423 10.746 L 6.423 9.2 L 6.077 9.2 L 6.077 8.755 L 8.139 8.755 L 8.139 9.2 L 7.795 9.2 L 7.795 10.639 L 8.99 9.974 L 8.99 11.193 L 6.077 11.193 L 6.077 10.746 Z "
+         fill-rule="evenodd"
+         fill="rgb(0,50,120)"
+         id="path11" />
+      <path
+         d=" M 10.154 7.37 C 10.559 7.37 10.888 7.696 10.888 8.102 C 10.888 8.508 10.559 8.836 10.154 8.836 C 9.748 8.836 9.419 8.508 9.419 8.102 C 9.419 7.696 9.748 7.37 10.154 7.37 Z "
+         fill-rule="evenodd"
+         fill="rgb(180,30,10)"
+         id="path13" />
+      <path
+         d=" M 11.656 8.755 L 11.656 9.201 L 12 9.201 L 12 10.746 L 11.656 10.746 L 11.656 11.193 L 13.622 11.193 C 15.075 11.193 15.09 8.755 13.622 8.755 L 11.656 8.755 Z  M 13.248 9.512 L 13.33 9.512 C 13.761 9.512 13.761 10.434 13.346 10.432 L 13.248 10.432 L 13.248 9.512 Z "
+         fill-rule="evenodd"
+         fill="rgb(0,50,120)"
+         id="path15" />
+      <path
+         d=" M 14.772 10.746 L 15.117 10.746 L 15.117 9.2 L 14.772 9.2 L 14.772 8.755 L 16.834 8.755 L 16.834 9.2 L 16.49 9.2 L 16.49 10.639 L 17.684 9.974 L 17.684 11.193 L 14.772 11.193 L 14.772 10.746 Z "
+         fill="rgb(0,50,120)"
+         id="path17" />
+    </g>
+  </g>
+</svg>

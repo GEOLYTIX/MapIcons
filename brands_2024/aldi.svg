@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 30 30"
+   width="30pt"
+   height="30pt"
+   version="1.1"
+   id="svg133"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs137" />
+  <circle
+     vector-effect="non-scaling-stroke"
+     cx="14.962687"
+     cy="12.380597"
+     fill="#fa6e0a"
+     id="circle5903"
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="9.1567163" />
+  <circle
+     vector-effect="non-scaling-stroke"
+     cx="14.962687"
+     cy="12.380597"
+     fill="#f03d14"
+     id="circle5905"
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="8.5026655" />
+  <circle
+     vector-effect="non-scaling-stroke"
+     cx="14.962687"
+     cy="12.393612"
+     fill="#00b5db"
+     id="circle5907"
+     style="isolation:isolate;stroke-width:0.0654052"
+     r="8.1102352" />
+  <ellipse
+     vector-effect="non-scaling-stroke"
+     cx="14.962687"
+     cy="12.387102"
+     fill="#001f78"
+     id="circle5909"
+     style="isolation:isolate;stroke-width:0.0654052"
+     rx="7.7767005"
+     ry="7.7767" />
+  <g
+     id="g5915"
+     style="isolation:isolate"
+     transform="matrix(0.06540513,0,0,0.06540511,1.9470657,0.54227224)">
+    <g
+       id="g5913">
+      <path
+         d="m 282.847,154.082 h -18.482 v 53.751 h 18.482 z m -43.746,26.876 c 0,10.343 -0.255,15.26 -6.189,15.26 h -1.526 v -30.351 h 1.526 c 5.934,-0.085 6.189,4.917 6.189,15.091 z m 18.567,0 c 0,-26.113 -8.818,-26.791 -27.554,-26.791 h -17.21 v 53.751 h 17.21 c 18.821,-0.085 27.554,-0.848 27.554,-26.96 z m -50.275,26.875 -1.78,-14.582 H 192.302 V 154.082 H 173.82 v 53.751 z m -37.981,0 -15.515,-53.751 h -22.975 l -15.769,53.751 h 18.482 l 1.441,-6.189 h 12.971 l 1.526,6.189 z m -23.569,-17.55 h -8.563 l 4.239,-21.788 z"
+         fill="#ffffff"
+         id="path5911" />
+    </g>
+  </g>
+</svg>
