@@ -2,6 +2,7 @@
   "name": "image-processing-script",
   "version": "1.0.0",
   "description": "A script to process, trace, and optimize images using sharp, potrace, and svgo.",
+  "main": "index.js",
   "dependencies": {
     "potrace": "^2.1.8",
     "sharp": "^0.33.2",
