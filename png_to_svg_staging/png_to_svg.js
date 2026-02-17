@@ -45,7 +45,7 @@ async function processAllLogos() {
             body { font-family: 'Segoe UI', sans-serif; background: #e0e0e0; padding: 20px; }
             h1 { text-align: center; color: #333; }
             .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-            .tile { background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+            .tile { background: aliceblue; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
             .tile-header { background: #333; color: white; padding: 10px; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             .tile-body { padding: 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; align-items: end; }
             .label { display: block; font-size: 10px; color: #666; margin-bottom: 5px; text-transform: uppercase; font-weight:bold; }
@@ -230,8 +230,8 @@ async function extractAndTrim(inputPath) {
     let detectionMethod = '';
 
     if (isTransparent) {
-        // --- CASE A: TRANSPARENT BG (e.g. CetaBever) ---
-        // Calculate average of OPAQUE pixels only.
+        // --- CASE A: TRANSPARENT BG ---
+        // Calculate average of OPAQUE pixels to see if logo is light or dark
         let rSum = 0, gSum = 0, bSum = 0, opaqueCount = 0;
         for (let i = 0; i < data.length; i += 4) {
             if (data[i+3] > 100) { 
@@ -239,17 +239,26 @@ async function extractAndTrim(inputPath) {
                 opaqueCount++;
             }
         }
-        if (opaqueCount > 0) {
-            bgR = Math.round(rSum / opaqueCount);
-            bgG = Math.round(gSum / opaqueCount);
-            bgB = Math.round(bSum / opaqueCount);
-        } else { bgR=255; bgG=255; bgB=255; }
-        detectionMethod = 'Transparent Avg';
         
+        let avgR = 255, avgG = 255, avgB = 255;
+        if (opaqueCount > 0) {
+            avgR = Math.round(rSum / opaqueCount);
+            avgG = Math.round(gSum / opaqueCount);
+            avgB = Math.round(bSum / opaqueCount);
+        }
+
+        const luma = 0.2126 * avgR + 0.7152 * avgG + 0.0722 * avgB;
+        
+        // FIXED LOGIC: Use White for color logos (creates cutouts), Black for white logos.
+        if (luma > 200) {
+            bgR = 0; bgG = 0; bgB = 0; // Black virtual bg
+            detectionMethod = 'Transparent (Light Logo)';
+        } else {
+            bgR = 255; bgG = 255; bgB = 255; // White virtual bg
+            detectionMethod = 'Transparent (Dark/Color Logo)';
+        }
     } else {
         // --- CASE B: SOLID BG (White/Colored Canvas) ---
-        // We need to decide: Is the "Background" the corners? Or is it a "Box Logo"?
-        
         // 1. Sample Corner Color (Top-Left)
         const cIdx = 0; 
         const cornerR = data[cIdx], cornerG = data[cIdx+1], cornerB = data[cIdx+2];
@@ -259,7 +268,6 @@ async function extractAndTrim(inputPath) {
         const centerR = data[midIdx], centerG = data[midIdx+1], centerB = data[midIdx+2];
 
         // 3. Count Pixels matching Corner vs Center
-        // This determines which color dominates the image area.
         let cornerCount = 0;
         let centerCount = 0;
         const tolerance = 45;
@@ -275,10 +283,6 @@ async function extractAndTrim(inputPath) {
         }
 
         const totalPixels = data.length / 4;
-        
-        // LOGIC: If Center color is dominant (>40%) AND significantly different from Corner,
-        // it's likely a "Box Logo" (like Wijzonol). We treat the BOX color as the Background
-        // to subtract, leaving the text.
         const centerIsDominant = centerCount > (totalPixels * 0.4);
         const distinctColors = Math.sqrt(Math.pow(cornerR-centerR,2) + Math.pow(cornerG-centerG,2) + Math.pow(cornerB-centerB,2)) > 50;
 
@@ -286,7 +290,6 @@ async function extractAndTrim(inputPath) {
             bgR = centerR; bgG = centerG; bgB = centerB;
             detectionMethod = 'Box Mode (Center)';
         } else {
-            // Otherwise, standard logo on canvas (Corner is BG)
             bgR = cornerR; bgG = cornerG; bgB = cornerB;
             detectionMethod = 'Standard (Corner)';
         }
@@ -309,7 +312,6 @@ async function extractAndTrim(inputPath) {
         if (a < 100) {
             isLogo = false; 
         } else {
-            // Is pixel different from our determined "Background"?
             const dist = Math.sqrt(Math.pow(r-bgR,2) + Math.pow(g-bgG,2) + Math.pow(b-bgB,2));
             isLogo = dist > 45; 
         }
@@ -333,8 +335,6 @@ async function extractAndTrim(inputPath) {
     }
 
     // 5. Pin Color Legibility Check
-    // If fill is light (White text) and bg is dark (Blue box), contrastColor is already the Box Color (Blue). Great.
-    // If fill is light and bg is light (low contrast), darken the pin.
     const getLuma = (hex) => {
         const c = parseInt(hex.slice(1), 16);
         return 0.2126 * ((c>>16)&0xff) + 0.7152 * ((c>>8)&0xff) + 0.0722 * ((c>>0)&0xff);
