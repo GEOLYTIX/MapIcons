@@ -6,8 +6,9 @@ const path = require('path');
 
 // --- CONFIGURATION ---
 const LOGO_DIR = './'; 
-const CONFIG_FILE = 'configuration.json';
 const GITHUB_BASE_URL = 'https://geolytix.github.io/MapIcons/brands_2024/';
+const LOGOS_FILE = 'logos.json';
+const FASCIA_FILE = 'logos_fascia_open_close.json';
 
 // DIMENSIONS & SCALING
 const VIEWBOX_SIZE = 24;      
@@ -20,18 +21,39 @@ const MAX_HEIGHT = 14 * SCALE; // 140px
 const HEAD_CENTER_X = 12 * SCALE; // 120px
 const HEAD_CENTER_Y = 9 * SCALE;  // 90px
 
-// --- CONFIGURATION OBJECT ---
-const configOutput = {
+// --- CONFIGURATION OBJECTS ---
+const logosConfig = {
     "style": {
-        "theme": {
-            "title": "THEME",
-            "field": "field",
-            "type": "categorized",
-            "distribution": "count",
-            "cat": {}
+        "themes": {
+            "logos": {
+                "type": "categorized",
+                "distribution": "count",
+                "cat": {}
+            }
         }
     }
 };
+
+const fasciaConfig = {
+    "style": {
+        "themes": {
+            "logos_fascia_open_close": {
+                "type": "categorized",
+                "distribution": "count",
+                "fields": [
+                    "open_close",
+                    "fascia"
+                ],
+                "cat": {}
+            }
+        }
+    }
+};
+
+// Helper function to convert "100_montaditos" to "100 Montaditos" for the JSON key
+function formatBrandName(name) {
+    return name.replace(/[_-]/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+}
 
 async function processAllLogos() {
     if (!fs.existsSync(LOGO_DIR)) return console.log(`❌ Directory ${LOGO_DIR} not found.`);
@@ -66,18 +88,17 @@ async function processAllLogos() {
         const outputName = file.replace(/\.[^/.]+$/, "") + ".svg";
         const outputPath = path.join(LOGO_DIR, 'svgs', outputName);
         const cleanName = path.parse(file).name; 
+        const brandName = formatBrandName(cleanName);
 
         try {
             process.stdout.write(`Processing ${file}... `);
             const { hexColor, method, contrastColor } = await convertLogo(inputPath, outputPath);
             console.log(`✅ [${method}]`);
             
-            // If the extracted logo is very light (e.g. White text from Wijzonol), 
-            // the pin background should be the contrast color (e.g. Blue Box color).
             const pinColor = contrastColor;
 
-            configOutput.style.theme.cat[cleanName] = {
-                "field": "retailer",
+            // 1. Populate logos.json
+            logosConfig.style.themes.logos.cat[brandName] = {
                 "style": {
                     "icon": [
                         {
@@ -86,10 +107,31 @@ async function processAllLogos() {
                             "substitute": {
                                 "#FF69B4": pinColor
                             },
-                            "legendScale": 0.6
+                            "legendScale": 0.7
                         },
                         {
                             "svg": `${GITHUB_BASE_URL}${outputName}`
+                        }
+                    ]
+                }
+            };
+
+            // 2. Populate logos_fascia_open_close.json
+            fasciaConfig.style.themes.logos_fascia_open_close.cat[brandName] = {
+                "field": "fascia",
+                "style": {
+                    "icon": [
+                        {
+                            "type": "template",
+                            "template": "master_pin_foreground",
+                            "substitute": {
+                                "#FF69B4": "#a0a0a0"
+                            },
+                            "legendScale": 0.7
+                        },
+                        {
+                            "svg": `${GITHUB_BASE_URL}${outputName}`,
+                            "legendScale": 0.7
                         }
                     ]
                 }
@@ -132,10 +174,14 @@ async function processAllLogos() {
     }
     
     fs.writeFileSync(path.join(LOGO_DIR, 'audit.html'), htmlContent + `</div></body></html>`);
-    fs.writeFileSync(path.join(LOGO_DIR, CONFIG_FILE), JSON.stringify(configOutput, null, 2));
+    
+    // Write both JSON files
+    fs.writeFileSync(path.join(LOGO_DIR, LOGOS_FILE), JSON.stringify(logosConfig, null, 2));
+    fs.writeFileSync(path.join(LOGO_DIR, FASCIA_FILE), JSON.stringify(fasciaConfig, null, 2));
 
     console.log(`\n👉 Open ${path.join(LOGO_DIR, 'audit.html')} to verify.`);
-    console.log(`👉 Config generated: ${path.join(LOGO_DIR, CONFIG_FILE)}`);
+    console.log(`👉 Config generated: ${path.join(LOGO_DIR, LOGOS_FILE)}`);
+    console.log(`👉 Config generated: ${path.join(LOGO_DIR, FASCIA_FILE)}`);
 }
 
 async function convertLogo(inputPath, outputPath) {
