@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 24 24" width="24pt" height="24pt" version="1.1" id="svg4" sodipodi:docname="discovery.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview id="namedview5" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="pt" showgrid="false" inkscape:zoom="25.125" inkscape:cx="9.8905473" inkscape:cy="15.9801" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg4"/>
-  <defs id="defs8">
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
-      <rect style="fill: #FFFFFF;stroke-width:0.773718" id="rect3" width="93.645615" height="70.043869" x="34.214005" y="76.362015"/>
-    </clipPath>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
-      <rect style="fill: #FFFFFF;stroke-width:0.773721" id="rect5" width="129.42938" height="121.05454" x="41.05772" y="99.169487"/>
-    </clipPath>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6">
-      <rect style="fill: #FFFFFF;stroke-width:1.47613" id="rect6" width="13.343284" height="10.985075" x="5.3134327" y="6.9850745"/>
-    </clipPath>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6-2">
-      <ellipse style="fill: #FFFFFF;stroke-width:0.773721" id="ellipse6" cx="85.596649" cy="197.76421" rx="43.016239" ry="38.448139"/>
-    </clipPath>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath7">
-      <ellipse style="fill: #FFFFFF;stroke-width:0.773721" id="ellipse7" cx="84.454643" cy="143.70844" rx="37.306118" ry="37.686794"/>
-    </clipPath>
-  </defs>
+<svg viewBox="0 0 24 24" width="24pt" height="24pt" version="1.1" sodipodi:docname="discovery.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="pt" showgrid="false" inkscape:zoom="25.125" inkscape:cx="9.8905473" inkscape:cy="15.9801" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg4"/>
+  
   <image width="617.42957" height="132.30634" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAx4AAACrCAYAAADo1UplAAAABHNCSVQICAgIfAhkiAAAIABJREFU
 eJzsnXd4W+X1x7/nleQdZzpOZOleWSKMMMIIe4cd9qbQUqAtUPorpS1dlLaUFgotpdCWFjoglD1D
 GYUyAyXMAAl7xJLulezYcRLHdrwk3Xt+f2TYTuJY48iSnft5nj7Fzr3f93hJ97zvOd9DcNhASAs8
@@ -596,5 +580,5 @@ jxOx41qU99KomG3/IRzSVxGRf+C5MZWVWwF4Kd/Yw8WMxxkwBxzOeRan7Li4iQlTPQntYr4XcdeL
 cTkDVUNfuIbbDqaVYJhwuz+NNTXZ3nVOkCw/M+KM92R5SMNkJctnW5E+k4aN8U8GPhxwtCx/v82k
 +RyA58LTpumoqDhQYdoZ4M0ZMIhoDAAwuIMYKQayxo4GAAAAM0lEQVQ+B+h1YufpWCLxaYm7PjjG
 NQz02wBf6OeImUy+bYRCRyik9ivEiC40FxJX8sb/AxSkZq9PZfg8AAAAAElFTkSuQmCC
-" id="image1" x="49.8256" y="92.401566" clip-path="url(#clipPath7)" transform="matrix(0.20436658,0,0,0.19055096,-5.537169,-17.933871)"/>
+" x="49.8256" y="92.401566" clip-path="url(#clipPath7)" transform="matrix(0.20436658,0,0,0.19055096,-5.537169,-17.933871)"/>
 </svg>

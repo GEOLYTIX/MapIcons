@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 24 24" width="24pt" height="24pt" version="1.1" id="svg4" sodipodi:docname="black_yak.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview id="namedview5" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="pt" showgrid="false" inkscape:zoom="25.125" inkscape:cx="9.8905473" inkscape:cy="15.9801" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg4"/>
-  <defs id="defs8">
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
-      <rect style="fill: #FFFFFF;stroke-width:0.773718" id="rect3" width="93.645615" height="70.043869" x="34.214005" y="76.362015"/>
-    </clipPath>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
-      <rect style="fill: #FFFFFF;stroke-width:0.773721" id="rect5" width="129.42938" height="121.05454" x="41.05772" y="99.169487"/>
-    </clipPath>
-  </defs>
+<svg viewBox="0 0 24 24" width="24pt" height="24pt" version="1.1" sodipodi:docname="black_yak.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#ffffff" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="pt" showgrid="false" inkscape:zoom="25.125" inkscape:cx="9.8905473" inkscape:cy="15.9801" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg4"/>
+  
   <image width="386.86063" height="101.35748" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAACDCAYAAAB7hulHAAAABHNCSVQICAgIfAhkiAAAIABJREFU
 eJztnXm4LUV1t999zh2AC15AQSYFEVFBRQWDyhdRQZRE4kAUHBAUB5zip8TEKRHnMUYTQA1RYxQj
 OMGHDCqRQREQlOCAiiAODDKIiAh3OGfv749fr1TtPt27q3v3ni7rfZ5+9tS7u7q6ulatVWutmmf8
@@ -254,5 +247,5 @@ dNPMHcdxHMdpkViobw+ci4TxAtLYBwn1vEAHLRJTtv/f0Z+X3XEcx3GcFom931cCX2CpA1uRYI8F
 wdFtkaXz6nmBPp/9b3MUyvZ1ZMa33xzHcRzHGTOWV3034Dw0n24OcxaalhfoxjzwcGBV9tmzwDmO
 4zjOBDGhvgJ4H0EzrxLoMS7MHcdxHGcKMIe5OZRz/WKCo9wFVAt0x3Ecx3GmBNOy55G2/jfA74Er
 cIHuOI7jODOHaevLgIcAh+MC3XEcx9mA+f97P02CFD+zDQAAAABJRU5ErkJggg==
-" id="image1-4" x="74.509506" y="113.9668" clip-path="url(#clipPath4)" transform="matrix(0.16964672,0,0,0.14656209,-8.390294,-13.449475)"/>
+" x="74.509506" y="113.9668" clip-path="url(#clipPath4)" transform="matrix(0.16964672,0,0,0.14656209,-8.390294,-13.449475)"/>
 </svg>
