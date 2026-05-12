@@ -5,6 +5,6 @@
 4. Open up the audit.html that is outputted and look at the outputs. 
 5. Revisit / re-add new pngs for any that didn't work. 
 6. If they still don't work, manually create these (but please let Si know which you had to do this for so we can improve the process with examples). 
-6. Move them from the svgs folder into brands_2024 once happy and then write the MAPP configuration. 
+6. Move them from the svgs folder into mapp_logos once happy and then write the MAPP configuration. 
 7. Copy the theme that is generated in the `configuration.json` file into your MAPP layer. 
 8. Push the logos to GitHub and then test it locally against the layer! 

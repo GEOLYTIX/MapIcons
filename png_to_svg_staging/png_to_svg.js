@@ -6,7 +6,7 @@ const path = require('path');
 
 // --- CONFIGURATION ---
 const LOGO_DIR = './'; 
-const GITHUB_BASE_URL = 'https://geolytix.github.io/MapIcons/brands_2024/';
+const GITHUB_BASE_URL = 'https://geolytix.github.io/MapIcons/mapp_logos/';
 const LOGOS_FILE = 'logos.json';
 const FASCIA_FILE = 'logos_fascia_open_close.json';
 
@@ -50,7 +50,7 @@ const fasciaConfig = {
     }
 };
 
-// Helper function to convert "100_montaditos" to "100 Montaditos" for the JSON key
+// Helper function to format brand names
 function formatBrandName(name) {
     return name.replace(/[_-]/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
@@ -80,7 +80,7 @@ async function processAllLogos() {
         </style>
     </head>
     <body>
-        <h1>Map Pin Audit (Intelligent Box Logic)</h1>
+        <h1>Map Pin Audit (White SVG on Colored Pin)</h1>
         <div class="grid">`;
 
     for (const file of files) {
@@ -92,10 +92,10 @@ async function processAllLogos() {
 
         try {
             process.stdout.write(`Processing ${file}... `);
-            const { hexColor, method, contrastColor } = await convertLogo(inputPath, outputPath);
+            const { prominentColor, method } = await convertLogo(inputPath, outputPath);
             console.log(`✅ [${method}]`);
             
-            const pinColor = contrastColor;
+            const pinColor = prominentColor;
 
             // 1. Populate logos.json
             logosConfig.style.themes.logos.cat[brandName] = {
@@ -125,7 +125,7 @@ async function processAllLogos() {
                             "type": "template",
                             "template": "master_pin_foreground",
                             "substitute": {
-                                "#FF69B4": "#a0a0a0"
+                                "#FF69B4": pinColor
                             },
                             "legendScale": 0.7
                         },
@@ -149,7 +149,7 @@ async function processAllLogos() {
                     </div>
                     <div>
                         <span class="label">SVG Result</span>
-                        <div class="box-24">
+                        <div class="box-24" style="background:#333;">
                             <img src="svgs/${outputName}" width="24" height="24" style="position:relative; z-index:2;">
                         </div>
                     </div>
@@ -165,7 +165,7 @@ async function processAllLogos() {
                 </div>
                 <div class="footer">
                     <span>${method}</span>
-                    <span><span class="color-chip" style="background:${hexColor}"></span>${hexColor}</span>
+                    <span><span class="color-chip" style="background:${pinColor}"></span>${pinColor}</span>
                 </div>
             </div>`;
         } catch (err) {
@@ -186,7 +186,7 @@ async function processAllLogos() {
 
 async function convertLogo(inputPath, outputPath) {
     const analysis = await extractAndTrim(inputPath);
-    const { maskBuffer, fillColor, method, contrastColor } = analysis;
+    const { maskBuffer, prominentColor, method } = analysis;
 
     const resizedMask = await sharp(maskBuffer)
         .resize({
@@ -219,12 +219,14 @@ async function convertLogo(inputPath, outputPath) {
     .png()
     .toBuffer();
 
-    const pathData = await traceBuffer(finalCanvas, fillColor);
+    const pathData = await traceBuffer(finalCanvas);
 
+    // Hardcode the extracted shape to pure white. 
+    // The mask ensures backgrounds were dropped.
     const rawSvg = `
         <svg xmlns="http://www.w3.org/2000/svg" width="${VIEWBOX_SIZE}" height="${VIEWBOX_SIZE}" viewBox="0 0 ${VIEWBOX_SIZE} ${VIEWBOX_SIZE}">
             <g transform="scale(${1/SCALE})">
-                <path d="${pathData}" fill="${fillColor}" fill-rule="evenodd" /> 
+                <path d="${pathData}" fill="#FFFFFF" fill-rule="evenodd" /> 
             </g>
         </svg>
     `;
@@ -249,12 +251,12 @@ async function convertLogo(inputPath, outputPath) {
     }
     
     fs.writeFileSync(outputPath, result.data);
-    return { hexColor: fillColor, method, contrastColor };
+    return { prominentColor, method };
 }
 
 // --- INTELLIGENT EXTRACTION ENGINE ---
 async function extractAndTrim(inputPath) {
-    // 1. Initial Trim: Remove borders (whitespace around the box)
+    // 1. Initial Trim: Remove blank borders
     const trimmedInput = await sharp(inputPath)
         .trim({ threshold: 10 }) 
         .toBuffer();
@@ -265,7 +267,7 @@ async function extractAndTrim(inputPath) {
         .raw()
         .toBuffer({ resolveWithObject: true });
 
-    // 2. Transparency Check
+    // 2. Background Detection
     let transparentCount = 0;
     for (let i = 0; i < data.length; i += 4) {
         if (data[i+3] < 50) transparentCount++;
@@ -276,8 +278,7 @@ async function extractAndTrim(inputPath) {
     let detectionMethod = '';
 
     if (isTransparent) {
-        // --- CASE A: TRANSPARENT BG ---
-        // Calculate average of OPAQUE pixels to see if logo is light or dark
+        // CASE A: Transparent background
         let rSum = 0, gSum = 0, bSum = 0, opaqueCount = 0;
         for (let i = 0; i < data.length; i += 4) {
             if (data[i+3] > 100) { 
@@ -294,42 +295,29 @@ async function extractAndTrim(inputPath) {
         }
 
         const luma = 0.2126 * avgR + 0.7152 * avgG + 0.0722 * avgB;
-        
-        // FIXED LOGIC: Use White for color logos (creates cutouts), Black for white logos.
         if (luma > 200) {
-            bgR = 0; bgG = 0; bgB = 0; // Black virtual bg
+            bgR = 0; bgG = 0; bgB = 0;
             detectionMethod = 'Transparent (Light Logo)';
         } else {
-            bgR = 255; bgG = 255; bgB = 255; // White virtual bg
+            bgR = 255; bgG = 255; bgB = 255; 
             detectionMethod = 'Transparent (Dark/Color Logo)';
         }
     } else {
-        // --- CASE B: SOLID BG (White/Colored Canvas) ---
-        // 1. Sample Corner Color (Top-Left)
-        const cIdx = 0; 
-        const cornerR = data[cIdx], cornerG = data[cIdx+1], cornerB = data[cIdx+2];
-
-        // 2. Sample Center Color (Middle of image)
+        // CASE B: Solid background 
+        const cornerR = data[0], cornerG = data[1], cornerB = data[2];
         const midIdx = (Math.floor(info.height/2) * info.width + Math.floor(info.width/2)) * 4;
         const centerR = data[midIdx], centerG = data[midIdx+1], centerB = data[midIdx+2];
 
-        // 3. Count Pixels matching Corner vs Center
-        let cornerCount = 0;
-        let centerCount = 0;
+        let cornerCount = 0, centerCount = 0;
         const tolerance = 45;
 
         for (let i = 0; i < data.length; i += 4) {
             const r = data[i], g = data[i+1], b = data[i+2];
-            
-            const distCorner = Math.sqrt(Math.pow(r-cornerR,2) + Math.pow(g-cornerG,2) + Math.pow(b-cornerB,2));
-            const distCenter = Math.sqrt(Math.pow(r-centerR,2) + Math.pow(g-centerG,2) + Math.pow(b-centerB,2));
-            
-            if (distCorner < tolerance) cornerCount++;
-            if (distCenter < tolerance) centerCount++;
+            if (Math.sqrt(Math.pow(r-cornerR,2) + Math.pow(g-cornerG,2) + Math.pow(b-cornerB,2)) < tolerance) cornerCount++;
+            if (Math.sqrt(Math.pow(r-centerR,2) + Math.pow(g-centerG,2) + Math.pow(b-centerB,2)) < tolerance) centerCount++;
         }
 
-        const totalPixels = data.length / 4;
-        const centerIsDominant = centerCount > (totalPixels * 0.4);
+        const centerIsDominant = centerCount > ((data.length / 4) * 0.4);
         const distinctColors = Math.sqrt(Math.pow(cornerR-centerR,2) + Math.pow(cornerG-centerG,2) + Math.pow(cornerB-centerB,2)) > 50;
 
         if (centerIsDominant && distinctColors) {
@@ -341,10 +329,7 @@ async function extractAndTrim(inputPath) {
         }
     }
 
-    // Determine Contrast Color (For the Pin Body)
-    let contrastColor = '#' + [bgR, bgG, bgB].map(c => c.toString(16).padStart(2,'0')).join('');
-
-    // 3. Create Mask (Difference Keying)
+    // 3. Create Mask & Extract Foreground Prominent Color
     const maskRaw = Buffer.alloc(info.width * info.height * 3);
     const fgPixels = [];
 
@@ -363,34 +348,24 @@ async function extractAndTrim(inputPath) {
         }
 
         if (isLogo) {
-            maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0; // Black (Keep)
+            maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0; // Black keeps it for potrace
             fgPixels.push({r, g, b});
         } else {
-            maskRaw[outIdx] = 255; maskRaw[outIdx+1] = 255; maskRaw[outIdx+2] = 255; // White (Drop)
+            maskRaw[outIdx] = 255; maskRaw[outIdx+1] = 255; maskRaw[outIdx+2] = 255; // White drops it
         }
     }
 
-    // 4. Determine Fill Color
-    let fillColor = '#000000';
+    // 4. Calculate Prominent Color (Average of foreground pixels)
+    let prominentColor = '#333333'; // fallback
     if (fgPixels.length > 0) {
         let r=0, g=0, b=0;
         fgPixels.forEach(p => { r+=p.r; g+=p.g; b+=p.b });
         const len = fgPixels.length;
-        fillColor = '#' + [Math.round(r/len), Math.round(g/len), Math.round(b/len)]
+        prominentColor = '#' + [Math.round(r/len), Math.round(g/len), Math.round(b/len)]
             .map(c => c.toString(16).padStart(2,'0')).join('');
     }
 
-    // 5. Pin Color Legibility Check
-    const getLuma = (hex) => {
-        const c = parseInt(hex.slice(1), 16);
-        return 0.2126 * ((c>>16)&0xff) + 0.7152 * ((c>>8)&0xff) + 0.0722 * ((c>>0)&0xff);
-    }
-    
-    if (getLuma(fillColor) > 180 && getLuma(contrastColor) > 180) {
-        contrastColor = '#333333';
-    }
-
-    // 6. Second Trim (Zoom to content)
+    // 5. Second Trim (Zoom tightly to content shape)
     const finalMaskBuffer = await sharp(maskRaw, { raw: { width: info.width, height: info.height, channels: 3 } })
         .trim({ threshold: 10, background: {r:255, g:255, b:255} }) 
         .png()
@@ -398,15 +373,14 @@ async function extractAndTrim(inputPath) {
 
     return { 
         maskBuffer: finalMaskBuffer, 
-        fillColor, 
-        method: detectionMethod,
-        contrastColor
+        prominentColor, 
+        method: detectionMethod
     };
 }
 
-function traceBuffer(buffer, color) {
+function traceBuffer(buffer) {
     return new Promise((resolve, reject) => {
-        potrace.trace(buffer, { turdSize: 20, optTolerance: 0.2, color: color }, (err, svg) => {
+        potrace.trace(buffer, { turdSize: 20, optTolerance: 0.2 }, (err, svg) => {
             if (err) return reject(err);
             const dMatch = svg.match(/d="([^"]+)"/);
             resolve(dMatch ? dMatch[1] : '');
