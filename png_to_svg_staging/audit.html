@@ -1,0 +1,442 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; background: #e0e0e0; padding: 20px; }
+            h1 { text-align: center; color: #333; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+            .tile { background: aliceblue; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+            .tile-header { background: #333; color: white; padding: 10px; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .tile-body { padding: 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; align-items: end; }
+            .label { display: block; font-size: 10px; color: #666; margin-bottom: 5px; text-transform: uppercase; font-weight:bold; }
+            .box-24 { width: 24px; height: 24px; margin: 0 auto; position: relative; background: #ccc; border-radius: 4px; border: 1px solid #999; }
+            .box-24.original { background: white; border-color: #eee; }
+            .pin-bg { position: absolute; top: 0; left: 0; z-index: 1; }
+            .pin-fg { position: absolute; top: 0; left: 0; z-index: 10; }
+            .footer { text-align:center; padding:8px; font-size:11px; color:#555; background:#f9f9f9; border-top:1px solid #eee; display:flex; justify-content:space-between; align-items:center; }
+            .color-chip { width:12px; height:12px; border-radius:50%; border:1px solid rgba(0,0,0,0.2); display:inline-block; vertical-align:middle; margin-right:4px; }
+        </style>
+    </head>
+    <body>
+        <h1>Map Pin Audit (White SVG on Colored Pin)</h1>
+        <div class="grid">
+            <div class="tile">
+                <div class="tile-header" title="centra.png">centra.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="centra.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/centra.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#fdd902">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/centra.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Light Logo)</span>
+                    <span><span class="color-chip" style="background:#fdd902"></span>#fdd902</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="central.png">central.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="central.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/central.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#4c5180">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/central.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#4c5180"></span>#4c5180</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="dansksupermarked.png">dansksupermarked.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="dansksupermarked.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/dansksupermarked.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#002848">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/dansksupermarked.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#002848"></span>#002848</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="daytoday.png">daytoday.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="daytoday.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/daytoday.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#c05156">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/daytoday.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#c05156"></span>#c05156</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="foodpluslogo.png">foodpluslogo.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="foodpluslogo.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/foodpluslogo.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#1e8025">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/foodpluslogo.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#1e8025"></span>#1e8025</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="keystore.png">keystore.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="keystore.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/keystore.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/keystore.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Light Logo)</span>
+                    <span><span class="color-chip" style="background:#ffffff"></span>#ffffff</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="mace.png">mace.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="mace.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/mace.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#17848d">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/mace.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#17848d"></span>#17848d</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="mccolls.png">mccolls.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="mccolls.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/mccolls.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#d5d7a8">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/mccolls.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Mode (Center)</span>
+                    <span><span class="color-chip" style="background:#d5d7a8"></span>#d5d7a8</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="mere.png">mere.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="mere.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/mere.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#fd2a20">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/mere.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Standard (Corner)</span>
+                    <span><span class="color-chip" style="background:#fd2a20"></span>#fd2a20</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="nearby.png">nearby.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="nearby.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/nearby.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#f9e1cb">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/nearby.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Standard (Corner)</span>
+                    <span><span class="color-chip" style="background:#f9e1cb"></span>#f9e1cb</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="one-o-one.png">one-o-one.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="one-o-one.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/one-o-one.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#61b3d1">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/one-o-one.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Standard (Corner)</span>
+                    <span><span class="color-chip" style="background:#61b3d1"></span>#61b3d1</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="shopndrive.png">shopndrive.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="shopndrive.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/shopndrive.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#33af9d">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/shopndrive.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Box Mode (Center)</span>
+                    <span><span class="color-chip" style="background:#33af9d"></span>#33af9d</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="supervalu.png">supervalu.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="supervalu.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/supervalu.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#ab0429">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/supervalu.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#ab0429"></span>#ab0429</span>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="tile-header" title="Usave.png">Usave.png</div>
+                <div class="tile-body">
+                    <div>
+                        <span class="label">Original</span>
+                        <div class="box-24 original">
+                            <img src="Usave.png" height="24" style="max-width:24px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">SVG Result</span>
+                        <div class="box-24" style="background:#333;">
+                            <img src="svgs/Usave.svg" width="24" height="24" style="position:relative; z-index:2;">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="label">Map Context</span>
+                        <div class="box-24" style="background:transparent; border:none;"> 
+                            <svg class="pin-bg" width="24" height="24" viewBox="0 0 24 24" fill="#de531a">
+                                <path d="M 18.219 16.551 C 19.896 14.836 21.02 12.588 21.02 10.02 C 21.02 5.042 16.978 1 12 1 C 7.022 1 2.98 5.042 2.98 10.02 C 2.98 12.62 4.007 14.787 5.844 16.61 L 5.844 16.61 L 11.633 23 L 18.23 16.551 L 18.219 16.551 Z" />
+                            </svg>
+                            <img src="svgs/Usave.svg" width="24" height="24" class="pin-fg">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Transparent (Dark/Color Logo)</span>
+                    <span><span class="color-chip" style="background:#de531a"></span>#de531a</span>
+                </div>
+            </div></div></body></html>
