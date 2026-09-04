@@ -255,114 +255,126 @@ async function convertLogo(inputPath, outputPath) {
 }
 
 // --- INTELLIGENT EXTRACTION ENGINE ---
+//
+// Background is removed by flood-filling inward from the border: starting
+// from every edge pixel, flood-fill through neighbours that are either both
+// transparent or close in colour to their neighbour. This strips anything
+// connected to the frame's edge - a real transparent margin, a checkerboard
+// artifact baked into the pixels by an export tool, or a solid fill shape
+// (e.g. a circle/rectangle background) that touches the border - regardless
+// of its colour, without needing to guess a single "the" background colour
+// upfront. Everything left over (not border-connected, and opaque) is the
+// logo content and is kept.
+const BORDER_FLOOD_TOLERANCE = 40;
+
 async function extractAndTrim(inputPath) {
     // 1. Initial Trim: Remove blank borders
     const trimmedInput = await sharp(inputPath)
-        .trim({ threshold: 10 }) 
+        .trim({ threshold: 10 })
         .toBuffer();
 
+    // Cap the working resolution at 800px on the long edge, but never enlarge a
+    // smaller source: upscaling introduces smooth interpolated gradients between
+    // colours (e.g. a sharp orange/white edge spread over several pixels), and
+    // those gentle gradients let the border flood-fill below leak through edges
+    // it should stop at.
     const { data, info } = await sharp(trimmedInput)
-        .resize(800, 800, { fit: 'inside' }) 
+        .resize(800, 800, { fit: 'inside', withoutEnlargement: true })
         .ensureAlpha()
         .raw()
         .toBuffer({ resolveWithObject: true });
 
-    // 2. Background Detection
-    let transparentCount = 0;
-    for (let i = 0; i < data.length; i += 4) {
-        if (data[i+3] < 50) transparentCount++;
+    const { width, height } = info;
+    const total = width * height;
+
+    // 2a. Pass 1: flood-fill background connected to the border
+    const borderBg = new Uint8Array(total);
+    const queue = new Int32Array(total);
+    let qTail = 0;
+
+    const isTransparentPx = (idx) => data[idx * 4 + 3] < 100;
+    const closeEnough = (idxA, idxB) => {
+        const aTransparent = isTransparentPx(idxA);
+        const bTransparent = isTransparentPx(idxB);
+        if (aTransparent || bTransparent) return aTransparent && bTransparent;
+        const pa = idxA * 4, pb = idxB * 4;
+        const dr = data[pa] - data[pb], dg = data[pa+1] - data[pb+1], db = data[pa+2] - data[pb+2];
+        return Math.sqrt(dr*dr + dg*dg + db*db) < BORDER_FLOOD_TOLERANCE;
+    };
+    const seed = (idx) => {
+        if (borderBg[idx]) return;
+        borderBg[idx] = 1;
+        queue[qTail++] = idx;
+    };
+
+    for (let x = 0; x < width; x++) {
+        seed(x);
+        seed((height - 1) * width + x);
     }
-    const isTransparent = transparentCount > (data.length / 4) * 0.1;
-
-    let bgR = 0, bgG = 0, bgB = 0;
-    let detectionMethod = '';
-
-    if (isTransparent) {
-        // CASE A: Transparent background
-        let rSum = 0, gSum = 0, bSum = 0, opaqueCount = 0;
-        for (let i = 0; i < data.length; i += 4) {
-            if (data[i+3] > 100) { 
-                rSum += data[i]; gSum += data[i+1]; bSum += data[i+2];
-                opaqueCount++;
-            }
-        }
-        
-        let avgR = 255, avgG = 255, avgB = 255;
-        if (opaqueCount > 0) {
-            avgR = Math.round(rSum / opaqueCount);
-            avgG = Math.round(gSum / opaqueCount);
-            avgB = Math.round(bSum / opaqueCount);
-        }
-
-        const luma = 0.2126 * avgR + 0.7152 * avgG + 0.0722 * avgB;
-        if (luma > 200) {
-            bgR = 0; bgG = 0; bgB = 0;
-            detectionMethod = 'Transparent (Light Logo)';
-        } else {
-            bgR = 255; bgG = 255; bgB = 255; 
-            detectionMethod = 'Transparent (Dark/Color Logo)';
-        }
-    } else {
-        // CASE B: Solid background 
-        const cornerR = data[0], cornerG = data[1], cornerB = data[2];
-        const midIdx = (Math.floor(info.height/2) * info.width + Math.floor(info.width/2)) * 4;
-        const centerR = data[midIdx], centerG = data[midIdx+1], centerB = data[midIdx+2];
-
-        let cornerCount = 0, centerCount = 0;
-        const tolerance = 45;
-
-        for (let i = 0; i < data.length; i += 4) {
-            const r = data[i], g = data[i+1], b = data[i+2];
-            if (Math.sqrt(Math.pow(r-cornerR,2) + Math.pow(g-cornerG,2) + Math.pow(b-cornerB,2)) < tolerance) cornerCount++;
-            if (Math.sqrt(Math.pow(r-centerR,2) + Math.pow(g-centerG,2) + Math.pow(b-centerB,2)) < tolerance) centerCount++;
-        }
-
-        const centerIsDominant = centerCount > ((data.length / 4) * 0.4);
-        const distinctColors = Math.sqrt(Math.pow(cornerR-centerR,2) + Math.pow(cornerG-centerG,2) + Math.pow(cornerB-centerB,2)) > 50;
-
-        if (centerIsDominant && distinctColors) {
-            bgR = centerR; bgG = centerG; bgB = centerB;
-            detectionMethod = 'Box Mode (Center)';
-        } else {
-            bgR = cornerR; bgG = cornerG; bgB = cornerB;
-            detectionMethod = 'Standard (Corner)';
-        }
+    for (let y = 0; y < height; y++) {
+        seed(y * width);
+        seed(y * width + (width - 1));
     }
 
-    // 3. Create Mask & Extract Foreground Prominent Color
-    const maskRaw = Buffer.alloc(info.width * info.height * 3);
+    for (let qHead = 0; qHead < qTail; qHead++) {
+        const idx = queue[qHead];
+        const x = idx % width, y = (idx / width) | 0;
+        if (x > 0 && !borderBg[idx - 1] && closeEnough(idx, idx - 1)) seed(idx - 1);
+        if (x < width - 1 && !borderBg[idx + 1] && closeEnough(idx, idx + 1)) seed(idx + 1);
+        if (y > 0 && !borderBg[idx - width] && closeEnough(idx, idx - width)) seed(idx - width);
+        if (y < height - 1 && !borderBg[idx + width] && closeEnough(idx, idx + width)) seed(idx + width);
+    }
+
+    const detectionMethod = `Border flood (${((qTail / total) * 100).toFixed(0)}% removed)`;
+
+    // 3. Create Mask & Extract Foreground / Background Prominent Colours
+    const maskRaw = Buffer.alloc(total * 3);
     const fgPixels = [];
+    const bgPixels = [];
 
-    for (let i = 0; i < info.width * info.height; i++) {
+    for (let i = 0; i < total; i++) {
         const idx = i * 4;
         const outIdx = i * 3;
-        
-        const r = data[idx], g = data[idx+1], b = data[idx+2], a = data[idx+3];
-        let isLogo = false;
 
-        if (a < 100) {
-            isLogo = false; 
-        } else {
-            const dist = Math.sqrt(Math.pow(r-bgR,2) + Math.pow(g-bgG,2) + Math.pow(b-bgB,2));
-            isLogo = dist > 45; 
-        }
+        const r = data[idx], g = data[idx+1], b = data[idx+2], a = data[idx+3];
+        const isLogo = a >= 100 && !borderBg[i];
 
         if (isLogo) {
             maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0; // Black keeps it for potrace
             fgPixels.push({r, g, b});
         } else {
             maskRaw[outIdx] = 255; maskRaw[outIdx+1] = 255; maskRaw[outIdx+2] = 255; // White drops it
+            if (a >= 100) bgPixels.push({r, g, b}); // opaque background fill removed by the flood-fill
         }
     }
 
-    // 4. Calculate Prominent Color (Average of foreground pixels)
+    // 4. Calculate Prominent Color for the pin: the single most common colour
+    // among whatever opaque background fill was flooded away (the brand
+    // colour), falling back to the most common kept foreground colour when
+    // there was no fill (e.g. a plain multi-coloured icon on a fully
+    // transparent canvas). The mode is used rather than a mean because a
+    // removed background can include incidental artifact pixels (e.g. a
+    // checkerboard placeholder pattern baked into the source image) whose
+    // colour would otherwise dilute the true brand colour.
+    const modeColor = (pixels) => {
+        const QUANT = 16;
+        const histogram = new Map();
+        for (const p of pixels) {
+            const key = [p.r, p.g, p.b].map(c => Math.round(c / QUANT) * QUANT).join(',');
+            histogram.set(key, (histogram.get(key) || 0) + 1);
+        }
+        let bestKey = null, bestCount = 0;
+        for (const [key, count] of histogram) {
+            if (count > bestCount) { bestCount = count; bestKey = key; }
+        }
+        const [r, g, b] = bestKey.split(',').map(Number);
+        return '#' + [r, g, b].map(c => Math.min(255, c).toString(16).padStart(2, '0')).join('');
+    };
     let prominentColor = '#333333'; // fallback
-    if (fgPixels.length > 0) {
-        let r=0, g=0, b=0;
-        fgPixels.forEach(p => { r+=p.r; g+=p.g; b+=p.b });
-        const len = fgPixels.length;
-        prominentColor = '#' + [Math.round(r/len), Math.round(g/len), Math.round(b/len)]
-            .map(c => c.toString(16).padStart(2,'0')).join('');
+    if (bgPixels.length > 0) {
+        prominentColor = modeColor(bgPixels);
+    } else if (fgPixels.length > 0) {
+        prominentColor = modeColor(fgPixels);
     }
 
     // 5. Second Trim (Zoom tightly to content shape)
