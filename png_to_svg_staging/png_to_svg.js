@@ -266,6 +266,11 @@ async function convertLogo(inputPath, outputPath) {
 // upfront. Everything left over (not border-connected, and opaque) is the
 // logo content and is kept.
 const BORDER_FLOOD_TOLERANCE = 40;
+// Comparing neighbours alone lets the fill creep up a soft anti-aliased edge
+// (white -> pink -> red in steps smaller than the tolerance) and then swallow
+// the whole letter. So every flooded pixel must also stay within this distance
+// of the border pixel its fill started from.
+const BORDER_ROOT_TOLERANCE = 100;
 
 async function extractAndTrim(inputPath) {
     // 1. Initial Trim: Remove blank borders
@@ -289,6 +294,7 @@ async function extractAndTrim(inputPath) {
 
     // 2a. Pass 1: flood-fill background connected to the border
     const borderBg = new Uint8Array(total);
+    const rootOf = new Int32Array(total);
     const queue = new Int32Array(total);
     let qTail = 0;
 
@@ -299,11 +305,15 @@ async function extractAndTrim(inputPath) {
         if (aTransparent || bTransparent) return aTransparent && bTransparent;
         const pa = idxA * 4, pb = idxB * 4;
         const dr = data[pa] - data[pb], dg = data[pa+1] - data[pb+1], db = data[pa+2] - data[pb+2];
-        return Math.sqrt(dr*dr + dg*dg + db*db) < BORDER_FLOOD_TOLERANCE;
+        if (Math.sqrt(dr*dr + dg*dg + db*db) >= BORDER_FLOOD_TOLERANCE) return false;
+        const pr = rootOf[idxA] * 4;
+        const rr = data[pr] - data[pb], rg = data[pr+1] - data[pb+1], rb = data[pr+2] - data[pb+2];
+        return Math.sqrt(rr*rr + rg*rg + rb*rb) < BORDER_ROOT_TOLERANCE;
     };
-    const seed = (idx) => {
+    const seed = (idx, root = idx) => {
         if (borderBg[idx]) return;
         borderBg[idx] = 1;
+        rootOf[idx] = root;
         queue[qTail++] = idx;
     };
 
@@ -319,10 +329,10 @@ async function extractAndTrim(inputPath) {
     for (let qHead = 0; qHead < qTail; qHead++) {
         const idx = queue[qHead];
         const x = idx % width, y = (idx / width) | 0;
-        if (x > 0 && !borderBg[idx - 1] && closeEnough(idx, idx - 1)) seed(idx - 1);
-        if (x < width - 1 && !borderBg[idx + 1] && closeEnough(idx, idx + 1)) seed(idx + 1);
-        if (y > 0 && !borderBg[idx - width] && closeEnough(idx, idx - width)) seed(idx - width);
-        if (y < height - 1 && !borderBg[idx + width] && closeEnough(idx, idx + width)) seed(idx + width);
+        if (x > 0 && !borderBg[idx - 1] && closeEnough(idx, idx - 1)) seed(idx - 1, rootOf[idx]);
+        if (x < width - 1 && !borderBg[idx + 1] && closeEnough(idx, idx + 1)) seed(idx + 1, rootOf[idx]);
+        if (y > 0 && !borderBg[idx - width] && closeEnough(idx, idx - width)) seed(idx - width, rootOf[idx]);
+        if (y < height - 1 && !borderBg[idx + width] && closeEnough(idx, idx + width)) seed(idx + width, rootOf[idx]);
     }
 
     const detectionMethod = `Border flood (${((qTail / total) * 100).toFixed(0)}% removed)`;
@@ -356,26 +366,34 @@ async function extractAndTrim(inputPath) {
     // removed background can include incidental artifact pixels (e.g. a
     // checkerboard placeholder pattern baked into the source image) whose
     // colour would otherwise dilute the true brand colour.
+    //
+    // The logo itself is drawn white on the pin, so a near-white pin is never
+    // useful. When the removed background is plain white (e.g. a logo pasted
+    // on a white square) the brand colour is the logo's own colour instead,
+    // so take the most common non-white foreground colour.
+    const isNearWhite = ({r, g, b}) => r >= 224 && g >= 224 && b >= 224;
     const modeColor = (pixels) => {
         const QUANT = 16;
         const histogram = new Map();
         for (const p of pixels) {
-            const key = [p.r, p.g, p.b].map(c => Math.round(c / QUANT) * QUANT).join(',');
+            const key = [p.r, p.g, p.b].map(c => Math.min(255, Math.round(c / QUANT) * QUANT)).join(',');
             histogram.set(key, (histogram.get(key) || 0) + 1);
         }
         let bestKey = null, bestCount = 0;
         for (const [key, count] of histogram) {
             if (count > bestCount) { bestCount = count; bestKey = key; }
         }
+        if (!bestKey) return null;
         const [r, g, b] = bestKey.split(',').map(Number);
-        return '#' + [r, g, b].map(c => Math.min(255, c).toString(16).padStart(2, '0')).join('');
+        return { r, g, b };
     };
-    let prominentColor = '#333333'; // fallback
-    if (bgPixels.length > 0) {
-        prominentColor = modeColor(bgPixels);
-    } else if (fgPixels.length > 0) {
-        prominentColor = modeColor(fgPixels);
+    const toHex = ({r, g, b}) => '#' + [r, g, b].map(c => c.toString(16).padStart(2, '0')).join('');
+
+    let pinColor = modeColor(bgPixels);
+    if (!pinColor || isNearWhite(pinColor)) {
+        pinColor = modeColor(fgPixels.filter(p => !isNearWhite(p)));
     }
+    const prominentColor = pinColor ? toHex(pinColor) : '#333333'; // fallback
 
     // 5. Second Trim (Zoom tightly to content shape)
     const finalMaskBuffer = await sharp(maskRaw, { raw: { width: info.width, height: info.height, channels: 3 } })
