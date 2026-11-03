@@ -271,6 +271,11 @@ const BORDER_FLOOD_TOLERANCE = 40;
 // the whole letter. So every flooded pixel must also stay within this distance
 // of the border pixel its fill started from.
 const BORDER_ROOT_TOLERANCE = 100;
+// An opaque border region is only treated as a background fill if it encloses
+// at least this share of the image in other opaque content. Letters that touch
+// the image edge enclose only transparent counters (or a thin anti-aliased
+// fringe), so they are kept.
+const ENCLOSED_CONTENT_MIN_SHARE = 0.005;
 
 async function extractAndTrim(inputPath) {
     // 1. Initial Trim: Remove blank borders
@@ -292,50 +297,95 @@ async function extractAndTrim(inputPath) {
     const { width, height } = info;
     const total = width * height;
 
-    // 2a. Pass 1: flood-fill background connected to the border
-    const borderBg = new Uint8Array(total);
-    const rootOf = new Int32Array(total);
+    // 2a. Pass 1: flood-fill each region connected to the border separately
+    const compOf = new Int32Array(total).fill(-1);
     const queue = new Int32Array(total);
-    let qTail = 0;
+    const comps = []; // { root, size }
 
     const isTransparentPx = (idx) => data[idx * 4 + 3] < 100;
-    const closeEnough = (idxA, idxB) => {
+    const colourDist = (idxA, idxB) => {
+        const pa = idxA * 4, pb = idxB * 4;
+        const dr = data[pa] - data[pb], dg = data[pa+1] - data[pb+1], db = data[pa+2] - data[pb+2];
+        return Math.sqrt(dr*dr + dg*dg + db*db);
+    };
+    const closeEnough = (idxA, idxB, root) => {
         const aTransparent = isTransparentPx(idxA);
         const bTransparent = isTransparentPx(idxB);
         if (aTransparent || bTransparent) return aTransparent && bTransparent;
-        const pa = idxA * 4, pb = idxB * 4;
-        const dr = data[pa] - data[pb], dg = data[pa+1] - data[pb+1], db = data[pa+2] - data[pb+2];
-        if (Math.sqrt(dr*dr + dg*dg + db*db) >= BORDER_FLOOD_TOLERANCE) return false;
-        const pr = rootOf[idxA] * 4;
-        const rr = data[pr] - data[pb], rg = data[pr+1] - data[pb+1], rb = data[pr+2] - data[pb+2];
-        return Math.sqrt(rr*rr + rg*rg + rb*rb) < BORDER_ROOT_TOLERANCE;
+        return colourDist(idxA, idxB) < BORDER_FLOOD_TOLERANCE && colourDist(root, idxB) < BORDER_ROOT_TOLERANCE;
     };
-    const seed = (idx, root = idx) => {
-        if (borderBg[idx]) return;
-        borderBg[idx] = 1;
-        rootOf[idx] = root;
-        queue[qTail++] = idx;
-    };
-
-    for (let x = 0; x < width; x++) {
-        seed(x);
-        seed((height - 1) * width + x);
-    }
-    for (let y = 0; y < height; y++) {
-        seed(y * width);
-        seed(y * width + (width - 1));
-    }
-
-    for (let qHead = 0; qHead < qTail; qHead++) {
-        const idx = queue[qHead];
+    const forEachNeighbour = (idx, fn) => {
         const x = idx % width, y = (idx / width) | 0;
-        if (x > 0 && !borderBg[idx - 1] && closeEnough(idx, idx - 1)) seed(idx - 1, rootOf[idx]);
-        if (x < width - 1 && !borderBg[idx + 1] && closeEnough(idx, idx + 1)) seed(idx + 1, rootOf[idx]);
-        if (y > 0 && !borderBg[idx - width] && closeEnough(idx, idx - width)) seed(idx - width, rootOf[idx]);
-        if (y < height - 1 && !borderBg[idx + width] && closeEnough(idx, idx + width)) seed(idx + width, rootOf[idx]);
+        if (x > 0) fn(idx - 1);
+        if (x < width - 1) fn(idx + 1);
+        if (y > 0) fn(idx - width);
+        if (y < height - 1) fn(idx + width);
+    };
+
+    const borderIdx = [];
+    for (let x = 0; x < width; x++) borderIdx.push(x, (height - 1) * width + x);
+    for (let y = 0; y < height; y++) borderIdx.push(y * width, y * width + (width - 1));
+
+    for (const root of borderIdx) {
+        if (compOf[root] !== -1) continue;
+        const id = comps.length;
+        let qTail = 0;
+        compOf[root] = id;
+        queue[qTail++] = root;
+        for (let qHead = 0; qHead < qTail; qHead++) {
+            const idx = queue[qHead];
+            forEachNeighbour(idx, n => {
+                if (compOf[n] === -1 && closeEnough(idx, n, root)) {
+                    compOf[n] = id;
+                    queue[qTail++] = n;
+                }
+            });
+        }
+        comps.push({ root, size: qTail });
     }
 
-    const detectionMethod = `Border flood (${((qTail / total) * 100).toFixed(0)}% removed)`;
+    // 2b. Pass 2: decide which border regions are background. Transparent
+    // regions always are. An opaque region touching the border may instead be
+    // part of the logo itself (e.g. a letter on a tightly cropped image), so it
+    // only counts as background when it encloses other opaque content - a fill
+    // shape sitting behind the logo. Regions are checked largest first so that
+    // enclosed pixels matching an already-accepted background colour (e.g. the
+    // white counter of a letter on a white JPG) don't count as content.
+    const borderBg = new Uint8Array(total);
+    const bgRoots = [];
+    const acceptBg = (id) => {
+        bgRoots.push(comps[id].root);
+        for (let i = 0; i < total; i++) if (compOf[i] === id) borderBg[i] = 1;
+    };
+    const enclosesContent = (id) => {
+        const outside = new Uint8Array(total);
+        let qTail = 0;
+        for (const idx of borderIdx) {
+            if (compOf[idx] !== id && !outside[idx]) { outside[idx] = 1; queue[qTail++] = idx; }
+        }
+        for (let qHead = 0; qHead < qTail; qHead++) {
+            forEachNeighbour(queue[qHead], n => {
+                if (compOf[n] !== id && !outside[n]) { outside[n] = 1; queue[qTail++] = n; }
+            });
+        }
+        let enclosed = 0;
+        for (let i = 0; i < total; i++) {
+            if (outside[i] || compOf[i] === id || isTransparentPx(i)) continue;
+            if (bgRoots.some(r => colourDist(r, i) < BORDER_ROOT_TOLERANCE)) continue;
+            enclosed++;
+        }
+        return enclosed >= total * ENCLOSED_CONTENT_MIN_SHARE;
+    };
+
+    const compIds = comps.map((_, id) => id);
+    compIds.filter(id => isTransparentPx(comps[id].root)).forEach(acceptBg);
+    compIds
+        .filter(id => !isTransparentPx(comps[id].root))
+        .sort((a, b) => comps[b].size - comps[a].size)
+        .forEach(id => { if (enclosesContent(id)) acceptBg(id); });
+
+    const removed = borderBg.reduce((sum, v) => sum + v, 0);
+    const detectionMethod = `Border flood (${((removed / total) * 100).toFixed(0)}% removed)`;
 
     // 3. Create Mask & Extract Foreground / Background Prominent Colours
     const maskRaw = Buffer.alloc(total * 3);
