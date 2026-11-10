@@ -278,17 +278,16 @@ const BORDER_ROOT_TOLERANCE = 100;
 const ENCLOSED_CONTENT_MIN_SHARE = 0.005;
 
 async function extractAndTrim(inputPath) {
-    // 1. Initial Trim: Remove blank borders
-    const trimmedInput = await sharp(inputPath)
-        .trim({ threshold: 10 })
-        .toBuffer();
-
+    // 1. No initial trim: sharp's trim crops away a solid fill margin (e.g. text
+    // on an opaque navy square), leaving the logo touching every edge so the
+    // fill is no longer recognised as background. The mask is trimmed in step 5.
+    //
     // Cap the working resolution at 800px on the long edge, but never enlarge a
     // smaller source: upscaling introduces smooth interpolated gradients between
     // colours (e.g. a sharp orange/white edge spread over several pixels), and
     // those gentle gradients let the border flood-fill below leak through edges
     // it should stop at.
-    const { data, info } = await sharp(trimmedInput)
+    const { data, info } = await sharp(inputPath)
         .resize(800, 800, { fit: 'inside', withoutEnlargement: true })
         .ensureAlpha()
         .raw()
@@ -371,7 +370,8 @@ async function extractAndTrim(inputPath) {
         let enclosed = 0;
         for (let i = 0; i < total; i++) {
             if (outside[i] || compOf[i] === id || isTransparentPx(i)) continue;
-            if (bgRoots.some(r => colourDist(r, i) < BORDER_ROOT_TOLERANCE)) continue;
+            // Transparent roots carry meaningless RGB, so only compare opaque fills.
+            if (bgRoots.some(r => !isTransparentPx(r) && colourDist(r, i) < BORDER_ROOT_TOLERANCE)) continue;
             enclosed++;
         }
         return enclosed >= total * ENCLOSED_CONTENT_MIN_SHARE;
@@ -383,6 +383,46 @@ async function extractAndTrim(inputPath) {
         .filter(id => !isTransparentPx(comps[id].root))
         .sort((a, b) => comps[b].size - comps[a].size)
         .forEach(id => { if (enclosesContent(id)) acceptBg(id); });
+
+    // 2c. Pass 3: regions not connected to the border. Once a fill colour is
+    // known, any enclosed region of that colour is background too (e.g. the
+    // inside of a ring or a letter's counter). An enclosed transparent region
+    // mostly surrounded by fill is a knockout (artwork cut out of the fill),
+    // so it becomes logo content.
+    const fillRoots = bgRoots.filter(r => !isTransparentPx(r));
+    const knockout = new Uint8Array(total);
+    if (fillRoots.length) {
+        for (let seed = 0; seed < total; seed++) {
+            if (compOf[seed] !== -1) continue;
+            const id = comps.length;
+            let qTail = 0;
+            compOf[seed] = id;
+            queue[qTail++] = seed;
+            for (let qHead = 0; qHead < qTail; qHead++) {
+                const idx = queue[qHead];
+                forEachNeighbour(idx, n => {
+                    if (compOf[n] === -1 && closeEnough(idx, n, seed)) {
+                        compOf[n] = id;
+                        queue[qTail++] = n;
+                    }
+                });
+            }
+            comps.push({ root: seed, size: qTail });
+            const members = queue.slice(0, qTail);
+            if (!isTransparentPx(seed)) {
+                if (fillRoots.some(r => colourDist(r, seed) < BORDER_ROOT_TOLERANCE)) {
+                    members.forEach(i => { borderBg[i] = 1; });
+                }
+            } else {
+                let bg = 0, fg = 0;
+                members.forEach(i => forEachNeighbour(i, n => {
+                    if (compOf[n] === id || isTransparentPx(n)) return;
+                    if (borderBg[n]) bg++; else fg++;
+                }));
+                if (bg > fg) members.forEach(i => { knockout[i] = 1; });
+            }
+        }
+    }
 
     const removed = borderBg.reduce((sum, v) => sum + v, 0);
     const detectionMethod = `Border flood (${((removed / total) * 100).toFixed(0)}% removed)`;
@@ -397,7 +437,7 @@ async function extractAndTrim(inputPath) {
         const outIdx = i * 3;
 
         const r = data[idx], g = data[idx+1], b = data[idx+2], a = data[idx+3];
-        const isLogo = a >= 100 && !borderBg[i];
+        const isLogo = (a >= 100 && !borderBg[i]) || knockout[i];
 
         if (isLogo) {
             maskRaw[outIdx] = 0; maskRaw[outIdx+1] = 0; maskRaw[outIdx+2] = 0; // Black keeps it for potrace
