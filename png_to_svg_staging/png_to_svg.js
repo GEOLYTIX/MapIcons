@@ -384,6 +384,31 @@ async function extractAndTrim(inputPath) {
         .sort((a, b) => comps[b].size - comps[a].size)
         .forEach(id => { if (enclosesContent(id)) acceptBg(id); });
 
+    // An opaque region holding an image corner is canvas (e.g. the white
+    // corners around a round badge on a non-alpha PNG) even though it encloses
+    // nothing, as is any other border region touching that canvas (e.g. a
+    // corner cut off from the rest by a grey crop line along the top edge).
+    // Removed, but kept out of bgRoots so its colour isn't treated as a fill -
+    // the white artwork inside the badge would otherwise match it.
+    const canvas = new Uint8Array(total);
+    const isCandidate = id => !isTransparentPx(comps[id].root) && !borderBg[comps[id].root];
+    const acceptCanvas = id => {
+        for (let i = 0; i < total; i++) if (compOf[i] === id) { borderBg[i] = 1; canvas[i] = 1; }
+    };
+    new Set([0, width - 1, total - width, total - 1].map(i => compOf[i]))
+        .forEach(id => { if (isCandidate(id)) acceptCanvas(id); });
+    for (let changed = true; changed;) {
+        changed = false;
+        const touching = new Set();
+        for (let i = 0; i < total; i++) {
+            if (!canvas[i]) continue;
+            forEachNeighbour(i, n => { if (!canvas[n]) touching.add(compOf[n]); });
+        }
+        touching.forEach(id => {
+            if (id >= 0 && isCandidate(id)) { acceptCanvas(id); changed = true; }
+        });
+    }
+
     // 2c. Pass 3: regions not connected to the border. Once a fill colour is
     // known, any enclosed region of that colour is background too (e.g. the
     // inside of a ring or a letter's counter). An enclosed transparent region
