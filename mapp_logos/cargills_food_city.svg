@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="cargills_food_city.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="32.208333"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="880"
+     inkscape:window-y="2151"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     fill="#ffffff"
+     fill-rule="evenodd"
+     d="M 11.129432,3.3067595 C 10.773374,3.352408 10.389926,3.4345755 10.26211,3.4893537 A 5.4778278,5.4778278 0 0 0 8.3722592,4.721865 C 7.3314719,5.7535225 6.7654297,7.1594983 6.6467434,9.1041272 6.500668,11.477853 7.1214885,13.349444 8.472686,14.609344 a 4.5648565,4.5648565 0 0 0 2.830211,1.296419 c 2.437633,0.31954 4.409651,-0.63908 5.41392,-2.601968 0.31954,-0.62995 0.566042,-1.351197 0.566042,-1.661608 v -0.219113 l -1.241641,0.02739 -1.241641,0.02739 -0.200854,0.547782 a 2.7389139,2.7389139 0 0 1 -1.27816,1.497273 C 12.690613,13.815059 11.631567,13.7968 11.010746,13.47726 9.5682511,12.765142 8.9565608,10.811383 9.3856573,8.3281016 9.6139001,7.0134229 10.179942,6.0913219 11.019876,5.6622254 c 0.547783,-0.2921508 1.762034,-0.2830211 2.355466,0 0.556912,0.2738914 1.004268,0.7760256 1.214252,1.3694569 l 0.173464,0.4747451 h 2.611098 L 17.319378,7.2051469 A 4.5648565,4.5648565 0 0 0 14.224405,3.5715211 8.2167416,8.2167416 0 0 0 11.120303,3.3067595"
+     id="path1"
+     style="stroke-width:0.912971" />
+</svg>
